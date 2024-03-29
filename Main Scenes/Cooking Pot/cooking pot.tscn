@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bovmc5ed603kv"]
+
+[node name="CookingPot" type="Node2D"]
