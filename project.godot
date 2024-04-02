@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="Cult-lery"
-run/main_scene="res://Main Scenes/Menus/Main Menu/MainMenu.tscn"
+run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global.gd"
+Global="*res://Scripts/Global.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 
