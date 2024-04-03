@@ -14,14 +14,12 @@ font_size = 45
 script = ExtResource("1_smv1p")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
-visible = false
 z_index = -1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_mleat")
 
 [node name="Label" type="Label" parent="."]
-visible = false
 offset_left = 832.0
 offset_top = 112.0
 offset_right = 1008.0
@@ -68,6 +66,7 @@ text = "Quit Button"
 label_settings = ExtResource("5_nkbai")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 1184.0

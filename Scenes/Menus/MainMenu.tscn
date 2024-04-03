@@ -1,112 +1,171 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj3kkdcx4ybau"]
+[gd_scene load_steps=8 format=3 uid="uid://bj3kkdcx4ybau"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_l3i7p"]
 [ext_resource type="Texture2D" uid="uid://rvmienl8cwkg" path="res://Art/BlakeTest/new_gradient_texture_1d1.tres" id="2_5dsue"]
+[ext_resource type="Texture2D" uid="uid://bvoy6rrd6gis4" path="res://Art/UI/General Button High Res.png" id="2_yg8g2"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="3_hcix3"]
-[ext_resource type="Texture2D" uid="uid://ck8axdh71v8fp" path="res://Art/BlakeTest/new_gradient_texture_1d.tres" id="4_hjgab"]
 [ext_resource type="Texture2D" uid="uid://b42tllqqdk71v" path="res://Art/BlakeTest/new_noise_texture_2d.tres" id="5_lknhp"]
+[ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="6_d6imb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rd6pl"]
+font_size = 150
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l3i7p")
 
+[node name="BackgroundImage" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_d6imb")
+expand_mode = 1
+
 [node name="NewGameButton" type="TextureButton" parent="."]
-offset_left = 213.0
-offset_top = 624.0
-offset_right = 853.0
-offset_bottom = 692.0
+offset_left = 320.0
+offset_top = 456.0
+offset_right = 872.0
+offset_bottom = 540.0
 tooltip_text = "Start Game"
-texture_normal = ExtResource("4_hjgab")
+texture_normal = ExtResource("2_yg8g2")
 texture_hover = ExtResource("2_5dsue")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="NewGameButton"]
-layout_mode = 0
-offset_left = 261.0
-offset_top = 17.0
-offset_right = 393.0
-offset_bottom = 52.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -17.5
+offset_right = 66.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "New Game"
 label_settings = ExtResource("3_hcix3")
 
 [node name="ContinueGameButton" type="TextureButton" parent="."]
-offset_left = 410.0
-offset_top = 731.0
-offset_right = 1051.0
-offset_bottom = 789.0
+offset_left = 528.0
+offset_top = 568.0
+offset_right = 1080.0
+offset_bottom = 652.0
 tooltip_text = "Continue Game"
 disabled = true
-texture_normal = ExtResource("4_hjgab")
+texture_normal = ExtResource("2_yg8g2")
 texture_hover = ExtResource("2_5dsue")
 texture_disabled = ExtResource("5_lknhp")
-stretch_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ContinueGameButton"]
-layout_mode = 0
-offset_left = 264.0
-offset_top = 13.0
-offset_right = 452.0
-offset_bottom = 48.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -17.5
+offset_right = 94.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Continue Game"
 label_settings = ExtResource("3_hcix3")
 
 [node name="LoadGameButton" type="TextureButton" parent="."]
-offset_left = 699.0
-offset_top = 817.0
-offset_right = 1340.0
-offset_bottom = 875.0
+offset_left = 696.0
+offset_top = 687.0
+offset_right = 1248.0
+offset_bottom = 771.0
 tooltip_text = "Load Game"
 disabled = true
-texture_normal = ExtResource("4_hjgab")
+texture_normal = ExtResource("2_yg8g2")
 texture_hover = ExtResource("2_5dsue")
 texture_disabled = ExtResource("5_lknhp")
-stretch_mode = 1
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="LoadGameButton"]
-layout_mode = 0
-offset_left = 285.0
-offset_top = 13.0
-offset_right = 423.0
-offset_bottom = 48.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -17.5
+offset_right = 69.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Load Game"
 label_settings = ExtResource("3_hcix3")
 
 [node name="SettingsButton" type="TextureButton" parent="."]
-offset_left = 932.0
-offset_top = 897.0
-offset_right = 1573.0
-offset_bottom = 955.0
+offset_left = 880.0
+offset_top = 799.0
+offset_right = 1432.0
+offset_bottom = 883.0
 tooltip_text = "Settings"
-texture_normal = ExtResource("4_hjgab")
+texture_normal = ExtResource("2_yg8g2")
 texture_hover = ExtResource("2_5dsue")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="SettingsButton"]
-layout_mode = 0
-offset_left = 287.0
-offset_top = 12.0
-offset_right = 384.0
-offset_bottom = 47.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -17.5
+offset_right = 48.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Settings"
 label_settings = ExtResource("3_hcix3")
 
 [node name="QuitButton" type="TextureButton" parent="."]
-offset_left = 1226.0
-offset_top = 976.0
-offset_right = 1867.0
-offset_bottom = 1034.0
+offset_left = 1088.0
+offset_top = 911.0
+offset_right = 1640.0
+offset_bottom = 995.0
 tooltip_text = "Quit"
-texture_normal = ExtResource("4_hjgab")
+texture_normal = ExtResource("2_yg8g2")
 texture_hover = ExtResource("2_5dsue")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="QuitButton"]
-layout_mode = 0
-offset_left = 303.0
-offset_top = 12.0
-offset_right = 391.0
-offset_bottom = 47.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -17.5
+offset_right = 44.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Quit"
 label_settings = ExtResource("3_hcix3")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 176.0
+offset_top = 216.0
+offset_right = 978.0
+offset_bottom = 489.0
+text = "CULT'LERY"
+label_settings = SubResource("LabelSettings_rd6pl")
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
