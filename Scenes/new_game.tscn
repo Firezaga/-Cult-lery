@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm3ea67cdqk2j"]
+
+[ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_c4he1"]
+[ext_resource type="VideoStream" path="res://Cutscenes/test_opening_scene.ogv" id="1_nblim"]
+
+[node name="NewGame" type="Node2D"]
+script = ExtResource("1_c4he1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_nblim")
+autoplay = true

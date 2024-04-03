@@ -1,13 +1,118 @@
 extends Node
 
+# Paths to different scenes and scene changing variables
+var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
 var current_scene = null
-var image = null
+
+# Character variables - for saving/loading and going between scenes
+var PlayerMaxHealth = null
+var PlayerCurHealth = null
+var PlayerAttack = null
+var PlayerDefense = null
+var PlayerLvl = null
+var PlayerMaxExperience = null
+var PlayerCurExperience = null
+var PlayerInv = null
+var PlayerLoc = null
+
+# Enemy variables
+var EnemyNumberOf = null
+var Enemy1 = null
+var Enemy2 = null
+var Enemy3 = null
+
+
+# ------------------------------------------------------------------------------
+#region
+# Getter/Setter functions
+func set_player(MaxHealth, CurHealth, Attack, Defense, Lvl, MaxExperience, CurExperience, Inv):
+	PlayerMaxHealth = MaxHealth
+	PlayerCurHealth = CurHealth
+	PlayerAttack = Attack
+	PlayerDefense = Defense
+	PlayerLvl = Lvl
+	PlayerMaxExperience = MaxExperience
+	PlayerCurExperience = CurExperience
+	PlayerInv = Inv
+
+func set_player_max_health(i):
+	PlayerMaxHealth = i
+
+func set_player_cur_health(i):
+	PlayerCurHealth = i
+
+func set_player_attack(i):
+	PlayerAttack = i
+
+func set_player_defense(i):
+	PlayerDefense = i
+
+func set_player_lvl(i):
+	PlayerLvl = i
+
+func set_player_max_experience(i):
+	PlayerMaxExperience = i
+
+func set_player_cur_experience(i):
+	PlayerCurExperience = i
+
+func set_player_inv(i):
+	PlayerInv = i
+
+func get_player_max_health(): 
+	return PlayerMaxHealth
+
+func get_player_cur_health(): 
+	return PlayerCurHealth
+
+func get_player_attack(): 
+	return PlayerAttack
+
+func get_player_defense():
+	return PlayerDefense
+
+func get_player_lvl():
+	return PlayerLvl
+
+func get_player_max_experience():
+	return PlayerMaxExperience
+
+func get_player_cur_experience():
+	return PlayerCurExperience
+
+func get_player_inv():
+	return PlayerInv
+
+func set_enemy(NumberOf, _Enemy1, _Enemy2, _Enemy3):
+	EnemyNumberOf = NumberOf
+	Enemy1 = _Enemy1
+	Enemy2 = _Enemy2
+	Enemy3 = _Enemy3
+
+func get_enemy_number_of():
+	return EnemyNumberOf
+
+func get_enemy_1():
+	return Enemy1
+
+func get_enemy_2():
+	return Enemy2
+
+func get_enemy_3():
+	return Enemy3
+
+#endregion
 
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+
+
+func _process(delta):
+	if Input.is_action_pressed("escape"):
+		quit_game()
 
 func goto_scene(path):
 	# This function will usually be called from a signal callback,
@@ -37,6 +142,17 @@ func _deferred_goto_scene(path):
 	
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
+
+
+func new_game():
+	PlayerMaxHealth = 50
+	PlayerCurHealth = 50
+	PlayerAttack = 5
+	PlayerDefense = 5
+	PlayerLvl = 1
+	PlayerMaxExperience = 10
+	PlayerCurExperience = 0
+	goto_scene(NewGame)
 
 
 func save():

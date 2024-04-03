@@ -12,8 +12,8 @@ func _process(delta):
 	pass
 
 
-func _on_start_game_button_pressed():
-	pass # Replace with function body.
+func _on_new_game_button_pressed():
+	Global.new_game()
 
 
 func _on_continue_game_button_pressed():
@@ -30,3 +30,4 @@ func _on_settings_button_pressed():
 
 func _on_quit_button_pressed():
 	Global.quit_game()
+

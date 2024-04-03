@@ -9,16 +9,17 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l3i7p")
 
-[node name="StartGameButton" type="TextureButton" parent="."]
+[node name="NewGameButton" type="TextureButton" parent="."]
 offset_left = 213.0
-offset_top = 634.0
+offset_top = 624.0
 offset_right = 853.0
-offset_bottom = 702.0
+offset_bottom = 692.0
 tooltip_text = "Start Game"
-texture_normal = ExtResource("2_5dsue")
+texture_normal = ExtResource("4_hjgab")
+texture_hover = ExtResource("2_5dsue")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="StartGameButton"]
+[node name="Label" type="Label" parent="NewGameButton"]
 layout_mode = 0
 offset_left = 261.0
 offset_top = 17.0
@@ -107,7 +108,7 @@ offset_bottom = 47.0
 text = "Quit"
 label_settings = ExtResource("3_hcix3")
 
-[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="LoadGameButton" to="." method="_on_load_game_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
