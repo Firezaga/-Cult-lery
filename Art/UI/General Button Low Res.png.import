@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhofcd2uplt0k"
-path="res://.godot/imported/Special Action Text Button.png-419e918f7c03ef9621f77bd7263753b2.ctex"
+uid="uid://ylnim1xcxg65"
+path="res://.godot/imported/General Button Low Res.png-54d02f15ebfeedf18a84f45ee1650a49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/Battle/Special Action Text Button.png"
-dest_files=["res://.godot/imported/Special Action Text Button.png-419e918f7c03ef9621f77bd7263753b2.ctex"]
+source_file="res://Art/UI/General Button Low Res.png"
+dest_files=["res://.godot/imported/General Button Low Res.png-54d02f15ebfeedf18a84f45ee1650a49.ctex"]
 
 [params]
 

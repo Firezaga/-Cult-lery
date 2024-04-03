@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bws111nk586ob"
-path="res://.godot/imported/Empty Frame for HP and Player Profile.png-621bd331358e52d8850baed188513241.ctex"
+uid="uid://bvoy6rrd6gis4"
+path="res://.godot/imported/General Button High Res.png-645f68dda90019eb6152d1e37bcc4759.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/Battle/Empty Frame for HP and Player Profile.png"
-dest_files=["res://.godot/imported/Empty Frame for HP and Player Profile.png-621bd331358e52d8850baed188513241.ctex"]
+source_file="res://Art/UI/General Button High Res.png"
+dest_files=["res://.godot/imported/General Button High Res.png-645f68dda90019eb6152d1e37bcc4759.ctex"]
 
 [params]
 
