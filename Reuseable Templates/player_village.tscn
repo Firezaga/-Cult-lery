@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu06d4mkwmk61"]
+
+[ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="1_1bbi0"]
+[ext_resource type="Script" path="res://Scripts/CharacterVillageControl.gd" id="1_dr0ss"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ke728"]
+
+[node name="PlayerVillage" type="Area2D"]
+script = ExtResource("1_dr0ss")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.14441e-05, 7.62939e-06)
+scale = Vector2(0.423225, 0.423225)
+texture = ExtResource("1_1bbi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ke728")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -400)
+zoom = Vector2(0.5, 0.5)
+limit_left = -786
+limit_right = 8192
+position_smoothing_enabled = true

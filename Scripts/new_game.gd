@@ -8,4 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_pressed("skip_cutscene"):
+		$VideoStreamPlayer.stop()
+		Global.goto_village_deserted()
+
+
+
+func _on_video_stream_player_finished():
+	Global.goto_village_deserted()

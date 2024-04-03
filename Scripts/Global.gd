@@ -4,6 +4,7 @@ extends Node
 var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
+var VillageDeserted = "res://Scenes/village_deserted.tscn"
 var current_scene = null
 
 # Character variables - for saving/loading and going between scenes
@@ -143,6 +144,8 @@ func _deferred_goto_scene(path):
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
 
+func goto_village_deserted():
+	goto_scene(VillageDeserted)
 
 func new_game():
 	PlayerMaxHealth = 50

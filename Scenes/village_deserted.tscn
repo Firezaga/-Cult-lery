@@ -8,65 +8,85 @@
 [ext_resource type="Texture2D" uid="uid://d14l6u0gf2rpw" path="res://Art/Village/Cupcake House Sprinkles Back View.png" id="4_hy6r4"]
 [ext_resource type="Texture2D" uid="uid://b0d7euyh5to2w" path="res://Art/Village/Muffin Rock Small.png" id="4_wjdau"]
 [ext_resource type="Texture2D" uid="uid://cfdo7yhdwgleh" path="res://Art/Village/Crumb Rock.png" id="5_i8jmq"]
-[ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="5_nc0j2"]
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
+[ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/player_village.tscn" id="10_0duxd"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
 
 [node name="Village" type="Node2D"]
 
-[node name="CupcakeVillageGround" type="Sprite2D" parent="."]
+[node name="Background" type="Node" parent="."]
+
+[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(1281, -713)
+texture = ExtResource("11_2sygv")
+
+[node name="CupcakeVillageGround2" type="TextureRect" parent="Background"]
+offset_left = -1784.0
+offset_right = 8184.0
+offset_bottom = 1440.0
+texture = ExtResource("1_i2dyl")
+stretch_mode = 1
+
+[node name="CupcakeVillageGround" type="Sprite2D" parent="Background"]
+visible = false
+texture_repeat = 2
 position = Vector2(1272, 696)
 texture = ExtResource("1_i2dyl")
 
-[node name="MuffinRockMiddle" type="Sprite2D" parent="CupcakeVillageGround"]
-position = Vector2(0, -958)
+[node name="MuffinRockMiddle" type="Sprite2D" parent="Background"]
+position = Vector2(1274.5, -245)
 scale = Vector2(0.550521, 0.573611)
 texture = ExtResource("2_iij61")
 
-[node name="MuffinRockEdge" type="Sprite2D" parent="CupcakeVillageGround"]
-position = Vector2(-826, -941)
+[node name="MuffinRockEdge" type="Sprite2D" parent="Background"]
+position = Vector2(448.5, -228)
 rotation = 0.0279019
 scale = Vector2(0.558333, 0.565278)
 texture = ExtResource("3_3rcsw")
 
-[node name="MuffinRockSmall" type="Sprite2D" parent="CupcakeVillageGround"]
-position = Vector2(-1236, -720)
+[node name="MuffinRockSmall" type="Sprite2D" parent="Background"]
+position = Vector2(38.4998, -7.00006)
 scale = Vector2(0.478472, 0.504167)
 texture = ExtResource("4_wjdau")
 
-[node name="CrumbRock" type="Sprite2D" parent="CupcakeVillageGround"]
-position = Vector2(91, -332)
+[node name="CrumbRock" type="Sprite2D" parent="Background"]
+position = Vector2(1363, 364)
 scale = Vector2(0.380556, 0.408333)
 texture = ExtResource("5_i8jmq")
 
-[node name="CrumbRock2" type="Sprite2D" parent="CupcakeVillageGround"]
-position = Vector2(-704, 398)
+[node name="CrumbRock2" type="Sprite2D" parent="Background"]
+position = Vector2(568, 1024)
 scale = Vector2(0.380556, 0.408333)
 texture = ExtResource("5_i8jmq")
 
-[node name="CupcakePathStraight" type="Sprite2D" parent="."]
+[node name="CupcakePathStraight2" type="TextureRect" parent="Background"]
+offset_left = -1784.0
+offset_top = -192.0
+offset_right = 8176.0
+offset_bottom = 1248.0
+texture = ExtResource("2_nxs47")
+stretch_mode = 1
+
+[node name="CupcakePathStraight" type="Sprite2D" parent="Background"]
+visible = false
 position = Vector2(1280, 528)
 texture = ExtResource("2_nxs47")
 
-[node name="CupcakeHouseSprinkles" type="Sprite2D" parent="."]
+[node name="CupcakeHouseSprinkles" type="Sprite2D" parent="Background"]
 position = Vector2(2152, -184)
 texture = ExtResource("3_a0qrm")
 
-[node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="."]
-position = Vector2(2688, 936)
-texture = ExtResource("4_hy6r4")
+[node name="Foreground" type="Node" parent="."]
 
-[node name="McIdleSprite" type="Sprite2D" parent="."]
-position = Vector2(328, 392)
-scale = Vector2(0.403086, 0.403086)
-texture = ExtResource("5_nc0j2")
-
-[node name="FortuneTellerIdleSprite" type="Sprite2D" parent="."]
+[node name="FortuneTellerIdleSprite" type="Sprite2D" parent="Foreground"]
 position = Vector2(2168, 264)
 scale = Vector2(0.322222, 0.322222)
 texture = ExtResource("6_myksh")
 
-[node name="CupcakeSkyBackground" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1281, -713)
-texture = ExtResource("11_2sygv")
+[node name="PlayerVillage" parent="Foreground" instance=ExtResource("10_0duxd")]
+position = Vector2(280, 408)
+
+[node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground"]
+position = Vector2(2688, 800)
+texture = ExtResource("4_hy6r4")

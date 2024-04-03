@@ -208,6 +208,7 @@ text = "16:9"
 label_settings = SubResource("LabelSettings_ok1wg")
 
 [node name="LabelDisplay Mode" type="Label" parent="NinePatchDialogueBox"]
+layout_mode = 0
 offset_left = 173.0
 offset_top = 421.0
 offset_right = 433.0
