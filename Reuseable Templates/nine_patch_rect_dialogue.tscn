@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0dcgeye1xs5d"]
+
+[ext_resource type="Texture2D" uid="uid://q61eo0j31o0x" path="res://Art/General Button SVG.svg" id="1_x34f5"]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_left = 176.0
+offset_top = 384.0
+offset_right = 800.0
+offset_bottom = 488.0
+texture = ExtResource("1_x34f5")
+region_rect = Rect2(6, 0, 124, 125)
+patch_margin_left = 42
+patch_margin_top = 54
+patch_margin_right = 35
+patch_margin_bottom = 50
