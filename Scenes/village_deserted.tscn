@@ -1,17 +1,48 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=12 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
+[ext_resource type="Texture2D" uid="uid://nxrgjvcbrnor" path="res://Art/Village/Muffin Rock Middle.png" id="2_iij61"]
 [ext_resource type="Texture2D" uid="uid://dhk0alqfsptsn" path="res://Art/Village/Cupcake Path Straight.png" id="2_nxs47"]
+[ext_resource type="Texture2D" uid="uid://cji6qsbpthhak" path="res://Art/Village/Muffin Rock Edge.png" id="3_3rcsw"]
 [ext_resource type="Texture2D" uid="uid://cljw6mc7t0ypp" path="res://Art/Village/Cupcake House Sprinkles.png" id="3_a0qrm"]
 [ext_resource type="Texture2D" uid="uid://d14l6u0gf2rpw" path="res://Art/Village/Cupcake House Sprinkles Back View.png" id="4_hy6r4"]
+[ext_resource type="Texture2D" uid="uid://b0d7euyh5to2w" path="res://Art/Village/Muffin Rock Small.png" id="4_wjdau"]
+[ext_resource type="Texture2D" uid="uid://cfdo7yhdwgleh" path="res://Art/Village/Crumb Rock.png" id="5_i8jmq"]
 [ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="5_nc0j2"]
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
+[ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
 
 [node name="Village" type="Node2D"]
 
 [node name="CupcakeVillageGround" type="Sprite2D" parent="."]
 position = Vector2(1272, 696)
 texture = ExtResource("1_i2dyl")
+
+[node name="MuffinRockMiddle" type="Sprite2D" parent="CupcakeVillageGround"]
+position = Vector2(0, -958)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+
+[node name="MuffinRockEdge" type="Sprite2D" parent="CupcakeVillageGround"]
+position = Vector2(-826, -941)
+rotation = 0.0279019
+scale = Vector2(0.558333, 0.565278)
+texture = ExtResource("3_3rcsw")
+
+[node name="MuffinRockSmall" type="Sprite2D" parent="CupcakeVillageGround"]
+position = Vector2(-1236, -720)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("4_wjdau")
+
+[node name="CrumbRock" type="Sprite2D" parent="CupcakeVillageGround"]
+position = Vector2(91, -332)
+scale = Vector2(0.380556, 0.408333)
+texture = ExtResource("5_i8jmq")
+
+[node name="CrumbRock2" type="Sprite2D" parent="CupcakeVillageGround"]
+position = Vector2(-704, 398)
+scale = Vector2(0.380556, 0.408333)
+texture = ExtResource("5_i8jmq")
 
 [node name="CupcakePathStraight" type="Sprite2D" parent="."]
 position = Vector2(1280, 528)
@@ -34,3 +65,8 @@ texture = ExtResource("5_nc0j2")
 position = Vector2(2168, 264)
 scale = Vector2(0.322222, 0.322222)
 texture = ExtResource("6_myksh")
+
+[node name="CupcakeSkyBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1281, -713)
+texture = ExtResource("11_2sygv")
