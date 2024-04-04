@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j5yfnqanpuky"
-path="res://.godot/imported/Filled Dialogue Frame.png-471fc743da27dfaabbd174197b91e4f9.ctex"
+uid="uid://t4bnngmmqk61"
+path="res://.godot/imported/General Button.png-7e08f36f2734f8c8e52cc391e66e8e18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/Dialogue/Filled Dialogue Frame.png"
-dest_files=["res://.godot/imported/Filled Dialogue Frame.png-471fc743da27dfaabbd174197b91e4f9.ctex"]
+source_file="res://Art/Delete if not used/General Button.png"
+dest_files=["res://.godot/imported/General Button.png-7e08f36f2734f8c8e52cc391e66e8e18.ctex"]
 
 [params]
 

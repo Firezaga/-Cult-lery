@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t4bnngmmqk61"
-path="res://.godot/imported/General Button.png-bdd27077037e462aa8195227abaeb724.ctex"
+uid="uid://oqbvfketxfq7"
+path="res://.godot/imported/AP Empty Icon.png-2d999cf5db54632613fc147c390ed81a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/General Button.png"
-dest_files=["res://.godot/imported/General Button.png-bdd27077037e462aa8195227abaeb724.ctex"]
+source_file="res://Art/UI/Battle/AP Empty Icon.png"
+dest_files=["res://.godot/imported/AP Empty Icon.png-2d999cf5db54632613fc147c390ed81a.ctex"]
 
 [params]
 

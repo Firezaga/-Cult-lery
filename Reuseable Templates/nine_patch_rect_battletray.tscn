@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctf4kk8t8s5sk"]
 
-[ext_resource type="Texture2D" uid="uid://q61eo0j31o0x" path="res://Art/General Button SVG.svg" id="1_l73mk"]
+[ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="1_58yk6"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 anchors_preset = -1
@@ -13,9 +13,9 @@ offset_top = -87.48
 offset_right = 153.32
 offset_bottom = 86.52
 size_flags_horizontal = 0
-texture = ExtResource("1_l73mk")
-region_rect = Rect2(6, 0, 124, 124)
+texture = ExtResource("1_58yk6")
+region_rect = Rect2(0, 0, 129, 129)
 patch_margin_left = 42
-patch_margin_top = 54
+patch_margin_top = 55
 patch_margin_right = 35
-patch_margin_bottom = 50
+patch_margin_bottom = 51

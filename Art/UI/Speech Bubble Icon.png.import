@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3tletuq8a1sh"
-path="res://.godot/imported/Filled Frame Battle Tray.png-d02a0fb4c6c151ab853650cf7914f3da.ctex"
+uid="uid://sqxenvxrlfox"
+path="res://.godot/imported/Speech Bubble Icon.png-bc79cefdc6219fcb759456af62c1ebb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/Dialogue/Filled Frame Battle Tray.png"
-dest_files=["res://.godot/imported/Filled Frame Battle Tray.png-d02a0fb4c6c151ab853650cf7914f3da.ctex"]
+source_file="res://Art/UI/Speech Bubble Icon.png"
+dest_files=["res://.godot/imported/Speech Bubble Icon.png-bc79cefdc6219fcb759456af62c1ebb2.ctex"]
 
 [params]
 
