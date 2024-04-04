@@ -71,7 +71,7 @@ offset_top = 154.0
 offset_right = 1231.0
 offset_bottom = 322.0
 theme_override_font_sizes/font_size = 121
-text = "Paused"
+text = "PAUSED"
 
 [node name="PauseButton" type="TextureButton" parent="." groups=["game_ui"]]
 anchors_preset = 1
