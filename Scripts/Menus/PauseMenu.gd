@@ -21,6 +21,7 @@ func _process(delta):
 
 
 func _on_pause_button_pressed():
+	$AnimationPlayer.play("start_pause")
 	# pause game
 	Global.pause()
 	# remove in-game button add pause UI
