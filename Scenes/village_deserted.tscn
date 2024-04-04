@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=17 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://b0d7euyh5to2w" path="res://Art/Village/Muffin Rock Small.png" id="4_wjdau"]
 [ext_resource type="Texture2D" uid="uid://cfdo7yhdwgleh" path="res://Art/Village/Crumb Rock.png" id="5_i8jmq"]
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
+[ext_resource type="Texture2D" uid="uid://dacgfo4m6fdu1" path="res://Art/Village/Fallen Cherry Decoration.png" id="7_u6kcl"]
+[ext_resource type="Texture2D" uid="uid://blvxrq5600846" path="res://Art/Village/Cupcake House Cherry.png" id="9_saxn2"]
 [ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/player_village.tscn" id="10_0duxd"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
+[ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="13_gcoyi"]
 [ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
 
 [node name="Village" type="Node2D"]
@@ -19,32 +22,26 @@ script = ExtResource("1_q1emg")
 
 [node name="Background" type="Node" parent="."]
 
-[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background"]
-z_index = -1
-position = Vector2(2043, -706)
-texture = ExtResource("11_2sygv")
-
-[node name="CupcakeSkyBackground2" type="Sprite2D" parent="Background/CupcakeSkyBackground"]
-z_index = -1
-position = Vector2(-2548, -9)
-texture = ExtResource("11_2sygv")
-
-[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background/CupcakeSkyBackground"]
-z_index = -1
-position = Vector2(2550, 4)
-texture = ExtResource("11_2sygv")
-
-[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background/CupcakeSkyBackground/CupcakeSkyBackground"]
-z_index = -1
-position = Vector2(2550, 4)
-texture = ExtResource("11_2sygv")
-
 [node name="CupcakeVillageGround2" type="TextureRect" parent="Background"]
+anchors_preset = -1
+anchor_top = -0.108333
 offset_left = -1784.0
-offset_right = 8184.0
-offset_bottom = 1440.0
+offset_top = 5.0
+offset_right = 8413.0
+offset_bottom = 1445.0
 texture = ExtResource("1_i2dyl")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CupcakeVillageGround3" type="TextureRect" parent="Background"]
+z_index = -1
+offset_left = -1784.0
+offset_top = -1427.0
+offset_right = 8413.0
+offset_bottom = 13.0
+texture = ExtResource("11_2sygv")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CupcakeVillageGround" type="Sprite2D" parent="Background"]
 visible = false
@@ -52,62 +49,230 @@ texture_repeat = 2
 position = Vector2(1272, 696)
 texture = ExtResource("1_i2dyl")
 
-[node name="MuffinRockMiddle" type="Sprite2D" parent="Background"]
-position = Vector2(1274.5, -245)
-scale = Vector2(0.550521, 0.573611)
+[node name="Large Rocks" type="Node" parent="Background"]
+
+[node name="MuffinRockMiddle6" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(-1351.25, -227.5)
+scale = Vector2(0.567448, 0.413194)
 texture = ExtResource("2_iij61")
 
-[node name="MuffinRockEdge" type="Sprite2D" parent="Background"]
-position = Vector2(448.5, -228)
+[node name="MuffinRockSmall5" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(-683.5, -233)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("4_wjdau")
+
+[node name="MuffinRockEdge" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(-51.4997, -383)
 rotation = 0.0279019
 scale = Vector2(0.558333, 0.565278)
 texture = ExtResource("3_3rcsw")
 
-[node name="MuffinRockSmall" type="Sprite2D" parent="Background"]
-position = Vector2(38.4998, -7.00006)
+[node name="MuffinRockEdge2" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(6895.5, -233)
+rotation = 0.0279019
+scale = Vector2(0.558333, 0.565278)
+texture = ExtResource("3_3rcsw")
+
+[node name="MuffinRockMiddle" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(832.5, -343)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+
+[node name="MuffinRockMiddle2" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(2879.5, -343)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+
+[node name="MuffinRockMiddle3" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(2879.5, -343)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+
+[node name="MuffinRockMiddle4" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(5597.5, -233)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+flip_h = true
+
+[node name="MuffinRockMiddle5" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(4171.5, -343)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("2_iij61")
+flip_h = true
+
+[node name="MuffinRockSmall" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(-461.5, -162)
 scale = Vector2(0.478472, 0.504167)
 texture = ExtResource("4_wjdau")
 
-[node name="CrumbRock" type="Sprite2D" parent="Background"]
-position = Vector2(1363, 364)
-scale = Vector2(0.380556, 0.408333)
-texture = ExtResource("5_i8jmq")
+[node name="MuffinRockSmall3" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(-461.5, -162)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("4_wjdau")
 
-[node name="CrumbRock2" type="Sprite2D" parent="Background"]
-position = Vector2(568, 1024)
-scale = Vector2(0.380556, 0.408333)
-texture = ExtResource("5_i8jmq")
+[node name="MuffinRockSmall2" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(1507.5, -295)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("4_wjdau")
+
+[node name="MuffinRockSmall4" type="Sprite2D" parent="Background/Large Rocks"]
+position = Vector2(8205.5, -44)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("4_wjdau")
 
 [node name="CupcakePathStraight2" type="TextureRect" parent="Background"]
 offset_left = -1784.0
-offset_top = -192.0
+offset_top = -204.0
 offset_right = 8176.0
-offset_bottom = 1248.0
+offset_bottom = 1236.0
 texture = ExtResource("2_nxs47")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Small Rocks" type="Node" parent="Background"]
+
+[node name="CrumbRock" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(1294.5, 213)
+scale = Vector2(0.380556, 0.408333)
+texture = ExtResource("5_i8jmq")
+
+[node name="CrumbRock3" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(2926.25, 321)
+scale = Vector2(0.494722, 0.497222)
+texture = ExtResource("5_i8jmq")
+flip_h = true
+
+[node name="CrumbRock7" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(-806.5, 171)
+scale = Vector2(0.380556, 0.408333)
+texture = ExtResource("5_i8jmq")
+flip_h = true
+
+[node name="CrumbRock2" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(574, 825)
+scale = Vector2(0.380556, 0.408333)
+texture = ExtResource("5_i8jmq")
+
+[node name="CrumbRock5" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(4896, 1049)
+scale = Vector2(0.494722, 0.497222)
+texture = ExtResource("5_i8jmq")
+flip_h = true
+
+[node name="CrumbRock6" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(6314, 1049)
+scale = Vector2(0.494722, 0.497222)
+texture = ExtResource("5_i8jmq")
+
+[node name="CrumbRock4" type="Sprite2D" parent="Background/Small Rocks"]
+position = Vector2(5861.5, 191)
+scale = Vector2(0.428472, 0.421528)
+texture = ExtResource("5_i8jmq")
+
+[node name="Houses" type="Node" parent="Background"]
+
+[node name="CupcakeHouseSprinkles" type="Sprite2D" parent="Background/Houses"]
+position = Vector2(2083.5, -335)
+texture = ExtResource("3_a0qrm")
+flip_h = true
+
+[node name="CupcakeHouseSprinkles2" type="Sprite2D" parent="Background/Houses"]
+position = Vector2(4906.5, -261)
+texture = ExtResource("3_a0qrm")
+
+[node name="CupcakeHouseSprinkles3" type="Sprite2D" parent="Background/Houses"]
+position = Vector2(6319.5, -255)
+texture = ExtResource("3_a0qrm")
+
+[node name="CupcakeHouseCherry" type="Sprite2D" parent="Background/Houses"]
+position = Vector2(3455.5, -291)
+texture = ExtResource("9_saxn2")
+
+[node name="CupcakeHouseCherry2" type="Sprite2D" parent="Background/Houses"]
+position = Vector2(7629.5, -263)
+texture = ExtResource("9_saxn2")
+flip_h = true
+
+[node name="Fallen Cherries" type="Node" parent="Background"]
+
+[node name="FallenCherryDecoration" type="Sprite2D" parent="Background/Fallen Cherries"]
+position = Vector2(3900.5, 201)
+texture = ExtResource("7_u6kcl")
+flip_h = true
+
+[node name="FallenCherryDecoration2" type="Sprite2D" parent="Background/Fallen Cherries"]
+position = Vector2(3350, 876)
+scale = Vector2(1.08278, 1.08278)
+texture = ExtResource("7_u6kcl")
+
+[node name="FallenCherryDecoration3" type="Sprite2D" parent="Background/Fallen Cherries"]
+position = Vector2(6560, 872)
+scale = Vector2(1.08278, 1.08278)
+texture = ExtResource("7_u6kcl")
 
 [node name="CupcakePathStraight" type="Sprite2D" parent="Background"]
 visible = false
 position = Vector2(1280, 528)
 texture = ExtResource("2_nxs47")
 
-[node name="CupcakeHouseSprinkles" type="Sprite2D" parent="Background"]
-position = Vector2(2152, -184)
-texture = ExtResource("3_a0qrm")
-
 [node name="Foreground" type="Node" parent="."]
 
 [node name="FortuneTellerIdleSprite" type="Sprite2D" parent="Foreground"]
-position = Vector2(2168, 264)
+position = Vector2(2056, 154)
 scale = Vector2(0.322222, 0.322222)
 texture = ExtResource("6_myksh")
+
+[node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground"]
+position = Vector2(7054, 319)
+scale = Vector2(0.562326, 0.562326)
+texture = ExtResource("13_gcoyi")
 
 [node name="PlayerVillage" parent="Foreground" instance=ExtResource("10_0duxd")]
 position = Vector2(280, 408)
 
-[node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground"]
-position = Vector2(2688, 800)
+[node name="Houses" type="Node" parent="Foreground"]
+
+[node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground/Houses"]
+position = Vector2(2594, 805)
 texture = ExtResource("4_hy6r4")
+
+[node name="CupcakeHouseSprinklesBackView2" type="Sprite2D" parent="Foreground/Houses"]
+position = Vector2(4194, 806)
+texture = ExtResource("4_hy6r4")
+
+[node name="CupcakeHouseSprinklesBackView3" type="Sprite2D" parent="Foreground/Houses"]
+position = Vector2(5700, 802)
+texture = ExtResource("4_hy6r4")
+
+[node name="Large Rocks" type="Node" parent="Foreground"]
+
+[node name="MuffinRockMiddle" type="Sprite2D" parent="Foreground/Large Rocks"]
+position = Vector2(7751, 1049)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("2_iij61")
+
+[node name="MuffinRockEdge" type="Sprite2D" parent="Foreground/Large Rocks"]
+position = Vector2(7234, 1324)
+scale = Vector2(0.725521, 0.704167)
+texture = ExtResource("3_3rcsw")
+
+[node name="MuffinRockMiddle2" type="Sprite2D" parent="Foreground/Large Rocks"]
+position = Vector2(-1264, 1119)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("2_iij61")
+flip_h = true
+
+[node name="MuffinRockMiddle3" type="Sprite2D" parent="Foreground/Large Rocks"]
+position = Vector2(1125, 1488)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("2_iij61")
+flip_h = true
+
+[node name="MuffinRockEdge2" type="Sprite2D" parent="Foreground/Large Rocks"]
+position = Vector2(-193, 1246)
+scale = Vector2(0.725521, 0.704167)
+texture = ExtResource("3_3rcsw")
+flip_h = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 600.0
@@ -115,5 +280,6 @@ offset_top = -856.0
 offset_right = 1032.0
 offset_bottom = -584.0
 text = "Test"
+metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_mo8rh")]
