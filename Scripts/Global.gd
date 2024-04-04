@@ -8,6 +8,7 @@ var VillageDeserted = "res://Scenes/village_deserted.tscn"
 var current_scene = null
 
 # Character variables - for saving/loading and going between scenes
+var PlayerName = null
 var PlayerMaxHealth = null
 var PlayerCurHealth = null
 var PlayerAttack = null
@@ -111,7 +112,7 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("escape"):
 		quit_game()
 
