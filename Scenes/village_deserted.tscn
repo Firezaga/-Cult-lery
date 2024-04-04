@@ -21,7 +21,22 @@ script = ExtResource("1_q1emg")
 
 [node name="CupcakeSkyBackground" type="Sprite2D" parent="Background"]
 z_index = -1
-position = Vector2(1281, -713)
+position = Vector2(2043, -706)
+texture = ExtResource("11_2sygv")
+
+[node name="CupcakeSkyBackground2" type="Sprite2D" parent="Background/CupcakeSkyBackground"]
+z_index = -1
+position = Vector2(-2548, -9)
+texture = ExtResource("11_2sygv")
+
+[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background/CupcakeSkyBackground"]
+z_index = -1
+position = Vector2(2550, 4)
+texture = ExtResource("11_2sygv")
+
+[node name="CupcakeSkyBackground" type="Sprite2D" parent="Background/CupcakeSkyBackground/CupcakeSkyBackground"]
+z_index = -1
+position = Vector2(2550, 4)
 texture = ExtResource("11_2sygv")
 
 [node name="CupcakeVillageGround2" type="TextureRect" parent="Background"]
