@@ -178,3 +178,12 @@ func main_menu():
 # Used to quit game
 func quit_game():
 	get_tree().quit()
+
+
+func pause():
+	get_tree().paused = true
+
+
+func unpause():
+	get_tree().paused = false
+

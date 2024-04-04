@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=3 uid="uid://6m1saae2adgt"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
+[ext_resource type="Texture2D" uid="uid://ck8axdh71v8fp" path="res://Art/BlakeTest/new_gradient_texture_1d.tres" id="1_l8kmc"]
+[ext_resource type="Texture2D" uid="uid://rvmienl8cwkg" path="res://Art/BlakeTest/new_gradient_texture_1d1.tres" id="2_l68b0"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_a2yh5")
+
+[node name="Label" type="Label" parent="." groups=["pause_menu"]]
+offset_left = 800.0
+offset_top = 88.0
+offset_right = 1240.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 121
+text = "Paused"
+
+[node name="PauseButton" type="TextureButton" parent="." groups=["game_ui"]]
+offset_left = 1632.0
+offset_top = 56.0
+offset_right = 1801.0
+offset_bottom = 215.0
+texture_normal = ExtResource("1_l8kmc")
+texture_hover = ExtResource("2_l68b0")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PauseButton"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 32.0
+offset_right = 125.0
+offset_bottom = 123.0
+theme_override_font_sizes/font_size = 66
+text = "||"
+
+[node name="Label2" type="Label" parent="PauseButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 7.0
+offset_right = 136.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 31
+text = "PAUSE"
+
+[node name="UnpauseButton" type="TextureButton" parent="." groups=["pause_menu"]]
+offset_left = 836.0
+offset_top = 849.0
+offset_right = 1143.0
+offset_bottom = 902.0
+texture_normal = ExtResource("1_l8kmc")
+texture_hover = ExtResource("2_l68b0")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UnpauseButton"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 4.0
+offset_right = 223.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 31
+text = "Unpause"
+
+[node name="QuitToMenuButton" type="TextureButton" parent="." groups=["pause_menu"]]
+offset_left = 238.0
+offset_top = 987.0
+offset_right = 574.0
+offset_bottom = 1044.0
+texture_normal = ExtResource("1_l8kmc")
+texture_hover = ExtResource("2_l68b0")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitToMenuButton"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 7.0
+offset_right = 269.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 31
+text = "Quit To Menu"
+
+[node name="QuitToDesktopButton" type="TextureButton" parent="." groups=["pause_menu"]]
+offset_left = 1393.0
+offset_top = 979.0
+offset_right = 1729.0
+offset_bottom = 1036.0
+texture_normal = ExtResource("1_l8kmc")
+texture_hover = ExtResource("2_l68b0")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitToDesktopButton"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 6.0
+offset_right = 285.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 31
+text = "Quit To Desktop"
+
+[node name="UI Elements" type="Control" parent="." groups=["pause_menu"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="Label" parent="UI Elements"]
+offset_left = 296.0
+offset_top = 293.0
+offset_right = 487.0
+offset_bottom = 326.0
+text = "Name: "
+
+[node name="MaxHealth" type="Label" parent="UI Elements"]
+offset_left = 298.0
+offset_top = 329.0
+offset_right = 489.0
+offset_bottom = 362.0
+text = "Max Health:"
+
+[node name="CurrentHealth" type="Label" parent="UI Elements"]
+offset_left = 302.0
+offset_top = 365.0
+offset_right = 493.0
+offset_bottom = 398.0
+text = "Current Health:"
+
+[node name="Attack" type="Label" parent="UI Elements"]
+offset_left = 300.0
+offset_top = 401.0
+offset_right = 491.0
+offset_bottom = 434.0
+text = "Attack:"
+
+[node name="Defense" type="Label" parent="UI Elements"]
+offset_left = 292.0
+offset_top = 439.0
+offset_right = 483.0
+offset_bottom = 472.0
+text = "Defense:"
+
+[node name="Level" type="Label" parent="UI Elements"]
+offset_left = 298.0
+offset_top = 471.0
+offset_right = 489.0
+offset_bottom = 504.0
+text = "Level:"
+
+[node name="MaxExperience" type="Label" parent="UI Elements"]
+offset_left = 294.0
+offset_top = 511.0
+offset_right = 485.0
+offset_bottom = 544.0
+text = "Max Experience:"
+
+[node name="CurrentExperience" type="Label" parent="UI Elements"]
+offset_left = 294.0
+offset_top = 545.0
+offset_right = 485.0
+offset_bottom = 578.0
+text = "Current Experience:"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="UnpauseButton" to="." method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
+[connection signal="pressed" from="QuitToDesktopButton" to="." method="_on_quit_to_desktop_button_pressed"]

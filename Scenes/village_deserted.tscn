@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=14 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
 [ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/player_village.tscn" id="10_0duxd"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
+[ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
 
 [node name="Village" type="Node2D"]
 script = ExtResource("1_q1emg")
@@ -99,3 +100,5 @@ offset_top = -856.0
 offset_right = 1032.0
 offset_bottom = -584.0
 text = "Test"
+
+[node name="PauseMenu" parent="." instance=ExtResource("13_mo8rh")]
