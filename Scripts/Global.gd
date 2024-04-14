@@ -87,6 +87,7 @@ func get_player_cur_experience():
 func get_player_inv():
 	return PlayerInv
 
+
 func set_enemy(NumberOf, _Enemy1, _Enemy2, _Enemy3):
 	EnemyNumberOf = NumberOf
 	Enemy1 = _Enemy1

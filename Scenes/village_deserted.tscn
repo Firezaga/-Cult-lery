@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=18 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
@@ -16,6 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="13_gcoyi"]
 [ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hv0lh"]
+radius = 572.622
+height = 1255.5
 
 [node name="Village" type="Node2D"]
 script = ExtResource("1_q1emg")
@@ -222,11 +226,6 @@ position = Vector2(2056, 154)
 scale = Vector2(0.322222, 0.322222)
 texture = ExtResource("6_myksh")
 
-[node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground"]
-position = Vector2(7054, 319)
-scale = Vector2(0.562326, 0.562326)
-texture = ExtResource("13_gcoyi")
-
 [node name="PlayerVillage" parent="Foreground" instance=ExtResource("10_0duxd")]
 position = Vector2(280, 408)
 
@@ -274,6 +273,18 @@ scale = Vector2(0.725521, 0.704167)
 texture = ExtResource("3_3rcsw")
 flip_h = true
 
+[node name="_Chad_ish" type="Area2D" parent="Foreground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/_Chad_ish"]
+position = Vector2(7054, 319)
+scale = Vector2(0.562326, 0.562326)
+shape = SubResource("CapsuleShape2D_hv0lh")
+
+[node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground/_Chad_ish"]
+position = Vector2(7054, 319)
+scale = Vector2(0.562326, 0.562326)
+texture = ExtResource("13_gcoyi")
+
 [node name="Label" type="Label" parent="."]
 offset_left = 600.0
 offset_top = -856.0
@@ -283,3 +294,5 @@ text = "Test"
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_mo8rh")]
+
+[connection signal="area_entered" from="Foreground/_Chad_ish" to="." method="_on__chad_ish_area_entered"]
