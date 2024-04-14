@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=20 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
 [ext_resource type="Texture2D" uid="uid://dacgfo4m6fdu1" path="res://Art/Village/Fallen Cherry Decoration.png" id="7_u6kcl"]
 [ext_resource type="Texture2D" uid="uid://blvxrq5600846" path="res://Art/Village/Cupcake House Cherry.png" id="9_saxn2"]
-[ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/player_village.tscn" id="10_0duxd"]
+[ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/Player/player_village.tscn" id="10_0duxd"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="13_gcoyi"]
 [ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
@@ -20,6 +20,27 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hv0lh"]
 radius = 572.622
 height = 1255.5
+
+[sub_resource type="Animation" id="Animation_3tgfu"]
+resource_name = "radish_up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RadishBossIdleSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4233.88, 922.875), Vector2(4233.88, 133)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_shayh"]
+_data = {
+"radish_up": SubResource("Animation_3tgfu")
+}
 
 [node name="Village" type="Node2D"]
 script = ExtResource("1_q1emg")
@@ -229,6 +250,23 @@ texture = ExtResource("6_myksh")
 [node name="PlayerVillage" parent="Foreground" instance=ExtResource("10_0duxd")]
 position = Vector2(280, 408)
 
+[node name="_Chad_ish" type="Area2D" parent="Foreground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/_Chad_ish"]
+position = Vector2(3994, 528)
+scale = Vector2(0.562326, 0.562326)
+shape = SubResource("CapsuleShape2D_hv0lh")
+
+[node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground/_Chad_ish"]
+position = Vector2(4233.88, 922.875)
+scale = Vector2(0.562326, 0.562326)
+texture = ExtResource("13_gcoyi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Foreground/_Chad_ish"]
+libraries = {
+"": SubResource("AnimationLibrary_shayh")
+}
+
 [node name="Houses" type="Node" parent="Foreground"]
 
 [node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground/Houses"]
@@ -273,18 +311,6 @@ scale = Vector2(0.725521, 0.704167)
 texture = ExtResource("3_3rcsw")
 flip_h = true
 
-[node name="_Chad_ish" type="Area2D" parent="Foreground"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/_Chad_ish"]
-position = Vector2(7054, 319)
-scale = Vector2(0.562326, 0.562326)
-shape = SubResource("CapsuleShape2D_hv0lh")
-
-[node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground/_Chad_ish"]
-position = Vector2(7054, 319)
-scale = Vector2(0.562326, 0.562326)
-texture = ExtResource("13_gcoyi")
-
 [node name="Label" type="Label" parent="."]
 offset_left = 600.0
 offset_top = -856.0
@@ -296,3 +322,4 @@ metadata/_edit_use_anchors_ = true
 [node name="PauseMenu" parent="." instance=ExtResource("13_mo8rh")]
 
 [connection signal="area_entered" from="Foreground/_Chad_ish" to="." method="_on__chad_ish_area_entered"]
+[connection signal="animation_finished" from="Foreground/_Chad_ish/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

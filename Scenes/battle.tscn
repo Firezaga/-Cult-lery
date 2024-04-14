@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=20 format=3 uid="uid://dk5kvc27hsf71"]
 
-[ext_resource type="Script" path="res://Scenes/battle.gd" id="1_rqkbr"]
+[ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
 [ext_resource type="Texture2D" uid="uid://b42tllqqdk71v" path="res://Art/BlakeTest/new_noise_texture_2d.tres" id="3_0lc8w"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dbxlc4pdiqe2y" path="res://Art/Weapons/Horn Slice Axe Sprite.png" id="5_fgpvi"]
 [ext_resource type="Texture2D" uid="uid://dubyscflobi0m" path="res://Art/Weapons/Sunset Fall Shield Sprite.png" id="6_8pok4"]
 [ext_resource type="Texture2D" uid="uid://bbjmftrf2j5wf" path="res://Art/Weapons/Swift Sword Sprite.png" id="7_g2fei"]
-[ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="8_sv75e"]
 [ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="9_3d1m4"]
 [ext_resource type="Texture2D" uid="uid://n0nn8cwxpx4t" path="res://Art/UI/Battle/Attack Button.png" id="10_h3wp1"]
 [ext_resource type="Texture2D" uid="uid://ce5cblcf2witn" path="res://Art/UI/Battle/Defend Button.png" id="11_yajv7"]
@@ -17,6 +16,20 @@
 [ext_resource type="Texture2D" uid="uid://0fmd3qg63grv" path="res://Art/UI/Battle/Battle Text Button.png" id="14_pboex"]
 [ext_resource type="Texture2D" uid="uid://rvmienl8cwkg" path="res://Art/BlakeTest/new_gradient_texture_1d1.tres" id="15_r3uas"]
 [ext_resource type="Texture2D" uid="uid://oqbvfketxfq7" path="res://Art/UI/Battle/AP Empty Icon.png" id="16_kim5s"]
+
+[sub_resource type="Animation" id="Animation_rs55o"]
+length = 2.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BattleStart/ColorRect:material:shader_parameter/amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5)
+}
 
 [sub_resource type="Animation" id="Animation_tahno"]
 resource_name = "battle_start"
@@ -33,20 +46,6 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2)
 }
 
-[sub_resource type="Animation" id="Animation_rs55o"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BattleStart/ColorRect:material:shader_parameter/amount")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0c4gh"]
 _data = {
 "RESET": SubResource("Animation_rs55o"),
@@ -54,6 +53,7 @@ _data = {
 }
 
 [node name="Battle" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_rqkbr")
 
 [node name="BattleStart" type="Node" parent="."]
@@ -105,16 +105,15 @@ texture = ExtResource("7_g2fei")
 
 [node name="Enemy" type="Node" parent="."]
 
-[node name="RadishBossIdleSprite" type="Sprite2D" parent="Enemy" groups=["Battle"]]
+[node name="Enemy1" type="Sprite2D" parent="Enemy" groups=["Battle"]]
 position = Vector2(1470, 431)
 scale = Vector2(0.518707, 0.518707)
-texture = ExtResource("8_sv75e")
 
 [node name="UI" type="Node" parent="."]
 
 [node name="Buttons" type="Node" parent="UI"]
 
-[node name="ButtonBackground" type="NinePatchRect" parent="UI/Buttons" groups=["Battle"]]
+[node name="ButtonBackground" type="NinePatchRect" parent="UI/Buttons" groups=["Battle", "ButtonsWBack"]]
 offset_left = 810.0
 offset_top = 652.0
 offset_right = 1874.0
@@ -128,7 +127,21 @@ patch_margin_top = 53
 patch_margin_right = 26
 patch_margin_bottom = 52
 
-[node name="AttackButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="BattleText" type="Label" parent="UI/Buttons/ButtonBackground" groups=["Battle"]]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 29.0
+offset_right = 1037.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AttackButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 912.0
 offset_top = 704.0
 offset_right = 1051.0
@@ -137,7 +150,8 @@ texture_normal = ExtResource("10_h3wp1")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="DefendButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="DefendButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1131.0
 offset_top = 705.0
 offset_right = 1270.0
@@ -146,7 +160,8 @@ texture_normal = ExtResource("11_yajv7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="WaitButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="WaitButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1392.0
 offset_top = 704.0
 offset_right = 1531.0
@@ -155,7 +170,8 @@ texture_normal = ExtResource("12_qqujl")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="FleeButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="FleeButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1640.0
 offset_top = 704.0
 offset_right = 1779.0
@@ -164,7 +180,8 @@ texture_normal = ExtResource("13_t3jkd")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="OrderButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="OrderButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 920.0
 offset_top = 896.0
 offset_right = 1261.0
@@ -173,7 +190,7 @@ texture_normal = ExtResource("14_pboex")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="UI/Buttons/OrderButton" groups=["Battle"]]
+[node name="Label" type="Label" parent="UI/Buttons/OrderButton" groups=["Buttons", "ButtonsWBack"]]
 layout_mode = 0
 offset_left = 123.0
 offset_top = 27.0
@@ -182,7 +199,8 @@ offset_bottom = 62.0
 theme_override_font_sizes/font_size = 25
 text = "ORDER"
 
-[node name="SpecialsButton" type="TextureButton" parent="UI/Buttons" groups=["Battle"]]
+[node name="SpecialsButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1416.0
 offset_top = 896.0
 offset_right = 1757.0
@@ -191,7 +209,7 @@ texture_normal = ExtResource("14_pboex")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="UI/Buttons/SpecialsButton" groups=["Battle"]]
+[node name="Label" type="Label" parent="UI/Buttons/SpecialsButton" groups=["Buttons", "ButtonsWBack"]]
 layout_mode = 0
 offset_left = 121.0
 offset_top = 27.0
@@ -257,3 +275,9 @@ offset_top = 57.0
 offset_right = 1779.0
 offset_bottom = 89.0
 texture = ExtResource("15_r3uas")
+
+[connection signal="animation_finished" from="BattleStart/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="UI/Buttons/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/DefendButton" to="." method="_on_defend_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/WaitButton" to="." method="_on_wait_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/FleeButton" to="." method="_on_flee_button_pressed"]

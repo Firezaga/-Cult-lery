@@ -4,6 +4,7 @@ extends Node
 var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
+var Battle = "res://Scenes/battle.tscn"
 var VillageDeserted = "res://Scenes/village_deserted.tscn"
 var current_scene = null
 
@@ -21,92 +22,25 @@ var PlayerLoc = null
 
 # Enemy variables
 var EnemyNumberOf = null
+
 var Enemy1 = null
+var Enemy1Name = null
+var Enemy1Health = null
+var Enemy1Attack = null
+var Enemy1Defense = null
+
 var Enemy2 = null
-var Enemy3 = null
+var Enemy2Name = null
+var Enemy2Health = null
+var Enemy2Attack = null
+var Enemy2Defense = null
 
+var enemy3 = null
+var Enemy3Name = null
+var Enemy3Health = null
+var Enemy3Attack = null
+var Enemy3Defense = null
 
-# ------------------------------------------------------------------------------
-#region
-# Getter/Setter functions
-func set_player(MaxHealth, CurHealth, Attack, Defense, Lvl, MaxExperience, CurExperience, Inv):
-	PlayerMaxHealth = MaxHealth
-	PlayerCurHealth = CurHealth
-	PlayerAttack = Attack
-	PlayerDefense = Defense
-	PlayerLvl = Lvl
-	PlayerMaxExperience = MaxExperience
-	PlayerCurExperience = CurExperience
-	PlayerInv = Inv
-
-func set_player_max_health(i):
-	PlayerMaxHealth = i
-
-func set_player_cur_health(i):
-	PlayerCurHealth = i
-
-func set_player_attack(i):
-	PlayerAttack = i
-
-func set_player_defense(i):
-	PlayerDefense = i
-
-func set_player_lvl(i):
-	PlayerLvl = i
-
-func set_player_max_experience(i):
-	PlayerMaxExperience = i
-
-func set_player_cur_experience(i):
-	PlayerCurExperience = i
-
-func set_player_inv(i):
-	PlayerInv = i
-
-func get_player_max_health(): 
-	return PlayerMaxHealth
-
-func get_player_cur_health(): 
-	return PlayerCurHealth
-
-func get_player_attack(): 
-	return PlayerAttack
-
-func get_player_defense():
-	return PlayerDefense
-
-func get_player_lvl():
-	return PlayerLvl
-
-func get_player_max_experience():
-	return PlayerMaxExperience
-
-func get_player_cur_experience():
-	return PlayerCurExperience
-
-func get_player_inv():
-	return PlayerInv
-
-
-func set_enemy(NumberOf, _Enemy1, _Enemy2, _Enemy3):
-	EnemyNumberOf = NumberOf
-	Enemy1 = _Enemy1
-	Enemy2 = _Enemy2
-	Enemy3 = _Enemy3
-
-func get_enemy_number_of():
-	return EnemyNumberOf
-
-func get_enemy_1():
-	return Enemy1
-
-func get_enemy_2():
-	return Enemy2
-
-func get_enemy_3():
-	return Enemy3
-
-#endregion
 
 func _ready():
 	var root = get_tree().get_root()
@@ -148,6 +82,12 @@ func _deferred_goto_scene(path):
 
 func goto_village_deserted():
 	goto_scene(VillageDeserted)
+
+func load_battle():
+	get_tree().paused = true
+	var scene = load(Battle)
+	var instance = scene.instantiate()
+	add_child(instance)
 
 func new_game():
 	PlayerMaxHealth = 50
