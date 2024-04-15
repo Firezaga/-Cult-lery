@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=23 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
@@ -14,8 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://cgi6mavcvqjwg" path="res://Art/UI/Battle/Empty Circle Button.png" id="12_qqujl"]
 [ext_resource type="Texture2D" uid="uid://2j3bis0h71b0" path="res://Art/UI/Battle/Flee Button.png" id="13_t3jkd"]
 [ext_resource type="Texture2D" uid="uid://0fmd3qg63grv" path="res://Art/UI/Battle/Battle Text Button.png" id="14_pboex"]
-[ext_resource type="Texture2D" uid="uid://rvmienl8cwkg" path="res://Art/BlakeTest/new_gradient_texture_1d1.tres" id="15_r3uas"]
+[ext_resource type="Texture2D" uid="uid://c3chl47wt8xtf" path="res://Art/BlakeTest/healthbacktest.png" id="16_3m3di"]
 [ext_resource type="Texture2D" uid="uid://oqbvfketxfq7" path="res://Art/UI/Battle/AP Empty Icon.png" id="16_kim5s"]
+[ext_resource type="Texture2D" uid="uid://c07xh5uepdi1w" path="res://Art/BlakeTest/healthfronttest.png" id="17_hbti0"]
+[ext_resource type="Texture2D" uid="uid://bmmn8683u5npk" path="res://Art/BlakeTest/healthEbacktest.png" id="18_sei1y"]
+[ext_resource type="Texture2D" uid="uid://cigh6qg3n4mqu" path="res://Art/BlakeTest/healthEfronttest.png" id="19_dg36b"]
 
 [sub_resource type="Animation" id="Animation_rs55o"]
 length = 2.5
@@ -220,13 +223,6 @@ text = "SPECIALS"
 
 [node name="Player" type="Node" parent="UI"]
 
-[node name="PlayerHealth" type="TextureRect" parent="UI/Player" groups=["Battle"]]
-offset_left = 130.0
-offset_top = 57.0
-offset_right = 673.0
-offset_bottom = 89.0
-texture = ExtResource("15_r3uas")
-
 [node name="ApEmptyIcon" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
 position = Vector2(195, 181)
 scale = Vector2(0.10733, 0.10733)
@@ -267,14 +263,30 @@ position = Vector2(600.5, 337.828)
 scale = Vector2(0.10733, 0.10733)
 texture = ExtResource("16_kim5s")
 
+[node name="PlayerHealth" type="TextureProgressBar" parent="UI/Player" groups=["Battle"]]
+offset_left = 36.0
+offset_top = 21.0
+offset_right = 773.0
+offset_bottom = 199.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("16_3m3di")
+texture_progress = ExtResource("17_hbti0")
+tint_progress = Color(0, 1, 0, 1)
+
 [node name="Enemy" type="Node" parent="UI"]
 
-[node name="PlayerHealth" type="TextureRect" parent="UI/Enemy" groups=["Battle"]]
-offset_left = 1236.0
-offset_top = 57.0
-offset_right = 1779.0
-offset_bottom = 89.0
-texture = ExtResource("15_r3uas")
+[node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy" groups=["Battle"]]
+offset_left = 1066.0
+offset_top = 29.0
+offset_right = 1815.0
+offset_bottom = 217.0
+value = 10.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("18_sei1y")
+texture_progress = ExtResource("19_dg36b")
+tint_progress = Color(0, 1, 0, 1)
 
 [connection signal="animation_finished" from="BattleStart/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="UI/Buttons/AttackButton" to="." method="_on_attack_button_pressed"]

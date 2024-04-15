@@ -91,7 +91,7 @@ func load_battle():
 
 func new_game():
 	PlayerMaxHealth = 50
-	PlayerCurHealth = 50
+	PlayerCurHealth = 30
 	PlayerAttack = 5
 	PlayerDefense = 5
 	PlayerLvl = 1
