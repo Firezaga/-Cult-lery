@@ -74,6 +74,8 @@ func DamageToPlayer(amount):
 	var tween = get_tree().create_tween()
 	tween.tween_property(player_health_bar, "value", Global.PlayerCurHealth, 0.5)
 	await DisplayText(str(damage) + " points of damage recieved.")
+	if Global.PlayerCurHealth < 1:
+		Global.game_over()
 
 
 func DamageToEnemy1(amount):

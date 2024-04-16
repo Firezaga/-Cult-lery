@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dm3ea67cdqk2j"]
 
 [ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_c4he1"]
-[ext_resource type="VideoStream" path="res://Cutscenes/opening_cutscene.ogv" id="2_btnqw"]
+[ext_resource type="VideoStream" path="res://Cutscenes/Final_Cutscene_1920x1080 (1).ogv" id="2_wupdu"]
 
 [node name="NewGame" type="Node2D"]
 script = ExtResource("1_c4he1")
@@ -16,7 +16,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_btnqw")
+stream = ExtResource("2_wupdu")
 autoplay = true
 
 [node name="PlayerNameTextInput" type="LineEdit" parent="."]

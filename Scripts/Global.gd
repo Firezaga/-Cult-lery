@@ -156,9 +156,9 @@ func quit_game():
 
 
 func pause():
-	get_tree().paused = true
+	current_scene.get_tree().paused = true
 
 
 func unpause():
-	get_tree().paused = false
+	current_scene.get_tree().paused = false
 

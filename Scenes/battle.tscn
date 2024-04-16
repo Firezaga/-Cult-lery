@@ -1,22 +1,33 @@
-[gd_scene load_steps=21 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=32 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
 [ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
+[ext_resource type="Texture2D" uid="uid://bswwgvooenevu" path="res://Art/UI/Battle/Attack Button Hover.png" id="8_nj4sy"]
 [ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="9_3d1m4"]
+[ext_resource type="Texture2D" uid="uid://b3nkibcnfytwh" path="res://Art/UI/Battle/Attack Button Dis.png" id="9_04usm"]
+[ext_resource type="Texture2D" uid="uid://b1phf6uy0l04f" path="res://Art/UI/Battle/Wait Button.png" id="9_bck3x"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="9_oy5gh"]
 [ext_resource type="Texture2D" uid="uid://n0nn8cwxpx4t" path="res://Art/UI/Battle/Attack Button.png" id="10_h3wp1"]
+[ext_resource type="Texture2D" uid="uid://v5ebrqwjjg4i" path="res://Art/UI/Battle/Defend Button Hover.png" id="11_h4ylx"]
 [ext_resource type="Texture2D" uid="uid://ce5cblcf2witn" path="res://Art/UI/Battle/Defend Button.png" id="11_yajv7"]
-[ext_resource type="Texture2D" uid="uid://cgi6mavcvqjwg" path="res://Art/UI/Battle/Empty Circle Button.png" id="12_qqujl"]
+[ext_resource type="Texture2D" uid="uid://dvyrwadj28mpd" path="res://Art/UI/Battle/Defend Button Dis.png" id="12_0i67s"]
 [ext_resource type="Texture2D" uid="uid://2j3bis0h71b0" path="res://Art/UI/Battle/Flee Button.png" id="13_t3jkd"]
-[ext_resource type="Texture2D" uid="uid://djc726i837jkm" path="res://Art/BlakeTest/TestPB.png" id="14_l2arw"]
+[ext_resource type="Texture2D" uid="uid://ctkjp020t618j" path="res://Art/UI [Updated]/Battle/HP Bar Background.png" id="14_gg4hw"]
+[ext_resource type="Texture2D" uid="uid://tm0ypai0ay8y" path="res://Art/UI/Battle/Wait Button Hover.png" id="14_hdfah"]
 [ext_resource type="Texture2D" uid="uid://0fmd3qg63grv" path="res://Art/UI/Battle/Battle Text Button.png" id="14_pboex"]
-[ext_resource type="Texture2D" uid="uid://deaifatex7yjy" path="res://Art/BlakeTest/TestPF.png" id="15_radu2"]
-[ext_resource type="Texture2D" uid="uid://dvrtlxlam3pe7" path="res://Art/BlakeTest/TestEB.png" id="16_6tyml"]
+[ext_resource type="Texture2D" uid="uid://bfgu4ulxuakv7" path="res://Art/UI [Updated]/Battle/HP Fill Fixed.png" id="15_a2qia"]
+[ext_resource type="Texture2D" uid="uid://ci7nigkv6abss" path="res://Art/UI/Battle/Wait Button Dis.png" id="15_o7wcd"]
+[ext_resource type="Texture2D" uid="uid://8duk3joobql" path="res://Art/UI [Updated]/Battle/HP Back Enemy.png" id="16_2pc08"]
 [ext_resource type="Texture2D" uid="uid://oqbvfketxfq7" path="res://Art/UI/Battle/AP Empty Icon.png" id="16_kim5s"]
 [ext_resource type="Texture2D" uid="uid://bruojjpgok5vl" path="res://Art/UI/Battle/AP Filled Icon.png" id="17_8ueu7"]
-[ext_resource type="Texture2D" uid="uid://b0mnvtsjw78rh" path="res://Art/BlakeTest/TestEF.png" id="17_ye6vf"]
+[ext_resource type="Texture2D" uid="uid://bxmao6i3gamfa" path="res://Art/UI [Updated]/Battle/HP Fill Enemy.png" id="17_v2knm"]
+[ext_resource type="Texture2D" uid="uid://corlvcft3fgj5" path="res://Art/UI/Battle/Flee ButtonHover.png" id="17_x1h1o"]
+[ext_resource type="Texture2D" uid="uid://c7kh15feal4sf" path="res://Art/UI/Battle/Flee Button Dis.png" id="18_k4tis"]
+[ext_resource type="Texture2D" uid="uid://cr3nlppssdpo8" path="res://Art/UI/Battle/Battle Text Button Hover.png" id="20_c153p"]
+[ext_resource type="Texture2D" uid="uid://dw5xdig3nlwfo" path="res://Art/UI/Battle/Battle Text Button Dis.png" id="21_ur7p4"]
+[ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="22_ljdfw"]
 
 [sub_resource type="Animation" id="Animation_rs55o"]
 length = 2.5
@@ -54,6 +65,7 @@ _data = {
 }
 
 [node name="Battle" type="CanvasLayer"]
+process_mode = 1
 layer = 2
 script = ExtResource("1_rqkbr")
 
@@ -146,6 +158,8 @@ offset_top = 704.0
 offset_right = 1051.0
 offset_bottom = 843.0
 texture_normal = ExtResource("10_h3wp1")
+texture_hover = ExtResource("8_nj4sy")
+texture_disabled = ExtResource("9_04usm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -156,6 +170,8 @@ offset_top = 705.0
 offset_right = 1270.0
 offset_bottom = 844.0
 texture_normal = ExtResource("11_yajv7")
+texture_hover = ExtResource("11_h4ylx")
+texture_disabled = ExtResource("12_0i67s")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -165,7 +181,10 @@ offset_left = 1392.0
 offset_top = 704.0
 offset_right = 1531.0
 offset_bottom = 843.0
-texture_normal = ExtResource("12_qqujl")
+disabled = true
+texture_normal = ExtResource("9_bck3x")
+texture_hover = ExtResource("14_hdfah")
+texture_disabled = ExtResource("15_o7wcd")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -175,7 +194,10 @@ offset_left = 1640.0
 offset_top = 704.0
 offset_right = 1779.0
 offset_bottom = 843.0
+disabled = true
 texture_normal = ExtResource("13_t3jkd")
+texture_hover = ExtResource("17_x1h1o")
+texture_disabled = ExtResource("18_k4tis")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -185,18 +207,23 @@ offset_left = 920.0
 offset_top = 896.0
 offset_right = 1261.0
 offset_bottom = 978.0
+disabled = true
 texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="UI/Buttons/OrderButton" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 layout_mode = 0
-offset_left = 123.0
-offset_top = 27.0
-offset_right = 207.0
-offset_bottom = 62.0
+offset_left = 106.0
+offset_top = 22.0
+offset_right = 210.0
+offset_bottom = 66.0
 theme_override_font_sizes/font_size = 25
 text = "ORDER"
+label_settings = ExtResource("22_ljdfw")
 
 [node name="SpecialsButton" type="TextureButton" parent="UI/Buttons" groups=["Buttons", "ButtonsWBack"]]
 visible = false
@@ -204,18 +231,23 @@ offset_left = 1416.0
 offset_top = 896.0
 offset_right = 1757.0
 offset_bottom = 978.0
+disabled = true
 texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="UI/Buttons/SpecialsButton" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 layout_mode = 0
-offset_left = 121.0
-offset_top = 27.0
-offset_right = 233.0
-offset_bottom = 62.0
+offset_left = 103.0
+offset_top = 22.0
+offset_right = 240.0
+offset_bottom = 66.0
 theme_override_font_sizes/font_size = 25
 text = "SPECIALS"
+label_settings = ExtResource("22_ljdfw")
 
 [node name="Player" type="Node" parent="UI"]
 
@@ -341,32 +373,30 @@ radial_initial_angle = 143.5
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="UI/Player" groups=["Battle"]]
 offset_left = 36.0
-offset_top = 11.0
-offset_right = 782.0
-offset_bottom = 105.0
+offset_top = 53.0
+offset_right = 838.0
+offset_bottom = 131.0
 step = 0.0
 value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("14_l2arw")
-texture_progress = ExtResource("15_radu2")
-texture_progress_offset = Vector2(-10, 0)
+texture_under = ExtResource("14_gg4hw")
+texture_progress = ExtResource("15_a2qia")
 tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy" type="Node" parent="UI"]
 
 [node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy" groups=["Battle"]]
-offset_left = 1095.0
-offset_top = 34.0
-offset_right = 1813.0
-offset_bottom = 123.0
+offset_left = 1081.0
+offset_top = 53.0
+offset_right = 1760.0
+offset_bottom = 142.0
 max_value = 80.0
 step = 0.0
 value = 80.0
 fill_mode = 1
 nine_patch_stretch = true
-texture_under = ExtResource("16_6tyml")
-texture_progress = ExtResource("17_ye6vf")
-texture_progress_offset = Vector2(10, 0)
+texture_under = ExtResource("16_2pc08")
+texture_progress = ExtResource("17_v2knm")
 tint_progress = Color(0, 1, 0, 1)
 
 [connection signal="animation_finished" from="BattleStart/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
