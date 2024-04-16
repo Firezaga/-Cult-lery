@@ -1,24 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=21 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
-[ext_resource type="Texture2D" uid="uid://b42tllqqdk71v" path="res://Art/BlakeTest/new_noise_texture_2d.tres" id="3_0lc8w"]
+[ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
-[ext_resource type="Texture2D" uid="uid://c2y2ma44ndkl8" path="res://Art/Weapons/Blood Moon Blade Sprite.png" id="4_bmewb"]
-[ext_resource type="Texture2D" uid="uid://dbxlc4pdiqe2y" path="res://Art/Weapons/Horn Slice Axe Sprite.png" id="5_fgpvi"]
-[ext_resource type="Texture2D" uid="uid://dubyscflobi0m" path="res://Art/Weapons/Sunset Fall Shield Sprite.png" id="6_8pok4"]
-[ext_resource type="Texture2D" uid="uid://bbjmftrf2j5wf" path="res://Art/Weapons/Swift Sword Sprite.png" id="7_g2fei"]
 [ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="9_3d1m4"]
+[ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="9_oy5gh"]
 [ext_resource type="Texture2D" uid="uid://n0nn8cwxpx4t" path="res://Art/UI/Battle/Attack Button.png" id="10_h3wp1"]
 [ext_resource type="Texture2D" uid="uid://ce5cblcf2witn" path="res://Art/UI/Battle/Defend Button.png" id="11_yajv7"]
 [ext_resource type="Texture2D" uid="uid://cgi6mavcvqjwg" path="res://Art/UI/Battle/Empty Circle Button.png" id="12_qqujl"]
 [ext_resource type="Texture2D" uid="uid://2j3bis0h71b0" path="res://Art/UI/Battle/Flee Button.png" id="13_t3jkd"]
+[ext_resource type="Texture2D" uid="uid://djc726i837jkm" path="res://Art/BlakeTest/TestPB.png" id="14_l2arw"]
 [ext_resource type="Texture2D" uid="uid://0fmd3qg63grv" path="res://Art/UI/Battle/Battle Text Button.png" id="14_pboex"]
-[ext_resource type="Texture2D" uid="uid://c3chl47wt8xtf" path="res://Art/BlakeTest/healthbacktest.png" id="16_3m3di"]
+[ext_resource type="Texture2D" uid="uid://deaifatex7yjy" path="res://Art/BlakeTest/TestPF.png" id="15_radu2"]
+[ext_resource type="Texture2D" uid="uid://dvrtlxlam3pe7" path="res://Art/BlakeTest/TestEB.png" id="16_6tyml"]
 [ext_resource type="Texture2D" uid="uid://oqbvfketxfq7" path="res://Art/UI/Battle/AP Empty Icon.png" id="16_kim5s"]
-[ext_resource type="Texture2D" uid="uid://c07xh5uepdi1w" path="res://Art/BlakeTest/healthfronttest.png" id="17_hbti0"]
-[ext_resource type="Texture2D" uid="uid://bmmn8683u5npk" path="res://Art/BlakeTest/healthEbacktest.png" id="18_sei1y"]
-[ext_resource type="Texture2D" uid="uid://cigh6qg3n4mqu" path="res://Art/BlakeTest/healthEfronttest.png" id="19_dg36b"]
+[ext_resource type="Texture2D" uid="uid://bruojjpgok5vl" path="res://Art/UI/Battle/AP Filled Icon.png" id="17_8ueu7"]
+[ext_resource type="Texture2D" uid="uid://b0mnvtsjw78rh" path="res://Art/BlakeTest/TestEF.png" id="17_ye6vf"]
 
 [sub_resource type="Animation" id="Animation_rs55o"]
 length = 2.5
@@ -56,7 +54,7 @@ _data = {
 }
 
 [node name="Battle" type="CanvasLayer"]
-process_mode = 3
+layer = 2
 script = ExtResource("1_rqkbr")
 
 [node name="BattleStart" type="Node" parent="."]
@@ -77,7 +75,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_0lc8w")
+texture = ExtResource("3_0m688")
+expand_mode = 1
 
 [node name="Player" type="Node" parent="."]
 
@@ -89,28 +88,25 @@ texture = ExtResource("3_woqp6")
 [node name="Weapon1" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(385, 541)
 scale = Vector2(0.116667, 0.116667)
-texture = ExtResource("4_bmewb")
 
 [node name="Weapon2" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(505, 657)
 scale = Vector2(0.111806, 0.111806)
-texture = ExtResource("5_fgpvi")
 
 [node name="Weapon3" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(622, 804)
 scale = Vector2(0.101215, 0.101215)
-texture = ExtResource("6_8pok4")
 
 [node name="Weapon4" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(734, 949)
 scale = Vector2(0.115432, 0.115432)
-texture = ExtResource("7_g2fei")
 
 [node name="Enemy" type="Node" parent="."]
 
 [node name="Enemy1" type="Sprite2D" parent="Enemy" groups=["Battle"]]
 position = Vector2(1470, 431)
 scale = Vector2(0.518707, 0.518707)
+texture = ExtResource("9_oy5gh")
 
 [node name="UI" type="Node" parent="."]
 
@@ -223,69 +219,154 @@ text = "SPECIALS"
 
 [node name="Player" type="Node" parent="UI"]
 
-[node name="ApEmptyIcon" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(195, 181)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 51.0
+offset_top = 116.0
+offset_right = 174.0
+offset_bottom = 274.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon2" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(336, 178)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP2" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 191.0
+offset_top = 110.0
+offset_right = 314.0
+offset_bottom = 268.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon3" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(470, 173)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP3" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 329.0
+offset_top = 111.0
+offset_right = 452.0
+offset_bottom = 269.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon4" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(612, 174)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP4" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 480.0
+offset_top = 106.0
+offset_right = 603.0
+offset_bottom = 264.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon5" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(183.5, 344.829)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP5" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 631.0
+offset_top = 107.0
+offset_right = 754.0
+offset_bottom = 265.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon6" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(324.5, 341.828)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP6" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 83.0
+offset_top = 278.0
+offset_right = 206.0
+offset_bottom = 436.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon7" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(458.5, 336.828)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP7" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 224.0
+offset_top = 272.0
+offset_right = 347.0
+offset_bottom = 430.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
-[node name="ApEmptyIcon8" type="Sprite2D" parent="UI/Player" groups=["Battle"]]
-position = Vector2(600.5, 337.828)
-scale = Vector2(0.10733, 0.10733)
-texture = ExtResource("16_kim5s")
+[node name="AP8" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 377.0
+offset_top = 271.0
+offset_right = 500.0
+offset_bottom = 429.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
+
+[node name="AP9" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 513.0
+offset_top = 271.0
+offset_right = 636.0
+offset_bottom = 429.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
+
+[node name="AP10" type="TextureProgressBar" parent="UI/Player"]
+visible = false
+offset_left = 664.0
+offset_top = 260.0
+offset_right = 787.0
+offset_bottom = 418.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("16_kim5s")
+texture_progress = ExtResource("17_8ueu7")
+radial_initial_angle = 143.5
 
 [node name="PlayerHealth" type="TextureProgressBar" parent="UI/Player" groups=["Battle"]]
 offset_left = 36.0
-offset_top = 21.0
-offset_right = 773.0
-offset_bottom = 199.0
+offset_top = 11.0
+offset_right = 782.0
+offset_bottom = 105.0
+step = 0.0
 value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("16_3m3di")
-texture_progress = ExtResource("17_hbti0")
+texture_under = ExtResource("14_l2arw")
+texture_progress = ExtResource("15_radu2")
+texture_progress_offset = Vector2(-10, 0)
 tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy" type="Node" parent="UI"]
 
 [node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy" groups=["Battle"]]
-offset_left = 1066.0
-offset_top = 29.0
-offset_right = 1815.0
-offset_bottom = 217.0
-value = 10.0
+offset_left = 1095.0
+offset_top = 34.0
+offset_right = 1813.0
+offset_bottom = 123.0
+max_value = 80.0
+step = 0.0
+value = 80.0
 fill_mode = 1
 nine_patch_stretch = true
-texture_under = ExtResource("18_sei1y")
-texture_progress = ExtResource("19_dg36b")
+texture_under = ExtResource("16_6tyml")
+texture_progress = ExtResource("17_ye6vf")
+texture_progress_offset = Vector2(10, 0)
 tint_progress = Color(0, 1, 0, 1)
 
 [connection signal="animation_finished" from="BattleStart/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

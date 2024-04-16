@@ -5,22 +5,50 @@ var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
 var Battle = "res://Scenes/battle.tscn"
+var GameOver = "res://Scenes/Menus/game_over.tscn"
 var VillageDeserted = "res://Scenes/village_deserted.tscn"
 var current_scene = null
 
-# Character variables - for saving/loading and going between scenes
+#region Character variables - for saving/loading and going between scenes
+#region Basic Stats - (Name, Health, Attack, Defense)
 var PlayerName = null
 var PlayerMaxHealth = null
 var PlayerCurHealth = null
 var PlayerAttack = null
+var PlayerAP = null
+var PlayerStartingAP = null
 var PlayerDefense = null
+#endregion
+
+#region Leveling
 var PlayerLvl = null
 var PlayerMaxExperience = null
 var PlayerCurExperience = null
-var PlayerInv = null
-var PlayerLoc = null
+#endregion
 
-# Enemy variables
+var PlayerWeapon1 = null
+var PlayerWeapon1Name = null
+var PlayerWeapon1Attack = null
+var PlayerWeapon1Defense = null
+var PlayerWeapon2 = null
+var PlayerWeapon2Name = null
+var PlayerWeapon2Attack = null
+var PlayerWeapon2Defense = null
+var PlayerWeapon3 = null
+var PlayerWeapon3Name = null
+var PlayerWeapon3Attack = null
+var PlayerWeapon3Defense = null
+var PlayerWeapon4 = null
+var PlayerWeapon4Name = null
+var PlayerWeapon4Attack = null
+var PlayerWeapon4Defense = null
+
+var PlayerInv = null
+
+var PlayerLoc = null
+#endregion
+
+#region Enemy variables
 var EnemyNumberOf = null
 
 var Enemy1 = null
@@ -40,7 +68,7 @@ var Enemy3Name = null
 var Enemy3Health = null
 var Enemy3Attack = null
 var Enemy3Defense = null
-
+#endregion
 
 func _ready():
 	var root = get_tree().get_root()
@@ -84,15 +112,21 @@ func goto_village_deserted():
 	goto_scene(VillageDeserted)
 
 func load_battle():
-	get_tree().paused = true
 	var scene = load(Battle)
 	var instance = scene.instantiate()
-	add_child(instance)
+	current_scene.add_child(instance)
+
+func game_over():
+	var scene = load(GameOver)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
 
 func new_game():
 	PlayerMaxHealth = 50
-	PlayerCurHealth = 30
-	PlayerAttack = 5
+	PlayerCurHealth = 50
+	PlayerAttack = 15
+	PlayerAP = 1
+	PlayerStartingAP = 25
 	PlayerDefense = 5
 	PlayerLvl = 1
 	PlayerMaxExperience = 10
