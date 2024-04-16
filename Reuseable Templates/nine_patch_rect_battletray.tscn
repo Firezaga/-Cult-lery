@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctf4kk8t8s5sk"]
 
-[ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="1_58yk6"]
+[ext_resource type="Texture2D" uid="uid://xbs15nubouy6" path="res://Art/UI [Updated]/Battle (New)/Battle Tray.png" id="1_trcby"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 anchors_preset = -1
@@ -13,9 +13,9 @@ offset_top = -87.48
 offset_right = 153.32
 offset_bottom = 86.52
 size_flags_horizontal = 0
-texture = ExtResource("1_58yk6")
+texture = ExtResource("1_trcby")
 region_rect = Rect2(0, 0, 129, 129)
-patch_margin_left = 42
-patch_margin_top = 55
-patch_margin_right = 35
-patch_margin_bottom = 51
+patch_margin_left = 23
+patch_margin_top = 23
+patch_margin_right = 63
+patch_margin_bottom = 24

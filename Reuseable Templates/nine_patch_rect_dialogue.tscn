@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0dcgeye1xs5d"]
 
-[ext_resource type="Texture2D" uid="uid://dgoh6aplg1jk3" path="res://Art/UI/Dialogue/Dialogue Frame.svg" id="1_ksq8h"]
+[ext_resource type="Texture2D" uid="uid://cqkmfbso08yyq" path="res://Art/UI [Updated]/Dialogue Frame.png" id="1_hfsoa"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 anchors_preset = -1
@@ -13,9 +13,9 @@ offset_top = -87.48
 offset_right = 153.32
 offset_bottom = 86.52
 size_flags_horizontal = 0
-texture = ExtResource("1_ksq8h")
+texture = ExtResource("1_hfsoa")
 region_rect = Rect2(0, 0, 129, 129)
-patch_margin_left = 42
-patch_margin_top = 56
-patch_margin_right = 35
-patch_margin_bottom = 51
+patch_margin_left = 20
+patch_margin_top = 25
+patch_margin_right = 78
+patch_margin_bottom = 25
