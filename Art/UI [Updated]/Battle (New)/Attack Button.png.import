@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxmao6i3gamfa"
-path="res://.godot/imported/HP Fill Enemy.png-4236c11459de3926dca95ab7b17abc60.ctex"
+uid="uid://drpjbv2muvqcv"
+path="res://.godot/imported/Attack Button.png-65fe7b62d6e8357e8200b8bd953eebcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle/HP Fill Enemy.png"
-dest_files=["res://.godot/imported/HP Fill Enemy.png-4236c11459de3926dca95ab7b17abc60.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Attack Button.png"
+dest_files=["res://.godot/imported/Attack Button.png-65fe7b62d6e8357e8200b8bd953eebcf.ctex"]
 
 [params]
 

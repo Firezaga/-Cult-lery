@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfgu4ulxuakv7"
-path="res://.godot/imported/HP Fill Fixed.png-a5e222a25d1a722ad79481346b879cdd.ctex"
+path="res://.godot/imported/HP Fill Fixed.png-b15eda48070c51b58a463590ff713565.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle/HP Fill Fixed.png"
-dest_files=["res://.godot/imported/HP Fill Fixed.png-a5e222a25d1a722ad79481346b879cdd.ctex"]
+source_file="res://Art/UI [Updated]/Battle (Old)/HP Fill Fixed.png"
+dest_files=["res://.godot/imported/HP Fill Fixed.png-b15eda48070c51b58a463590ff713565.ctex"]
 
 [params]
 

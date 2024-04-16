@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8duk3joobql"
-path="res://.godot/imported/HP Back Enemy.png-a5e2d024ffc22f012c5c2161335c0b5a.ctex"
+uid="uid://dcdjwqa0e1u0b"
+path="res://.godot/imported/AP Empty Icon.png-ec1b2e6ea1374e0c4aa9618ee04d2b11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle/HP Back Enemy.png"
-dest_files=["res://.godot/imported/HP Back Enemy.png-a5e2d024ffc22f012c5c2161335c0b5a.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/AP Empty Icon.png"
+dest_files=["res://.godot/imported/AP Empty Icon.png-ec1b2e6ea1374e0c4aa9618ee04d2b11.ctex"]
 
 [params]
 

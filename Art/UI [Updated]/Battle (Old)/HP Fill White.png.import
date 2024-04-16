@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqs3n8oenkc62"
-path="res://.godot/imported/HP Fill White.png-788a9df9bfbe004344354def2fa36ee2.ctex"
+path="res://.godot/imported/HP Fill White.png-534a06285f655cdc612b8fc76a45c914.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle/HP Fill White.png"
-dest_files=["res://.godot/imported/HP Fill White.png-788a9df9bfbe004344354def2fa36ee2.ctex"]
+source_file="res://Art/UI [Updated]/Battle (Old)/HP Fill White.png"
+dest_files=["res://.godot/imported/HP Fill White.png-534a06285f655cdc612b8fc76a45c914.ctex"]
 
 [params]
 
