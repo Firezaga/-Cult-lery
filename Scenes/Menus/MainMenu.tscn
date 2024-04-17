@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj3kkdcx4ybau"]
+[gd_scene load_steps=9 format=3 uid="uid://bj3kkdcx4ybau"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_l3i7p"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="3_hcix3"]
@@ -7,7 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="6_d6imb"]
 [ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI/General Text ButtonBlack.png" id="6_d553q"]
 
+[sub_resource type="SystemFont" id="SystemFont_13bf4"]
+font_names = PackedStringArray("Felix Titling")
+
 [sub_resource type="LabelSettings" id="LabelSettings_rd6pl"]
+font = SubResource("SystemFont_13bf4")
 font_size = 150
 
 [node name="MainMenu" type="Node2D"]

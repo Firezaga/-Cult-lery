@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://co4ip75rjbre2"]
+
+[sub_resource type="SystemFont" id="SystemFont_4ch1i"]
+font_names = PackedStringArray("Calibri")
+
+[resource]
+font = SubResource("SystemFont_4ch1i")
+font_size = 40
