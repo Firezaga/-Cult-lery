@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
-[ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
+[ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted Village/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
 [ext_resource type="Texture2D" uid="uid://bswwgvooenevu" path="res://Art/UI/Battle/Attack Button Hover.png" id="8_nj4sy"]
 [ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="9_3d1m4"]

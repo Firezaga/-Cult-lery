@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c54o6sks6k71s"
-path="res://.godot/imported/Deserted Cupcake Village Battle Normal.png-d97cfa120e77afbac5753a5806669048.ctex"
+uid="uid://cyjgoccl7hk7i"
+path="res://.godot/imported/Tiny Rocks.png-42a3607af45430d1c83801503a258645.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Deserted/Battle/Deserted Cupcake Village Battle Normal.png"
-dest_files=["res://.godot/imported/Deserted Cupcake Village Battle Normal.png-d97cfa120e77afbac5753a5806669048.ctex"]
+source_file="res://Art/Village/Deserted Village/Side Scroller [Updated]/Tiny Rocks.png"
+dest_files=["res://.godot/imported/Tiny Rocks.png-42a3607af45430d1c83801503a258645.ctex"]
 
 [params]
 
