@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ms433fcbks7n"
+path="res://.godot/imported/Sky Background.png-528a38e771419c20d957bcdf1f765063.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Art/Village/Main Village/Side Scroller/Sky Background.png"
+dest_files=["res://.godot/imported/Sky Background.png-528a38e771419c20d957bcdf1f765063.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
