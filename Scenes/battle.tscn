@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=31 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI/Battle/Battle Tray.svg" id="9_3d1m4"]
 [ext_resource type="Texture2D" uid="uid://b3nkibcnfytwh" path="res://Art/UI/Battle/Attack Button Dis.png" id="9_04usm"]
 [ext_resource type="Texture2D" uid="uid://b1phf6uy0l04f" path="res://Art/UI/Battle/Wait Button.png" id="9_bck3x"]
-[ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="9_oy5gh"]
 [ext_resource type="Texture2D" uid="uid://n0nn8cwxpx4t" path="res://Art/UI/Battle/Attack Button.png" id="10_h3wp1"]
 [ext_resource type="Texture2D" uid="uid://v5ebrqwjjg4i" path="res://Art/UI/Battle/Defend Button Hover.png" id="11_h4ylx"]
 [ext_resource type="Texture2D" uid="uid://ce5cblcf2witn" path="res://Art/UI/Battle/Defend Button.png" id="11_yajv7"]
@@ -118,7 +117,6 @@ scale = Vector2(0.115432, 0.115432)
 [node name="Enemy1" type="Sprite2D" parent="Enemy" groups=["Battle"]]
 position = Vector2(1470, 431)
 scale = Vector2(0.518707, 0.518707)
-texture = ExtResource("9_oy5gh")
 
 [node name="UI" type="Node" parent="."]
 
@@ -239,7 +237,6 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="UI/Buttons/SpecialsButton" groups=["Buttons", "ButtonsWBack"]]
-visible = false
 layout_mode = 0
 offset_left = 103.0
 offset_top = 22.0

@@ -61,7 +61,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NinePatchRect" parent="." groups=["pause_menu"] instance=ExtResource("3_cxgdb")]
-visible = false
 offset_left = 64.32
 offset_top = 23.52
 offset_right = 1653.32

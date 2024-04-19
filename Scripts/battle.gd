@@ -10,6 +10,7 @@ var player_health_bar
 var enemy1_health_bar
 
 var current_weapon = 1
+var max_weapons
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,13 +36,17 @@ func _ready():
 	
 	
 	if Global.PlayerWeapon1 != null:
-		$Player/Weapon1.texture = Global.PlayerWeapon1
+		$Player/Weapon1.texture = ResourceLoader.load(Global.PlayerWeapon1)
+		max_weapons = 1
 	if Global.PlayerWeapon2 != null:
-		$Player/Weapon2.texture = Global.PlayerWeapon2
+		$Player/Weapon2.texture = ResourceLoader.load(Global.PlayerWeapon2)
+		max_weapons = 2
 	if Global.PlayerWeapon3 != null:
-		$Player/Weapon3.texture = Global.PlayerWeapon3
+		$Player/Weapon3.texture = ResourceLoader.load(Global.PlayerWeapon3)
+		max_weapons = 3
 	if Global.PlayerWeapon4 != null:
-		$Player/Weapon4.texture = Global.PlayerWeapon4
+		$Player/Weapon4.texture = ResourceLoader.load(Global.PlayerWeapon4)
+		max_weapons = 4
 	
 	player_health_bar.max_value = Global.PlayerMaxHealth
 	player_health_bar.value = Global.PlayerCurHealth
@@ -55,7 +60,7 @@ func _process(delta):
 	pass
 
 func DisplayText(text):
-	battle_text.text = " "
+	battle_text.text = ""
 	battle_text.visible = true
 	for i in len(text):
 		battle_text.text += text[i]
@@ -70,7 +75,6 @@ func DamageToPlayer(amount):
 		damage = 0
 	
 	Global.PlayerCurHealth -= damage
-	var health = Global.PlayerCurHealth
 	var tween = get_tree().create_tween()
 	tween.tween_property(player_health_bar, "value", Global.PlayerCurHealth, 0.5)
 	await DisplayText(str(damage) + " points of damage recieved.")
@@ -83,7 +87,6 @@ func DamageToEnemy1(amount):
 	if damage < 0:
 		damage = 0
 	Global.Enemy1Health -= damage
-	var health = Global.Enemy1Health
 	var tween = get_tree().create_tween()
 	tween.tween_property(enemy1_health_bar, "value", Global.Enemy1Health, 0.5)
 	tween.tween_property($UI/Player/AP, "value", $UI/Player/AP.value + 25, 0.5)

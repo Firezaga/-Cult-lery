@@ -5,6 +5,7 @@ var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
 var Battle = "res://Scenes/battle.tscn"
+var Dialogue = "res://Scenes/dialogue.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
 var VillageDeserted = "res://Scenes/village_deserted.tscn"
 var current_scene = null
@@ -18,6 +19,7 @@ var PlayerAttack = null
 var PlayerAP = null
 var PlayerStartingAP = null
 var PlayerDefense = null
+var PlayerMove = null
 #endregion
 
 #region Leveling
@@ -49,26 +51,33 @@ var PlayerLoc = null
 #endregion
 
 #region Enemy variables
-var EnemyNumberOf = null
+var EnemyNumberOf = 0
 
-var Enemy1 = null
-var Enemy1Name = null
-var Enemy1Health = null
-var Enemy1Attack = null
-var Enemy1Defense = null
+var Enemy1 = ""
+var Enemy1Name = ""
+var Enemy1Health = 0
+var Enemy1Attack = 0
+var Enemy1Defense = 0
 
-var Enemy2 = null
-var Enemy2Name = null
-var Enemy2Health = null
-var Enemy2Attack = null
-var Enemy2Defense = null
+var Enemy2 = ""
+var Enemy2Name = ""
+var Enemy2Health = 0
+var Enemy2Attack = 0
+var Enemy2Defense = 0
 
-var enemy3 = null
-var Enemy3Name = null
-var Enemy3Health = null
-var Enemy3Attack = null
-var Enemy3Defense = null
+var enemy3 = ""
+var Enemy3Name = ""
+var Enemy3Health = 0
+var Enemy3Attack = 0
+var Enemy3Defense = 0
 #endregion
+
+# Dialogue
+var DiaBackground = "res://Art/BlakeTest/new_noise_texture_2d.tres"
+var DiaSpriteRight = "res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png"
+var DiaSpriteLeft = "res://Art/Character/MC Idle Sprite(Open World).png"
+var DiaText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque justo nec odio ultrices, vitae tincidunt nibh mollis. Nulla facilisi. Suspendisse potenti. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. ~Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. Sed auctor nisl nec nunc mattis, eu sodales nibh molestie. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. ~Sed auctor nisl nec nunc mattis, eu sodales nibh molestie.~"
+
 
 func _ready():
 	var root = get_tree().get_root()
@@ -111,10 +120,42 @@ func _deferred_goto_scene(path):
 func goto_village_deserted():
 	goto_scene(VillageDeserted)
 
+func dialogue():
+	var scene = load(Dialogue)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
+
+func dialogue_end():
+	DiaBackground = ""
+	DiaSpriteLeft = ""
+	DiaSpriteRight = ""
+	DiaText = ""
+
 func load_battle():
 	var scene = load(Battle)
 	var instance = scene.instantiate()
 	current_scene.add_child(instance)
+
+func battle_end():
+	EnemyNumberOf = 0
+
+	Enemy1 = ""
+	Enemy1Name = ""
+	Enemy1Health = 0
+	Enemy1Attack = 0
+	Enemy1Defense = 0
+
+	Enemy2 = ""
+	Enemy2Name = ""
+	Enemy2Health = 0
+	Enemy2Attack = 0
+	Enemy2Defense = 0
+
+	enemy3 = ""
+	Enemy3Name = ""
+	Enemy3Health = 0
+	Enemy3Attack = 0
+	Enemy3Defense = 0
 
 func game_over():
 	var scene = load(GameOver)

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm3ea67cdqk2j"]
+[gd_scene load_steps=5 format=3 uid="uid://dm3ea67cdqk2j"]
 
 [ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_c4he1"]
 [ext_resource type="VideoStream" path="res://Cutscenes/Final_Cutscene_1920x1080 (1).ogv" id="2_wupdu"]
+[ext_resource type="PackedScene" uid="uid://c0dcgeye1xs5d" path="res://Reuseable Templates/nine_patch_rect_dialogue.tscn" id="3_rsv6m"]
+[ext_resource type="LabelSettings" uid="uid://co4ip75rjbre2" path="res://Fonts/DialogueFont.tres" id="4_usn0r"]
 
 [node name="NewGame" type="Node2D"]
 script = ExtResource("1_c4he1")
@@ -21,11 +23,38 @@ autoplay = true
 
 [node name="PlayerNameTextInput" type="LineEdit" parent="."]
 visible = false
-offset_left = 832.0
-offset_top = 512.0
-offset_right = 1104.0
-offset_bottom = 543.0
+offset_left = 1040.0
+offset_top = 416.0
+offset_right = 1312.0
+offset_bottom = 447.0
 placeholder_text = "Please enter your name..."
+
+[node name="TextBackground" parent="." instance=ExtResource("3_rsv6m")]
+visible = false
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1792.0
+offset_bottom = 384.0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="TextBackground"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1632.0
+offset_bottom = 288.0
+label_settings = ExtResource("4_usn0r")
+autowrap_mode = 3
+
+[node name="SkipTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="finished" from="OpeningCutscene" to="." method="_on_video_stream_player_finished"]
 [connection signal="text_submitted" from="PlayerNameTextInput" to="." method="_on_player_name_text_input_text_submitted"]
+[connection signal="timeout" from="SkipTimer" to="." method="_on_skip_timer_timeout"]
