@@ -22,6 +22,21 @@ func _process(_delta):
 
 func _on_pause_button_pressed():
 	$AnimationPlayer.play("start_pause")
+	$PlayerStats/Name.text = Global.PlayerName
+	$PlayerStats/Lvl.text = str(Global.PlayerLvl)
+	$PlayerStats/Lvl2.text = str(Global.PlayerLvl + 1)
+	$PlayerStats/LevelProgressBar.max_value = Global.PlayerMaxExperience
+	$PlayerStats/LevelProgressBar.value = Global.PlayerCurExperience
+	$PlayerStats/HealthBar.max_value = Global.PlayerMaxHealth
+	$PlayerStats/HealthBar.value = Global.PlayerCurHealth
+	if Global.PlayerWeapon1 != "":
+		$PlayerStats/Weapon1.texture = ResourceLoader.load(Global.PlayerWeapon1)
+	if Global.PlayerWeapon2 != "":
+		$PlayerStats/Weapon2.texture = ResourceLoader.load(Global.PlayerWeapon2)
+	if Global.PlayerWeapon3 != "":
+		$PlayerStats/Weapon3.texture = ResourceLoader.load(Global.PlayerWeapon3)
+	if Global.PlayerWeapon4 != "":
+		$PlayerStats/Weapon4.texture = ResourceLoader.load(Global.PlayerWeapon4)
 	# pause game
 	Global.pause()
 	# remove in-game button add pause UI
@@ -31,15 +46,6 @@ func _on_pause_button_pressed():
 	for i in len(pause_menu):
 		var item = pause_menu[i]
 		item.visible = true
-	# retrieve variables from Global.gd
-	$"UI Elements/Name".text = "Name: " + Global.PlayerName
-	$"UI Elements/MaxHealth".text = "Max Health: " + str(Global.PlayerMaxHealth)
-	$"UI Elements/CurrentHealth".text = "Current Health: " + str(Global.PlayerCurHealth)
-	$"UI Elements/Attack".text = "Attack: " + str(Global.PlayerAttack)
-	$"UI Elements/Defense".text = "Defense: " + str(Global.PlayerDefense)
-	$"UI Elements/Level".text = "Level: " + str(Global.PlayerLvl)
-	$"UI Elements/MaxExperience".text = "Max Experience: " + str(Global.PlayerMaxExperience)
-	$"UI Elements/CurrentExperience".text = "Current Experience: " + str(Global.PlayerCurExperience)
 
 
 func _on_unpause_button_pressed():

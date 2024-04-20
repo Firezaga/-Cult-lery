@@ -28,24 +28,24 @@ var PlayerMaxExperience = null
 var PlayerCurExperience = 0
 #endregion
 
-var PlayerWeapon1 = ""
+var PlayerWeapon1 = "res://Art/Weapons/Horn Slice Axe Sprite.png"
 var PlayerWeapon1Name = null
 var PlayerWeapon1Attack = null
 var PlayerWeapon1Defense = null
-var PlayerWeapon2 = ""
+var PlayerWeapon2 = "res://Art/Weapons/Swift Sword Sprite.png"
 var PlayerWeapon2Name = null
 var PlayerWeapon2Attack = null
 var PlayerWeapon2Defense = null
-var PlayerWeapon3 = ""
+var PlayerWeapon3 = "res://Art/Weapons/Blood Moon Blade Sprite.png"
 var PlayerWeapon3Name = null
 var PlayerWeapon3Attack = null
 var PlayerWeapon3Defense = null
-var PlayerWeapon4 = ""
+var PlayerWeapon4 = "res://Art/Weapons/Sunset Fall Shield Sprite.png"
 var PlayerWeapon4Name = null
 var PlayerWeapon4Attack = null
 var PlayerWeapon4Defense = null
 
-var PlayerInv = null
+var PlayerPotion = null
 
 var PlayerLoc = null
 #endregion
@@ -79,10 +79,10 @@ var Enemy4Defense = 0
 #endregion
 
 # Dialogue
-var DiaBackground = "res://Art/BlakeTest/new_noise_texture_2d.tres"
-var DiaSpriteRight = "res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png"
-var DiaSpriteLeft = "res://Art/Character/MC Idle Sprite(Open World).png"
-var DiaText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque justo nec odio ultrices, vitae tincidunt nibh mollis. Nulla facilisi. Suspendisse potenti. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. ~Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. Sed auctor nisl nec nunc mattis, eu sodales nibh molestie. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. ~Sed auctor nisl nec nunc mattis, eu sodales nibh molestie.~"
+var DiaBackground = ""
+var DiaSpriteRight = ""
+var DiaSpriteLeft = ""
+var DiaText = ""
 
 
 func _ready():
@@ -136,6 +136,8 @@ func dialogue_end():
 	DiaSpriteLeft = ""
 	DiaSpriteRight = ""
 	DiaText = ""
+	await get_tree().create_timer(0.5).timeout
+	PlayerMove = true
 
 func load_battle():
 	var scene = load(Battle)
@@ -168,6 +170,9 @@ func battle_end():
 	Enemy4Health = 0
 	Enemy4Attack = 0
 	Enemy4.Defense = 0
+	
+	await get_tree().create_timer(0.5).timeout
+	PlayerMove = true
 
 func game_over():
 	var scene = load(GameOver)

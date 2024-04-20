@@ -48,6 +48,7 @@ _data = {
 }
 
 [node name="Dialogue" type="CanvasLayer"]
+layer = 4
 script = ExtResource("1_lfevn")
 
 [node name="ColorRect" type="ColorRect" parent="."]

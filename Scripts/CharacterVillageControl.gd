@@ -1,10 +1,9 @@
 extends Area2D
 
 @export var speed = 1000;
-@export var can_move = true
 
 func _process(delta):
-	if !can_move:
+	if !Global.PlayerMove:
 		return
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("right"):
