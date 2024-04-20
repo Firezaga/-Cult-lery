@@ -6,7 +6,7 @@ var can_skip
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque justo nec odio ultrices, vitae tincidunt nibh mollis. Nulla facilisi. Suspendisse potenti. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. Sed auctor nisl nec nunc mattis, eu sodales nibh molestie. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. Sed auctor nisl nec nunc mattis, eu sodales nibh molestie."
+	text = "FALLING           \nF A L L L I N G                 \nF  A  L  L  I  N  G                \nF   A   L   L   I   N   G                    \nF    A    L    L    I    N    G                  \nF     A     L     L     I     N     G                   ~F      A      L      L      I      N      G                  \nF          A          L          L          I          N          G                               \nF                  A                   L                    L                                                       ~Pain...                                                                                                                                                               \n\n\n\n\nPlease, try and remember your name, the world needs your help."
 	cutscene_playing = true
 	can_skip = false
 
@@ -17,14 +17,34 @@ func _process(_delta):
 		$OpeningCutscene.stop()
 		cutscene_playing = false
 		$SkipTimer.start()
-		_on_video_stream_player_finished()
-	
+		_on_opening_cutscene_finished()
 
-func _on_video_stream_player_finished():
+
+func _on_player_name_text_input_text_submitted(_name):
+	Global.PlayerName = _name
+	$EndOpeningCutscene.visible = true
+	$EndOpeningCutscene.play()
+	$DizzyLoop.visible = false
+	$PlayerNameTextInput.visible = false
+	$TextBackground.visible = false
+	$DizzyLoop.stop()
+
+
+func _on_skip_timer_timeout():
+	can_skip = true
+
+
+func _on_opening_cutscene_finished():
 	cutscene_playing = false
 	$OpeningCutscene.visible = false
+	$DizzyLoop.visible = true
+	$DizzyLoop.play()
 	$TextBackground.visible = true
 	for i in len(text):
+		if text[i] == '~':
+			await get_tree().create_timer(1).timeout
+			$TextBackground/Label.text = ""
+			continue
 		if Input.is_action_pressed("skip_cutscene") && can_skip:
 			can_skip = false
 			$TextBackground/Label.text = text
@@ -35,10 +55,5 @@ func _on_video_stream_player_finished():
 	$PlayerNameTextInput.visible = true
 
 
-func _on_player_name_text_input_text_submitted(_name):
-	Global.PlayerName = _name
+func _on_end_opening_cutscene_finished():
 	Global.goto_village_deserted()
-
-
-func _on_skip_timer_timeout():
-	can_skip = true

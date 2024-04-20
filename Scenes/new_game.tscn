@@ -1,25 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm3ea67cdqk2j"]
+[gd_scene load_steps=7 format=3 uid="uid://dm3ea67cdqk2j"]
 
 [ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_c4he1"]
 [ext_resource type="VideoStream" path="res://Cutscenes/Final_Cutscene_1920x1080 (1).ogv" id="2_wupdu"]
+[ext_resource type="VideoStream" path="res://Cutscenes/Dizzy_Loop.ogv" id="3_cxf1p"]
 [ext_resource type="PackedScene" uid="uid://c0dcgeye1xs5d" path="res://Reuseable Templates/nine_patch_rect_dialogue.tscn" id="3_rsv6m"]
+[ext_resource type="VideoStream" path="res://Cutscenes/Picking_Up_Hat_Cutscene.ogv" id="4_jcnt4"]
 [ext_resource type="LabelSettings" uid="uid://co4ip75rjbre2" path="res://Fonts/DialogueFont.tres" id="4_usn0r"]
 
 [node name="NewGame" type="Node2D"]
 script = ExtResource("1_c4he1")
 
 [node name="OpeningCutscene" type="VideoStreamPlayer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 1088.0
 stream = ExtResource("2_wupdu")
 autoplay = true
+
+[node name="DizzyLoop" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_cxf1p")
+loop = true
+metadata/_edit_use_anchors_ = true
+
+[node name="EndOpeningCutscene" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("4_jcnt4")
 
 [node name="PlayerNameTextInput" type="LineEdit" parent="."]
 visible = false
@@ -55,6 +64,7 @@ autowrap_mode = 3
 [node name="SkipTimer" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="finished" from="OpeningCutscene" to="." method="_on_video_stream_player_finished"]
+[connection signal="finished" from="OpeningCutscene" to="." method="_on_opening_cutscene_finished"]
+[connection signal="finished" from="EndOpeningCutscene" to="." method="_on_end_opening_cutscene_finished"]
 [connection signal="text_submitted" from="PlayerNameTextInput" to="." method="_on_player_name_text_input_text_submitted"]
 [connection signal="timeout" from="SkipTimer" to="." method="_on_skip_timer_timeout"]
