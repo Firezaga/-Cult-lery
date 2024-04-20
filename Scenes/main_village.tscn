@@ -1,3 +1,379 @@
-[gd_scene format=3 uid="uid://by54j1uyv6y81"]
+[gd_scene load_steps=18 format=3 uid="uid://by54j1uyv6y81"]
+
+[ext_resource type="Texture2D" uid="uid://bq51hq2e743tt" path="res://Art/Village/Main Village/Side Scroller/Ground Top.png" id="1_slwfm"]
+[ext_resource type="Texture2D" uid="uid://cjg3su8bgef4q" path="res://Art/Village/Main Village/Side Scroller/Sky Background.png" id="1_um8n4"]
+[ext_resource type="Texture2D" uid="uid://bpngtirwxdvnw" path="res://Art/Village/Main Village/Side Scroller/Ground Village.png" id="2_k2ck3"]
+[ext_resource type="Texture2D" uid="uid://c10klh2cvnqe0" path="res://Art/Village/Main Village/Side Scroller/Path Normal.png" id="4_j5rwu"]
+[ext_resource type="Texture2D" uid="uid://boo1tlwuln2jx" path="res://Art/Village/Main Village/Side Scroller/Cupcake House Sprinkles Front.png" id="5_mpkpo"]
+[ext_resource type="Texture2D" uid="uid://dne6018wum02n" path="res://Art/Village/Main Village/Side Scroller/Large Rock Rectangular.png" id="5_tolfq"]
+[ext_resource type="Texture2D" uid="uid://jycxk7istx0j" path="res://Art/Village/Main Village/Side Scroller/Cupcake House Cherry Front.png" id="6_50yu4"]
+[ext_resource type="Texture2D" uid="uid://csjyunt4yjxb6" path="res://Art/Village/Main Village/Side Scroller/Large Rock Round.png" id="6_r5vxc"]
+[ext_resource type="Texture2D" uid="uid://dnymnqcxn2eyp" path="res://Art/Village/Main Village/Side Scroller/Cupcake House Cherry Back.png" id="7_63sva"]
+[ext_resource type="Texture2D" uid="uid://co75vc4bom1k2" path="res://Art/Village/Main Village/Side Scroller/Medium Rock.png" id="7_piiin"]
+[ext_resource type="Texture2D" uid="uid://c3umo4bxehxir" path="res://Art/Village/Main Village/Side Scroller/Tiny Rocks.png" id="8_1axuq"]
+[ext_resource type="Texture2D" uid="uid://dei02ym5l27a2" path="res://Art/Village/Main Village/Side Scroller/Cupcake House Sprinkles Back.png" id="8_8nqx6"]
+[ext_resource type="Texture2D" uid="uid://e83ubg2jhd6y" path="res://Art/Village/Main Village/Side Scroller/Tree.png" id="10_4ngnb"]
+[ext_resource type="Texture2D" uid="uid://o6c263fikr1h" path="res://Art/Village/Main Village/Side Scroller/Flowers.png" id="11_1q04k"]
+[ext_resource type="Texture2D" uid="uid://blicgn25aawas" path="res://Art/Village/Main Village/Side Scroller/Flower Single.png" id="12_6biak"]
+[ext_resource type="Texture2D" uid="uid://b1hwi6eqdgojp" path="res://Art/Village/Main Village/Side Scroller/Extra Shadow.png" id="12_q61wn"]
+[ext_resource type="Texture2D" uid="uid://diah4wg0opjjj" path="res://Art/Village/Main Village/Side Scroller/Tree with Shadow.png" id="13_qcsea"]
 
 [node name="MainVillage" type="Node2D"]
+
+[node name="Background Art" type="Node" parent="."]
+
+[node name="Sky" type="Node" parent="Background Art"]
+
+[node name="CupcakeVillageSky" type="TextureRect" parent="Background Art/Sky"]
+z_index = -1
+offset_left = -1776.0
+offset_top = -1581.0
+offset_right = 8421.0
+offset_bottom = 305.0
+texture = ExtResource("1_um8n4")
+stretch_mode = 1
+
+[node name="Ground" type="Node" parent="Background Art"]
+
+[node name="GroundTop" type="TextureRect" parent="Background Art/Ground"]
+anchors_preset = -1
+anchor_left = 0.174365
+anchor_top = 0.094169
+anchor_right = 0.174365
+anchor_bottom = 0.094169
+offset_left = -2110.78
+offset_top = -429.703
+offset_right = 8086.22
+offset_bottom = -170.702
+texture = ExtResource("1_slwfm")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CupcakeVillageGround" type="TextureRect" parent="Background Art/Ground"]
+anchors_preset = -1
+anchor_left = 0.174953
+anchor_top = 0.739661
+anchor_right = 0.174953
+anchor_bottom = 1.1304
+offset_left = -2111.91
+offset_top = -931.834
+offset_right = 8085.09
+offset_bottom = 508.167
+texture = ExtResource("2_k2ck3")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Path" type="Node" parent="Background Art"]
+
+[node name="Cupcake Path Straight" type="TextureRect" parent="Background Art/Path"]
+offset_left = -1944.0
+offset_top = 352.0
+offset_right = 3883.0
+offset_bottom = 559.0
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_j5rwu")
+stretch_mode = 1
+
+[node name="Midground Art" type="Node" parent="."]
+
+[node name="Large Rocks" type="Node" parent="Midground Art"]
+
+[node name="SideRock1" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(-1396, -329)
+scale = Vector2(0.542099, 0.48442)
+texture = ExtResource("5_tolfq")
+
+[node name="MidRock1" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(-90.901, -406.136)
+rotation = 0.0279019
+scale = Vector2(0.558333, 0.565278)
+texture = ExtResource("6_r5vxc")
+
+[node name="SideRock2" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(799.099, -376.136)
+scale = Vector2(0.498274, 0.519173)
+texture = ExtResource("5_tolfq")
+
+[node name="MidRock2" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(2766, -357)
+scale = Vector2(0.550521, 0.573611)
+texture = ExtResource("5_tolfq")
+
+[node name="MediumRock1" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(-779, -324)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("7_piiin")
+
+[node name="MediumRock2" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(-460.401, -176.271)
+scale = Vector2(0.478472, 0.504167)
+texture = ExtResource("7_piiin")
+
+[node name="MediumRock3" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(1426, -315)
+scale = Vector2(0.508238, 0.513734)
+texture = ExtResource("7_piiin")
+
+[node name="MediumRock4" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(3995.1, -359.271)
+scale = Vector2(0.546818, 0.546818)
+texture = ExtResource("7_piiin")
+
+[node name="MediumRock5" type="Sprite2D" parent="Midground Art/Large Rocks"]
+position = Vector2(8261, -422)
+scale = Vector2(0.614236, 0.647222)
+texture = ExtResource("7_piiin")
+
+[node name="Small Rocks Back" type="Node" parent="Midground Art"]
+
+[node name="TinyRocks" type="Sprite2D" parent="Midground Art/Small Rocks Back"]
+position = Vector2(4283.07, -139.5)
+scale = Vector2(0.398571, 0.398571)
+texture = ExtResource("8_1axuq")
+
+[node name="Background Trees" type="Node" parent="Midground Art"]
+
+[node name="Tree" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(264, -368)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Tree2" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(938, -388)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Tree3" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(2808, -400)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Tree4" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(5656, -408)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Tree6" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(5656, -408)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Tree5" type="Sprite2D" parent="Midground Art/Background Trees"]
+position = Vector2(8552, -352)
+scale = Vector2(0.855714, 0.855714)
+texture = ExtResource("10_4ngnb")
+
+[node name="Background Houses" type="Node" parent="Midground Art"]
+
+[node name="CupcakeHouseSprinkles" type="Sprite2D" parent="Midground Art/Background Houses"]
+position = Vector2(2083.5, -335)
+texture = ExtResource("5_mpkpo")
+flip_h = true
+
+[node name="CupcakeHouseCherry" type="Sprite2D" parent="Midground Art/Background Houses"]
+position = Vector2(3504, -384)
+texture = ExtResource("6_50yu4")
+
+[node name="CupcakeHouseSprinkles2" type="Sprite2D" parent="Midground Art/Background Houses"]
+position = Vector2(4960, -320)
+texture = ExtResource("5_mpkpo")
+
+[node name="CupcakeHouseSprinkles3" type="Sprite2D" parent="Midground Art/Background Houses"]
+position = Vector2(6408, -320)
+texture = ExtResource("5_mpkpo")
+
+[node name="CupcakeHouseCherry2" type="Sprite2D" parent="Midground Art/Background Houses"]
+position = Vector2(7755, -348)
+texture = ExtResource("6_50yu4")
+
+[node name="Flowers" type="Node" parent="Midground Art"]
+
+[node name="Flowers" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(1480, 80)
+scale = Vector2(0.217537, 0.217537)
+texture = ExtResource("11_1q04k")
+
+[node name="Flowers3" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(2664, 56)
+scale = Vector2(0.217537, 0.217537)
+texture = ExtResource("11_1q04k")
+flip_h = true
+
+[node name="Flowers4" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4392, 64)
+scale = Vector2(0.217537, 0.217537)
+texture = ExtResource("11_1q04k")
+
+[node name="Flowers5" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(7176, 72)
+scale = Vector2(0.217537, 0.217537)
+texture = ExtResource("11_1q04k")
+
+[node name="ExtraShadow" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4055, 165)
+scale = Vector2(0.0650607, 0.0777778)
+texture = ExtResource("12_q61wn")
+
+[node name="ExtraShadow2" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(6884, 243)
+scale = Vector2(0.0650607, 0.0777778)
+texture = ExtResource("12_q61wn")
+
+[node name="FlowerSingle" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4052, 36)
+scale = Vector2(0.209999, 0.209999)
+texture = ExtResource("12_6biak")
+
+[node name="FlowerSingle2" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(6913.6, 122.199)
+scale = Vector2(0.209999, 0.209999)
+texture = ExtResource("12_6biak")
+
+[node name="FlowerSingle3" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(6812.6, 156.199)
+rotation = -0.207638
+scale = Vector2(0.162143, 0.162143)
+texture = ExtResource("12_6biak")
+
+[node name="Flowers2" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(1752, 688)
+scale = Vector2(0.275933, 0.275933)
+texture = ExtResource("11_1q04k")
+flip_h = true
+
+[node name="Flowers6" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(5212, 721)
+scale = Vector2(0.29431, 0.29431)
+texture = ExtResource("11_1q04k")
+flip_h = true
+
+[node name="ExtraShadow3" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4908, 932)
+scale = Vector2(0.0650607, 0.0777778)
+texture = ExtResource("12_q61wn")
+
+[node name="ExtraShadow4" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4797, 858)
+scale = Vector2(0.0540148, 0.0777778)
+texture = ExtResource("12_q61wn")
+
+[node name="FlowerSingle4" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4909, 804)
+scale = Vector2(0.232717, 0.232717)
+texture = ExtResource("12_6biak")
+flip_h = true
+
+[node name="FlowerSingle5" type="Sprite2D" parent="Midground Art/Flowers"]
+position = Vector2(4770, 760)
+rotation = -0.207638
+scale = Vector2(0.169149, 0.169149)
+texture = ExtResource("12_6biak")
+flip_h = true
+
+[node name="Foreground Art" type="Node" parent="."]
+
+[node name="Small Rocks Front" type="Node" parent="Foreground Art"]
+
+[node name="TinyRocks" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+position = Vector2(19, 220)
+scale = Vector2(0.327143, 0.327143)
+texture = ExtResource("8_1axuq")
+
+[node name="TinyRocks2" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+position = Vector2(1703, 255)
+scale = Vector2(0.327143, 0.327143)
+texture = ExtResource("8_1axuq")
+
+[node name="TinyRocks4" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+position = Vector2(5787, 198)
+scale = Vector2(0.327143, 0.327143)
+texture = ExtResource("8_1axuq")
+
+[node name="TinyRocks5" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+position = Vector2(5787, 198)
+scale = Vector2(0.327143, 0.327143)
+texture = ExtResource("8_1axuq")
+
+[node name="TinyRocks3" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(561, 771)
+scale = Vector2(0.456428, 0.456429)
+texture = ExtResource("8_1axuq")
+
+[node name="TinyRocks6" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(3586, 1030)
+scale = Vector2(0.5425, 0.5425)
+texture = ExtResource("8_1axuq")
+flip_h = true
+
+[node name="TinyRocks7" type="Sprite2D" parent="Foreground Art/Small Rocks Front"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(4740, 1425)
+scale = Vector2(0.5425, 0.5425)
+texture = ExtResource("8_1axuq")
+flip_h = true
+
+[node name="Foreground Houses" type="Node" parent="Foreground Art"]
+
+[node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground Art/Foreground Houses"]
+position = Vector2(2573.5, 958.065)
+scale = Vector2(1.07565, 1.07565)
+texture = ExtResource("7_63sva")
+
+[node name="CupcakeHouseSprinklesBackView2" type="Sprite2D" parent="Foreground Art/Foreground Houses"]
+position = Vector2(4167.5, 981.187)
+scale = Vector2(1.1075, 1.1075)
+texture = ExtResource("8_8nqx6")
+flip_h = true
+
+[node name="CupcakeHouseSprinklesBackView3" type="Sprite2D" parent="Foreground Art/Foreground Houses"]
+position = Vector2(5840, 984)
+scale = Vector2(1.10083, 1.10083)
+texture = ExtResource("8_8nqx6")
+flip_h = true
+
+[node name="Foreground Trees" type="Node" parent="Foreground Art"]
+
+[node name="TreeWithShadow" type="Sprite2D" parent="Foreground Art/Foreground Trees"]
+position = Vector2(-376, 448)
+texture = ExtResource("13_qcsea")
+
+[node name="TreeWithShadow2" type="Sprite2D" parent="Foreground Art/Foreground Trees"]
+position = Vector2(6864, 936)
+texture = ExtResource("13_qcsea")
+
+[node name="Foreground Rocks" type="Node" parent="Foreground Art"]
+
+[node name="LargeRock1" type="Sprite2D" parent="Foreground Art/Foreground Rocks"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(-1264, 1119)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("5_tolfq")
+flip_h = true
+
+[node name="LargeRock3" type="Sprite2D" parent="Foreground Art/Foreground Rocks"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(-193, 1246)
+scale = Vector2(0.725521, 0.704167)
+texture = ExtResource("6_r5vxc")
+flip_h = true
+
+[node name="LargeRock2" type="Sprite2D" parent="Foreground Art/Foreground Rocks"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(1125, 1488)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("5_tolfq")
+flip_h = true
+
+[node name="LargeRock4" type="Sprite2D" parent="Foreground Art/Foreground Rocks"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(8232, 1152)
+scale = Vector2(0.779167, 0.779167)
+texture = ExtResource("5_tolfq")
+
+[node name="LargeRock5" type="Sprite2D" parent="Foreground Art/Foreground Rocks"]
+modulate = Color(0.964706, 0.913725, 0.898039, 1)
+position = Vector2(7712, 1432)
+scale = Vector2(0.725521, 0.704167)
+texture = ExtResource("6_r5vxc")

@@ -148,9 +148,9 @@ scale = Vector2(0.546818, 0.546818)
 texture = ExtResource("7_cvvov")
 
 [node name="Cupcake Path Straight2" type="TextureRect" parent="Background"]
-offset_left = -2104.0
+offset_left = -2013.0
 offset_top = 380.0
-offset_right = 8728.0
+offset_right = 3885.0
 offset_bottom = 587.0
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("7_uxm7f")
@@ -325,16 +325,19 @@ libraries = {
 [node name="Houses" type="Node" parent="Foreground"]
 
 [node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(2577, 1003)
+position = Vector2(2622, 1051.46)
+scale = Vector2(1.06923, 1.06923)
 texture = ExtResource("20_s8sk3")
 
 [node name="CupcakeHouseSprinklesBackView2" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(4150, 1010)
+position = Vector2(4200, 1060)
+scale = Vector2(1.08333, 1.08333)
 texture = ExtResource("21_bng48")
 flip_h = true
 
 [node name="CupcakeHouseSprinklesBackView3" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(5734, 1016)
+position = Vector2(5776.5, 1058.5)
+scale = Vector2(1.07083, 1.07083)
 texture = ExtResource("21_bng48")
 flip_h = true
 
