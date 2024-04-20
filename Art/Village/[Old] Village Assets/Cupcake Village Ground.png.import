@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhk0alqfsptsn"
-path="res://.godot/imported/Cupcake Path Straight.png-ed8ba9e7c4ed25b86d9d596a49c371a4.ctex"
+uid="uid://bf14fo72snrvh"
+path="res://.godot/imported/Cupcake Village Ground.png-c264608573edfcba4806a7c19fb139dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Cupcake Path Straight.png"
-dest_files=["res://.godot/imported/Cupcake Path Straight.png-ed8ba9e7c4ed25b86d9d596a49c371a4.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Cupcake Village Ground.png"
+dest_files=["res://.godot/imported/Cupcake Village Ground.png-c264608573edfcba4806a7c19fb139dd.ctex"]
 
 [params]
 

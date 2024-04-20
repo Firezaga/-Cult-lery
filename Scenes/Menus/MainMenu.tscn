@@ -4,7 +4,7 @@
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="3_hcix3"]
 [ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI/General Text Button.png" id="3_xsm8h"]
 [ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="4_bru4v"]
-[ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="6_d6imb"]
+[ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/[Old] Village Assets/Cupcake Sky Background.png" id="6_d6imb"]
 [ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI/General Text ButtonBlack.png" id="6_d553q"]
 
 [sub_resource type="SystemFont" id="SystemFont_13bf4"]

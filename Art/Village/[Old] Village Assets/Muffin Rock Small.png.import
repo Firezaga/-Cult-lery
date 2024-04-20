@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cljw6mc7t0ypp"
-path="res://.godot/imported/Cupcake House Sprinkles.png-f50dbd145c927eb41a5695a894292198.ctex"
+uid="uid://b0d7euyh5to2w"
+path="res://.godot/imported/Muffin Rock Small.png-6d3b1fc8a56dec72e023b72308698b5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Cupcake House Sprinkles.png"
-dest_files=["res://.godot/imported/Cupcake House Sprinkles.png-f50dbd145c927eb41a5695a894292198.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Muffin Rock Small.png"
+dest_files=["res://.godot/imported/Muffin Rock Small.png-6d3b1fc8a56dec72e023b72308698b5f.ctex"]
 
 [params]
 

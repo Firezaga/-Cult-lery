@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0d7euyh5to2w"
-path="res://.godot/imported/Muffin Rock Small.png-9712ae4f06d0f96ac8937f5e9fb82509.ctex"
+uid="uid://dh812rerribfc"
+path="res://.godot/imported/Cupcake Sky Background.png-85bc0a9ea61068c392b204be3126874a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Muffin Rock Small.png"
-dest_files=["res://.godot/imported/Muffin Rock Small.png-9712ae4f06d0f96ac8937f5e9fb82509.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Cupcake Sky Background.png"
+dest_files=["res://.godot/imported/Cupcake Sky Background.png-85bc0a9ea61068c392b204be3126874a.ctex"]
 
 [params]
 

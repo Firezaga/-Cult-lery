@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dacgfo4m6fdu1"
-path="res://.godot/imported/Fallen Cherry Decoration.png-998da70e3728f22bcf865e7f7fa5f612.ctex"
+uid="uid://d14l6u0gf2rpw"
+path="res://.godot/imported/Cupcake House Sprinkles Back View.png-fc4775c4cae16c7588e8ee7d6c15db70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Fallen Cherry Decoration.png"
-dest_files=["res://.godot/imported/Fallen Cherry Decoration.png-998da70e3728f22bcf865e7f7fa5f612.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Cupcake House Sprinkles Back View.png"
+dest_files=["res://.godot/imported/Cupcake House Sprinkles Back View.png-fc4775c4cae16c7588e8ee7d6c15db70.ctex"]
 
 [params]
 

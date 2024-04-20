@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvxrq5600846"
-path="res://.godot/imported/Cupcake House Cherry.png-9f1f2f2448913ac6af8332c8d1180c29.ctex"
+uid="uid://dhk0alqfsptsn"
+path="res://.godot/imported/Cupcake Path Straight.png-cd273079eecb17c993859634764506e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Cupcake House Cherry.png"
-dest_files=["res://.godot/imported/Cupcake House Cherry.png-9f1f2f2448913ac6af8332c8d1180c29.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Cupcake Path Straight.png"
+dest_files=["res://.godot/imported/Cupcake Path Straight.png-cd273079eecb17c993859634764506e2.ctex"]
 
 [params]
 

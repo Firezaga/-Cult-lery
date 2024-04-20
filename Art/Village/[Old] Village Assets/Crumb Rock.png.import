@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh812rerribfc"
-path="res://.godot/imported/Cupcake Sky Background.png-c1c164f5205668e4c90fc9240e4032d5.ctex"
+uid="uid://cfdo7yhdwgleh"
+path="res://.godot/imported/Crumb Rock.png-8e1f3f7d055a40cfee00628a84d8cf11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Cupcake Sky Background.png"
-dest_files=["res://.godot/imported/Cupcake Sky Background.png-c1c164f5205668e4c90fc9240e4032d5.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Crumb Rock.png"
+dest_files=["res://.godot/imported/Crumb Rock.png-8e1f3f7d055a40cfee00628a84d8cf11.ctex"]
 
 [params]
 

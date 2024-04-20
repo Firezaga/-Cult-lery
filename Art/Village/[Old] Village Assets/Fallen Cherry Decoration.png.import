@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf14fo72snrvh"
-path="res://.godot/imported/Cupcake Village Ground.png-88e53d86c03a92786d0bfebdcf0114d9.ctex"
+uid="uid://dacgfo4m6fdu1"
+path="res://.godot/imported/Fallen Cherry Decoration.png-06859971eb8e7593b26068a09586cc5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Cupcake Village Ground.png"
-dest_files=["res://.godot/imported/Cupcake Village Ground.png-88e53d86c03a92786d0bfebdcf0114d9.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Fallen Cherry Decoration.png"
+dest_files=["res://.godot/imported/Fallen Cherry Decoration.png-06859971eb8e7593b26068a09586cc5c.ctex"]
 
 [params]
 

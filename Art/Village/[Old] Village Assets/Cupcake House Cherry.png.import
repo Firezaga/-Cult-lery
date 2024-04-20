@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfdo7yhdwgleh"
-path="res://.godot/imported/Crumb Rock.png-c3472a9705199bc9c3c15301d960e432.ctex"
+uid="uid://blvxrq5600846"
+path="res://.godot/imported/Cupcake House Cherry.png-1263132afd02cf61f2bf76f64708cf03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Village/Crumb Rock.png"
-dest_files=["res://.godot/imported/Crumb Rock.png-c3472a9705199bc9c3c15301d960e432.ctex"]
+source_file="res://Art/Village/[Old] Village Assets/Cupcake House Cherry.png"
+dest_files=["res://.godot/imported/Cupcake House Cherry.png-1263132afd02cf61f2bf76f64708cf03.ctex"]
 
 [params]
 

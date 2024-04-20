@@ -1,19 +1,20 @@
-[gd_scene load_steps=22 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=23 format=3 uid="uid://bpb606qjtymvg"]
 
-[ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/Cupcake Village Ground.png" id="1_i2dyl"]
+[ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/[Old] Village Assets/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
-[ext_resource type="Texture2D" uid="uid://nxrgjvcbrnor" path="res://Art/Village/Muffin Rock Middle.png" id="2_iij61"]
-[ext_resource type="Texture2D" uid="uid://dhk0alqfsptsn" path="res://Art/Village/Cupcake Path Straight.png" id="2_nxs47"]
-[ext_resource type="Texture2D" uid="uid://cji6qsbpthhak" path="res://Art/Village/Muffin Rock Edge.png" id="3_3rcsw"]
-[ext_resource type="Texture2D" uid="uid://cljw6mc7t0ypp" path="res://Art/Village/Cupcake House Sprinkles.png" id="3_a0qrm"]
-[ext_resource type="Texture2D" uid="uid://d14l6u0gf2rpw" path="res://Art/Village/Cupcake House Sprinkles Back View.png" id="4_hy6r4"]
-[ext_resource type="Texture2D" uid="uid://b0d7euyh5to2w" path="res://Art/Village/Muffin Rock Small.png" id="4_wjdau"]
-[ext_resource type="Texture2D" uid="uid://cfdo7yhdwgleh" path="res://Art/Village/Crumb Rock.png" id="5_i8jmq"]
+[ext_resource type="Texture2D" uid="uid://nxrgjvcbrnor" path="res://Art/Village/[Old] Village Assets/Muffin Rock Middle.png" id="2_iij61"]
+[ext_resource type="Texture2D" uid="uid://dhk0alqfsptsn" path="res://Art/Village/[Old] Village Assets/Cupcake Path Straight.png" id="2_nxs47"]
+[ext_resource type="Texture2D" uid="uid://cji6qsbpthhak" path="res://Art/Village/[Old] Village Assets/Muffin Rock Edge.png" id="3_3rcsw"]
+[ext_resource type="Texture2D" uid="uid://ckrj0ye3au30j" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Sky Background.png" id="3_culna"]
+[ext_resource type="Texture2D" uid="uid://d14l6u0gf2rpw" path="res://Art/Village/[Old] Village Assets/Cupcake House Sprinkles Back View.png" id="4_hy6r4"]
+[ext_resource type="Texture2D" uid="uid://b0d7euyh5to2w" path="res://Art/Village/[Old] Village Assets/Muffin Rock Small.png" id="4_wjdau"]
+[ext_resource type="Texture2D" uid="uid://cfdo7yhdwgleh" path="res://Art/Village/[Old] Village Assets/Crumb Rock.png" id="5_i8jmq"]
 [ext_resource type="Texture2D" uid="uid://c1ypxqt2ytyjv" path="res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png" id="6_myksh"]
-[ext_resource type="Texture2D" uid="uid://dacgfo4m6fdu1" path="res://Art/Village/Fallen Cherry Decoration.png" id="7_u6kcl"]
-[ext_resource type="Texture2D" uid="uid://blvxrq5600846" path="res://Art/Village/Cupcake House Cherry.png" id="9_saxn2"]
+[ext_resource type="Texture2D" uid="uid://dacgfo4m6fdu1" path="res://Art/Village/[Old] Village Assets/Fallen Cherry Decoration.png" id="7_u6kcl"]
+[ext_resource type="Texture2D" uid="uid://bsblcj8a8cqtg" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Path Deserted.png" id="7_uxm7f"]
+[ext_resource type="Texture2D" uid="uid://c02pvtcdq6s1i" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Sprinkles Front.png" id="9_kiiax"]
 [ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/Player/player_village.tscn" id="10_0duxd"]
-[ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/Cupcake Sky Background.png" id="11_2sygv"]
+[ext_resource type="Texture2D" uid="uid://c2paketaax648" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Cherry Front.png" id="10_clfsi"]
 [ext_resource type="Texture2D" uid="uid://sqxenvxrlfox" path="res://Art/UI/Speech Bubble Icon.png" id="13_0q47p"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="13_gcoyi"]
 [ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
@@ -63,13 +64,13 @@ texture = ExtResource("1_i2dyl")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CupcakeVillageGround3" type="TextureRect" parent="Background"]
+[node name="CupcakeVillageSky" type="TextureRect" parent="Background"]
 z_index = -1
 offset_left = -1784.0
-offset_top = -1427.0
+offset_top = -1728.0
 offset_right = 8413.0
-offset_bottom = 13.0
-texture = ExtResource("11_2sygv")
+offset_bottom = -288.0
+texture = ExtResource("3_culna")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -150,7 +151,17 @@ position = Vector2(8205.5, -44)
 scale = Vector2(0.478472, 0.504167)
 texture = ExtResource("4_wjdau")
 
+[node name="Cupcake Path Straight2" type="TextureRect" parent="Background"]
+offset_left = -2104.0
+offset_top = 410.0
+offset_right = 8728.0
+offset_bottom = 617.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_uxm7f")
+stretch_mode = 1
+
 [node name="CupcakePathStraight2" type="TextureRect" parent="Background"]
+visible = false
 offset_left = -1784.0
 offset_top = -204.0
 offset_right = 8176.0
@@ -203,25 +214,24 @@ texture = ExtResource("5_i8jmq")
 
 [node name="CupcakeHouseSprinkles" type="Sprite2D" parent="Background/Houses"]
 position = Vector2(2083.5, -335)
-texture = ExtResource("3_a0qrm")
+texture = ExtResource("9_kiiax")
 flip_h = true
 
 [node name="CupcakeHouseSprinkles2" type="Sprite2D" parent="Background/Houses"]
-position = Vector2(4906.5, -261)
-texture = ExtResource("3_a0qrm")
+position = Vector2(4960, -288)
+texture = ExtResource("9_kiiax")
 
 [node name="CupcakeHouseSprinkles3" type="Sprite2D" parent="Background/Houses"]
-position = Vector2(6319.5, -255)
-texture = ExtResource("3_a0qrm")
+position = Vector2(6397, -288)
+texture = ExtResource("9_kiiax")
 
 [node name="CupcakeHouseCherry" type="Sprite2D" parent="Background/Houses"]
-position = Vector2(3455.5, -291)
-texture = ExtResource("9_saxn2")
+position = Vector2(3513, -407)
+texture = ExtResource("10_clfsi")
 
 [node name="CupcakeHouseCherry2" type="Sprite2D" parent="Background/Houses"]
-position = Vector2(7629.5, -263)
-texture = ExtResource("9_saxn2")
-flip_h = true
+position = Vector2(7755, -348)
+texture = ExtResource("10_clfsi")
 
 [node name="Fallen Cherries" type="Node" parent="Background"]
 
@@ -242,8 +252,8 @@ texture = ExtResource("7_u6kcl")
 
 [node name="CupcakePathStraight" type="Sprite2D" parent="Background"]
 visible = false
-position = Vector2(1280, 528)
-texture = ExtResource("2_nxs47")
+position = Vector2(1297, 679)
+texture = ExtResource("7_uxm7f")
 
 [node name="Foreground" type="Node" parent="."]
 
@@ -297,15 +307,15 @@ libraries = {
 [node name="Houses" type="Node" parent="Foreground"]
 
 [node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(2594, 805)
+position = Vector2(2577, 883)
 texture = ExtResource("4_hy6r4")
 
 [node name="CupcakeHouseSprinklesBackView2" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(4194, 806)
+position = Vector2(4219, 878)
 texture = ExtResource("4_hy6r4")
 
 [node name="CupcakeHouseSprinklesBackView3" type="Sprite2D" parent="Foreground/Houses"]
-position = Vector2(5700, 802)
+position = Vector2(5725, 874)
 texture = ExtResource("4_hy6r4")
 
 [node name="Large Rocks" type="Node" parent="Foreground"]
