@@ -25,6 +25,7 @@ func _on_animation_player_animation_finished(anim_name):
 	Global.Enemy1Health = 80
 	Global.Enemy1Attack = 20
 	Global.Enemy1Defense = 10
+	Global.EnemyNumberOf = 1
 	$Foreground/PlayerVillage.set_process(false)
 	Global.load_battle()
 

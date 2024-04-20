@@ -114,9 +114,25 @@ scale = Vector2(0.115432, 0.115432)
 
 [node name="Enemy" type="Node" parent="."]
 
-[node name="Enemy1" type="Sprite2D" parent="Enemy" groups=["Battle"]]
-position = Vector2(1470, 431)
-scale = Vector2(0.518707, 0.518707)
+[node name="Enemy3" type="Sprite2D" parent="Enemy"]
+visible = false
+position = Vector2(1218, 309)
+scale = Vector2(0.34477, 0.34477)
+
+[node name="Enemy4" type="Sprite2D" parent="Enemy"]
+visible = false
+position = Vector2(1664, 307)
+scale = Vector2(0.335048, 0.335048)
+
+[node name="Enemy1" type="Sprite2D" parent="Enemy"]
+visible = false
+position = Vector2(985, 473)
+scale = Vector2(0.412826, 0.412826)
+
+[node name="Enemy2" type="Sprite2D" parent="Enemy"]
+visible = false
+position = Vector2(1499, 524)
+scale = Vector2(0.412826, 0.412826)
 
 [node name="UI" type="Node" parent="."]
 
@@ -137,6 +153,7 @@ patch_margin_right = 26
 patch_margin_bottom = 52
 
 [node name="BattleText" type="Label" parent="UI/Buttons/ButtonBackground" groups=["Battle"]]
+visible = false
 layout_mode = 0
 offset_left = 28.0
 offset_top = 29.0
@@ -245,6 +262,116 @@ offset_bottom = 66.0
 theme_override_font_sizes/font_size = 25
 text = "SPECIALS"
 label_settings = ExtResource("22_ljdfw")
+
+[node name="TargetButtons" type="Node2D" parent="UI/Buttons"]
+visible = false
+
+[node name="AttackEnemy1Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
+offset_left = 913.0
+offset_top = 835.0
+offset_right = 1233.0
+offset_bottom = 934.0
+texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/Buttons/TargetButtons/AttackEnemy1Button"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "ENEMY 1"
+
+[node name="AttackEnemy2Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
+offset_left = 1424.0
+offset_top = 835.0
+offset_right = 1744.0
+offset_bottom = 934.0
+texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/Buttons/TargetButtons/AttackEnemy2Button"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "ENEMY 2"
+
+[node name="AttackEnemy3Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
+offset_left = 911.0
+offset_top = 697.0
+offset_right = 1231.0
+offset_bottom = 796.0
+texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/Buttons/TargetButtons/AttackEnemy3Button"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "ENEMY 3"
+
+[node name="AttackBackButton" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+offset_left = 854.0
+offset_top = 958.0
+offset_right = 990.0
+offset_bottom = 1000.0
+texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/Buttons/TargetButtons/AttackBackButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AttackEnemy4Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
+offset_left = 1421.0
+offset_top = 697.0
+offset_right = 1741.0
+offset_bottom = 796.0
+texture_normal = ExtResource("14_pboex")
+texture_hover = ExtResource("20_c153p")
+texture_disabled = ExtResource("21_ur7p4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/Buttons/TargetButtons/AttackEnemy4Button"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "ENEMY 4"
 
 [node name="Player" type="Node" parent="UI"]
 
@@ -382,11 +509,57 @@ tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy" type="Node" parent="UI"]
 
-[node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy" groups=["Battle"]]
-offset_left = 1081.0
-offset_top = 53.0
-offset_right = 1760.0
-offset_bottom = 142.0
+[node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
+offset_left = 695.0
+offset_top = 206.0
+offset_right = 1069.0
+offset_bottom = 255.0
+max_value = 80.0
+step = 0.0
+value = 80.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("16_2pc08")
+texture_progress = ExtResource("17_v2knm")
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Enemy2Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
+offset_left = 1247.0
+offset_top = 216.0
+offset_right = 1621.0
+offset_bottom = 265.0
+max_value = 80.0
+step = 0.0
+value = 80.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("16_2pc08")
+texture_progress = ExtResource("17_v2knm")
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Enemy3Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
+offset_left = 988.0
+offset_top = 51.0
+offset_right = 1362.0
+offset_bottom = 100.0
+max_value = 80.0
+step = 0.0
+value = 80.0
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("16_2pc08")
+texture_progress = ExtResource("17_v2knm")
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Enemy4Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
+offset_left = 1443.0
+offset_top = 63.0
+offset_right = 1817.0
+offset_bottom = 112.0
 max_value = 80.0
 step = 0.0
 value = 80.0
@@ -401,3 +574,8 @@ tint_progress = Color(0, 1, 0, 1)
 [connection signal="pressed" from="UI/Buttons/DefendButton" to="." method="_on_defend_button_pressed"]
 [connection signal="pressed" from="UI/Buttons/WaitButton" to="." method="_on_wait_button_pressed"]
 [connection signal="pressed" from="UI/Buttons/FleeButton" to="." method="_on_flee_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/TargetButtons/AttackEnemy1Button" to="." method="_on_attack_enemy_1_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/TargetButtons/AttackEnemy2Button" to="." method="_on_attack_enemy_2_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/TargetButtons/AttackEnemy3Button" to="." method="_on_attack_enemy_3_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/TargetButtons/AttackBackButton" to="." method="_on_attack_back_button_pressed"]
+[connection signal="pressed" from="UI/Buttons/TargetButtons/AttackEnemy4Button" to="." method="_on_attack_enemy_4_button_pressed"]

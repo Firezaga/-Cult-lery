@@ -12,35 +12,35 @@ var current_scene = null
 
 #region Character variables - for saving/loading and going between scenes
 #region Basic Stats - (Name, Health, Attack, Defense)
-var PlayerName = null
-var PlayerMaxHealth = null
-var PlayerCurHealth = null
-var PlayerAttack = null
-var PlayerAP = null
-var PlayerStartingAP = null
-var PlayerDefense = null
+var PlayerName = "Test"
+var PlayerMaxHealth = 200
+var PlayerCurHealth = 200
+var PlayerAttack = 50
+var PlayerAP = 1
+var PlayerStartingAP = 1
+var PlayerDefense = 0
 var PlayerMove = null
 #endregion
 
 #region Leveling
 var PlayerLvl = null
 var PlayerMaxExperience = null
-var PlayerCurExperience = null
+var PlayerCurExperience = 0
 #endregion
 
-var PlayerWeapon1 = null
+var PlayerWeapon1 = ""
 var PlayerWeapon1Name = null
 var PlayerWeapon1Attack = null
 var PlayerWeapon1Defense = null
-var PlayerWeapon2 = null
+var PlayerWeapon2 = ""
 var PlayerWeapon2Name = null
 var PlayerWeapon2Attack = null
 var PlayerWeapon2Defense = null
-var PlayerWeapon3 = null
+var PlayerWeapon3 = ""
 var PlayerWeapon3Name = null
 var PlayerWeapon3Attack = null
 var PlayerWeapon3Defense = null
-var PlayerWeapon4 = null
+var PlayerWeapon4 = ""
 var PlayerWeapon4Name = null
 var PlayerWeapon4Attack = null
 var PlayerWeapon4Defense = null
@@ -65,11 +65,17 @@ var Enemy2Health = 0
 var Enemy2Attack = 0
 var Enemy2Defense = 0
 
-var enemy3 = ""
+var Enemy3 = ""
 var Enemy3Name = ""
 var Enemy3Health = 0
 var Enemy3Attack = 0
 var Enemy3Defense = 0
+
+var Enemy4 = ""
+var Enemy4Name = ""
+var Enemy4Health = 0
+var Enemy4Attack = 0
+var Enemy4Defense = 0
 #endregion
 
 # Dialogue
@@ -138,24 +144,30 @@ func load_battle():
 
 func battle_end():
 	EnemyNumberOf = 0
-
+	
 	Enemy1 = ""
 	Enemy1Name = ""
 	Enemy1Health = 0
 	Enemy1Attack = 0
 	Enemy1Defense = 0
-
+	
 	Enemy2 = ""
 	Enemy2Name = ""
 	Enemy2Health = 0
 	Enemy2Attack = 0
 	Enemy2Defense = 0
-
-	enemy3 = ""
+	
+	Enemy3 = ""
 	Enemy3Name = ""
 	Enemy3Health = 0
 	Enemy3Attack = 0
 	Enemy3Defense = 0
+	
+	Enemy4 = ""
+	Enemy4Name = ""
+	Enemy4Health = 0
+	Enemy4Attack = 0
+	Enemy4.Defense = 0
 
 func game_over():
 	var scene = load(GameOver)
