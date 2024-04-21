@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://6m1saae2adgt"]
+[gd_scene load_steps=22 format=3 uid="uid://6m1saae2adgt"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
 [ext_resource type="Material" uid="uid://ba1ofdf7mq55l" path="res://Materials/blur.tres" id="2_u3111"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="7_g4qmq"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="8_oae47"]
 [ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI/General Text ButtonBlack.png" id="9_6qydt"]
+[ext_resource type="Texture2D" uid="uid://dw5xdig3nlwfo" path="res://Art/UI/Battle/Battle Text Button Dis.png" id="10_0ev21"]
 [ext_resource type="PackedScene" uid="uid://ctf4kk8t8s5sk" path="res://Reuseable Templates/nine_patch_rect_battletray.tscn" id="10_o1p8c"]
 [ext_resource type="LabelSettings" uid="uid://b5depcdow2mva" path="res://Fonts/pause_menu.tres" id="11_cdvcq"]
 [ext_resource type="Texture2D" uid="uid://dx31sx8w1672b" path="res://Art/BlakeTest/lvl_bar_back.png" id="12_todem"]
@@ -271,6 +272,7 @@ offset_right = 1755.0
 offset_bottom = 234.0
 texture_normal = ExtResource("6_2ni0n")
 texture_hover = ExtResource("7_g4qmq")
+texture_disabled = ExtResource("10_0ev21")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -398,6 +400,7 @@ position = Vector2(483, 388)
 scale = Vector2(0.0858025, 0.0858025)
 
 [node name="HealthBar" type="TextureProgressBar" parent="PlayerStats"]
+process_mode = 3
 layout_mode = 0
 offset_left = 56.0
 offset_top = 94.0
@@ -413,3 +416,4 @@ tint_progress = Color(0, 1, 0, 1)
 [connection signal="pressed" from="UnpauseButton" to="." method="_on_unpause_button_pressed"]
 [connection signal="pressed" from="QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
 [connection signal="pressed" from="QuitToDesktopButton" to="." method="_on_quit_to_desktop_button_pressed"]
+[connection signal="button_down" from="DrinkPotionButton" to="." method="_on_drink_potion_button_button_down"]

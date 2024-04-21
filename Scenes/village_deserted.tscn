@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bpb606qjtymvg"]
+[gd_scene load_steps=31 format=3 uid="uid://bpb606qjtymvg"]
 
 [ext_resource type="Texture2D" uid="uid://bf14fo72snrvh" path="res://Art/Village/[Old] Village Assets/Cupcake Village Ground.png" id="1_i2dyl"]
 [ext_resource type="Script" path="res://Scripts/village_deserted.gd" id="1_q1emg"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cyjgoccl7hk7i" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Tiny Rocks.png" id="14_rfako"]
 [ext_resource type="Texture2D" uid="uid://g5x4x23qrnkg" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Extra Shadow.png" id="15_7dasn"]
 [ext_resource type="Texture2D" uid="uid://bc18okulnj7ss" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Fallen Cherry.png" id="15_j5vwk"]
+[ext_resource type="Texture2D" uid="uid://ps1r0swx1oxn" path="res://Art/BlakeTest/Placeholder_Coin.png" id="18_lp2sf"]
 [ext_resource type="Texture2D" uid="uid://bl63s7wfqnafl" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Cherry Back.png" id="20_s8sk3"]
 [ext_resource type="Texture2D" uid="uid://b4fbrmy02yife" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Sprinkles Back.png" id="21_bng48"]
 
@@ -285,6 +286,22 @@ texture = ExtResource("6_myksh")
 [node name="CollisionFortune" type="CollisionShape2D" parent="Foreground/FortuneTeller"]
 position = Vector2(2053, 294)
 shape = SubResource("CapsuleShape2D_yau0s")
+
+[node name="ShopIcon" type="Sprite2D" parent="Foreground/FortuneTeller"]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(2241, -89)
+scale = Vector2(0.10623, 0.10623)
+texture = ExtResource("18_lp2sf")
+
+[node name="Label" type="Label" parent="Foreground/FortuneTeller/ShopIcon"]
+offset_left = -103.548
+offset_top = -291.82
+offset_right = 176.452
+offset_bottom = 210.18
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 368
+text = "F"
 
 [node name="SpeechBubbleIcon" type="Sprite2D" parent="Foreground/FortuneTeller"]
 visible = false

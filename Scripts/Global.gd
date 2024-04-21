@@ -5,6 +5,7 @@ var NewGame = "res://Scenes/new_game.tscn"
 var SettingsMenu = "res://Scenes/Menus/SettingsMenu.tscn"
 var MainMenu = "res://Scenes/Menus/MainMenu.tscn"
 var Battle = "res://Scenes/battle.tscn"
+var Shop = "res://Scenes/shop.tscn"
 var Dialogue = "res://Scenes/dialogue.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
 var VillageDeserted = "res://Scenes/village_deserted.tscn"
@@ -14,7 +15,7 @@ var current_scene = null
 #region Basic Stats - (Name, Health, Attack, Defense)
 var PlayerName = "Test"
 var PlayerMaxHealth = 200
-var PlayerCurHealth = 200
+var PlayerCurHealth = 100
 var PlayerAttack = 50
 var PlayerAP = 1
 var PlayerStartingAP = 1
@@ -28,24 +29,25 @@ var PlayerMaxExperience = null
 var PlayerCurExperience = 0
 #endregion
 
-var PlayerWeapon1 = "res://Art/Weapons/Horn Slice Axe Sprite.png"
+var PlayerWeapon1 = ""
 var PlayerWeapon1Name = null
 var PlayerWeapon1Attack = null
 var PlayerWeapon1Defense = null
-var PlayerWeapon2 = "res://Art/Weapons/Swift Sword Sprite.png"
+var PlayerWeapon2 = ""
 var PlayerWeapon2Name = null
 var PlayerWeapon2Attack = null
 var PlayerWeapon2Defense = null
-var PlayerWeapon3 = "res://Art/Weapons/Blood Moon Blade Sprite.png"
+var PlayerWeapon3 = ""
 var PlayerWeapon3Name = null
 var PlayerWeapon3Attack = null
 var PlayerWeapon3Defense = null
-var PlayerWeapon4 = "res://Art/Weapons/Sunset Fall Shield Sprite.png"
+var PlayerWeapon4 = ""
 var PlayerWeapon4Name = null
 var PlayerWeapon4Attack = null
 var PlayerWeapon4Defense = null
 
-var PlayerPotion = null
+var PlayerMoney = 15
+var PlayerPotion = 0
 
 var PlayerLoc = null
 #endregion
@@ -126,6 +128,11 @@ func _deferred_goto_scene(path):
 func goto_village_deserted():
 	goto_scene(VillageDeserted)
 
+func shop():
+	var scene = load(Shop)
+	var instance = scene.instantiate()
+	current_scene.add_child(instance)
+
 func dialogue():
 	var scene = load(Dialogue)
 	var instance = scene.instantiate()
@@ -181,7 +188,7 @@ func game_over():
 
 func new_game():
 	PlayerMaxHealth = 50
-	PlayerCurHealth = 50
+	PlayerCurHealth = 10
 	PlayerAttack = 15
 	PlayerAP = 1
 	PlayerStartingAP = 25

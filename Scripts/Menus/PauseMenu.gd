@@ -37,6 +37,13 @@ func _on_pause_button_pressed():
 		$PlayerStats/Weapon3.texture = ResourceLoader.load(Global.PlayerWeapon3)
 	if Global.PlayerWeapon4 != "":
 		$PlayerStats/Weapon4.texture = ResourceLoader.load(Global.PlayerWeapon4)
+	$DrinkPotionButton/PotionText.text = "Potions remaining: " + str(Global.PlayerPotion)
+	if Global.PlayerCurHealth < Global.PlayerMaxHealth:
+		$DrinkPotionButton.disabled = false
+	if Global.PlayerCurHealth == Global.PlayerMaxHealth:
+		$DrinkPotionButton.disabled = true
+	if Global.PlayerPotion == 0:
+		$DrinkPotionButton.disabled = true
 	# pause game
 	Global.pause()
 	# remove in-game button add pause UI
@@ -67,3 +74,17 @@ func _on_quit_to_menu_button_pressed():
 
 func _on_quit_to_desktop_button_pressed():
 	Global.quit_game()
+
+
+func _on_drink_potion_button_button_down():
+	Global.PlayerPotion -= 1
+	Global.PlayerCurHealth += 30
+	if Global.PlayerCurHealth > Global.PlayerMaxHealth:
+		Global.PlayerCurHealth = Global.PlayerMaxHealth
+	$PlayerStats/HealthBar.value = Global.PlayerCurHealth
+	$DrinkPotionButton/PotionText.text = "Potions remaining: " + str(Global.PlayerPotion)
+	if Global.PlayerCurHealth == Global.PlayerMaxHealth:
+		$DrinkPotionButton.disabled = true
+	if Global.PlayerPotion == 0:
+		$DrinkPotionButton.disabled = true
+	
