@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdt6phqo7aedc"
-path="res://.godot/imported/General Arrow Dark.png-2dcff19906e0d406aba9a14509c56f8c.ctex"
+uid="uid://2ddcarycodno"
+path="res://.godot/imported/Battle Text Button Normal.png-4f7f075d693e8d7215374ad695584b09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/General Arrow Dark.png"
-dest_files=["res://.godot/imported/General Arrow Dark.png-2dcff19906e0d406aba9a14509c56f8c.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Battle Text Button Normal.png"
+dest_files=["res://.godot/imported/Battle Text Button Normal.png-4f7f075d693e8d7215374ad695584b09.ctex"]
 
 [params]
 

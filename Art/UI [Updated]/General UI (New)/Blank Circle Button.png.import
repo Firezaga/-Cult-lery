@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gf4bgnmdwdiy"
-path="res://.godot/imported/Battle Text Button.png-71dacdea4dcdb5710abf609167d6e993.ctex"
+uid="uid://cu0m4qbnc43"
+path="res://.godot/imported/Blank Circle Button.png-5a13eb41a26ef1cc8b7592386b51b17f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle (New)/Battle Text Button.png"
-dest_files=["res://.godot/imported/Battle Text Button.png-71dacdea4dcdb5710abf609167d6e993.ctex"]
+source_file="res://Art/UI [Updated]/General UI (New)/Blank Circle Button.png"
+dest_files=["res://.godot/imported/Blank Circle Button.png-5a13eb41a26ef1cc8b7592386b51b17f.ctex"]
 
 [params]
 

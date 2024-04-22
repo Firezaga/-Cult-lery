@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0dcgeye1xs5d"]
 
-[ext_resource type="Texture2D" uid="uid://cqkmfbso08yyq" path="res://Art/UI [Updated]/Dialogue Frame.png" id="1_hfsoa"]
+[ext_resource type="Texture2D" uid="uid://cqkmfbso08yyq" path="res://Art/UI [Updated]/General UI (New)/Dialogue Frame.png" id="1_hfsoa"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 anchors_preset = -1

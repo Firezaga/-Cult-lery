@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpmfaon24a43w"
-path="res://.godot/imported/General Arrow Light.png-c2a14b36123d6a6e2167ab941a4ce2ec.ctex"
+uid="uid://d146asjwypy3p"
+path="res://.godot/imported/General Text Button Disabled.png-16a5c3913f7723792418d7a4997d2242.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/General Arrow Light.png"
-dest_files=["res://.godot/imported/General Arrow Light.png-c2a14b36123d6a6e2167ab941a4ce2ec.ctex"]
+source_file="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png"
+dest_files=["res://.godot/imported/General Text Button Disabled.png-16a5c3913f7723792418d7a4997d2242.ctex"]
 
 [params]
 

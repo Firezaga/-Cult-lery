@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu0m4qbnc43"
-path="res://.godot/imported/Blank Circle Button.png-7f11bad74f2a3d9884c85cde7d843e89.ctex"
+uid="uid://bgkm66wxekooj"
+path="res://.godot/imported/Player Avatar Frame.png-32fd8c7f98b6c78785f952bba2d1a371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Blank Circle Button.png"
-dest_files=["res://.godot/imported/Blank Circle Button.png-7f11bad74f2a3d9884c85cde7d843e89.ctex"]
+source_file="res://Art/UI [Updated]/General UI (New)/Player Avatar Frame.png"
+dest_files=["res://.godot/imported/Player Avatar Frame.png-32fd8c7f98b6c78785f952bba2d1a371.ctex"]
 
 [params]
 

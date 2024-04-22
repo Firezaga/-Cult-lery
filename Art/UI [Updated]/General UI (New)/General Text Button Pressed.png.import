@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drpjbv2muvqcv"
-path="res://.godot/imported/Attack Button.png-65fe7b62d6e8357e8200b8bd953eebcf.ctex"
+uid="uid://d38ikh2sci6ho"
+path="res://.godot/imported/General Text Button Pressed.png-1900172193c76d225cab4ddf1f7b6e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle (New)/Attack Button.png"
-dest_files=["res://.godot/imported/Attack Button.png-65fe7b62d6e8357e8200b8bd953eebcf.ctex"]
+source_file="res://Art/UI [Updated]/General UI (New)/General Text Button Pressed.png"
+dest_files=["res://.godot/imported/General Text Button Pressed.png-1900172193c76d225cab4ddf1f7b6e3e.ctex"]
 
 [params]
 

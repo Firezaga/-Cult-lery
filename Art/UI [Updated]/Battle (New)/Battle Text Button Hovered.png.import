@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjemqk0vgqn8l"
-path="res://.godot/imported/Defend Button.png-c5a6939675f9c0c1fe6c994c47ea6cb7.ctex"
+uid="uid://dpm7s432tcaj2"
+path="res://.godot/imported/Battle Text Button Hovered.png-8fc450b299be4372c8434748db787efb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle (New)/Defend Button.png"
-dest_files=["res://.godot/imported/Defend Button.png-c5a6939675f9c0c1fe6c994c47ea6cb7.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Battle Text Button Hovered.png"
+dest_files=["res://.godot/imported/Battle Text Button Hovered.png-8fc450b299be4372c8434748db787efb.ctex"]
 
 [params]
 

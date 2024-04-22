@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccrsd3ly2r4s2"
-path="res://.godot/imported/Wait Button.png-200420046cdc2b6ae38539b855cd5ad4.ctex"
+uid="uid://cv4x04yibhjl8"
+path="res://.godot/imported/Attack Button Hovered.png-e9ae2f59ee54d557e33771f4e5fd0a95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Battle (New)/Wait Button.png"
-dest_files=["res://.godot/imported/Wait Button.png-200420046cdc2b6ae38539b855cd5ad4.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Attack Button Hovered.png"
+dest_files=["res://.godot/imported/Attack Button Hovered.png-e9ae2f59ee54d557e33771f4e5fd0a95.ctex"]
 
 [params]
 

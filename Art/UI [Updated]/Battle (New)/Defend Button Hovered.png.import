@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uf4ma4e8mft4"
-path="res://.godot/imported/Empty Speech Bubble Icon.png-113753285b95e478c2b4ad37f48cced7.ctex"
+uid="uid://dld0fc4r27fu1"
+path="res://.godot/imported/Defend Button Hovered.png-95eec7c92a1707d750618f0c4ab6a10b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Empty Speech Bubble Icon.png"
-dest_files=["res://.godot/imported/Empty Speech Bubble Icon.png-113753285b95e478c2b4ad37f48cced7.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Defend Button Hovered.png"
+dest_files=["res://.godot/imported/Defend Button Hovered.png-95eec7c92a1707d750618f0c4ab6a10b.ctex"]
 
 [params]
 

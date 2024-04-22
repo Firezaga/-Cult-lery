@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpyc54hg3yuq5"
-path="res://.godot/imported/General Text Button.png-aef6b30318a1543bfeb0995fad5ffd7f.ctex"
+uid="uid://c1d1nqelp4a6e"
+path="res://.godot/imported/Battle Text Button Disabled.png-a5a790f77c695fa5a520d091f87d7905.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/General Text Button.png"
-dest_files=["res://.godot/imported/General Text Button.png-aef6b30318a1543bfeb0995fad5ffd7f.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Battle Text Button Disabled.png"
+dest_files=["res://.godot/imported/Battle Text Button Disabled.png-a5a790f77c695fa5a520d091f87d7905.ctex"]
 
 [params]
 

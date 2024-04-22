@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxp2jrkve2eak"
-path="res://.godot/imported/Pause Button.png-c2037c7b0d31ca46047409d701fa0491.ctex"
+uid="uid://es48ps8l4by4"
+path="res://.godot/imported/Defend Button Pressed.png-e1f3098779cc4f6ec4288d08115bfeea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Pause Button.png"
-dest_files=["res://.godot/imported/Pause Button.png-c2037c7b0d31ca46047409d701fa0491.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Defend Button Pressed.png"
+dest_files=["res://.godot/imported/Defend Button Pressed.png-e1f3098779cc4f6ec4288d08115bfeea.ctex"]
 
 [params]
 

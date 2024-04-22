@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br2psirukhxuj"
-path="res://.godot/imported/Placeholder Player Avatar.png-b2d2362b49ce7c396be3effaa1eae6ce.ctex"
+uid="uid://b44vd0b7f7ryj"
+path="res://.godot/imported/Attack Button Pressed.png-fd170e3bab11842cb5db96e9d24ab04e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI [Updated]/Placeholder Player Avatar.png"
-dest_files=["res://.godot/imported/Placeholder Player Avatar.png-b2d2362b49ce7c396be3effaa1eae6ce.ctex"]
+source_file="res://Art/UI [Updated]/Battle (New)/Attack Button Pressed.png"
+dest_files=["res://.godot/imported/Attack Button Pressed.png-fd170e3bab11842cb5db96e9d24ab04e.ctex"]
 
 [params]
 
