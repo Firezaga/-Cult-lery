@@ -1,15 +1,16 @@
-[gd_scene load_steps=32 format=3 uid="uid://6m1saae2adgt"]
+[gd_scene load_steps=33 format=3 uid="uid://6m1saae2adgt"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
 [ext_resource type="Material" uid="uid://ba1ofdf7mq55l" path="res://Materials/blur.tres" id="2_u3111"]
 [ext_resource type="PackedScene" uid="uid://c0dcgeye1xs5d" path="res://Reuseable Templates/nine_patch_rect_dialogue.tscn" id="3_cxgdb"]
 [ext_resource type="Texture2D" uid="uid://cr7i1skpw2msn" path="res://Art/UI/Pause Button.png" id="4_qov66"]
 [ext_resource type="Texture2D" uid="uid://b6xf3wco30m5g" path="res://Art/UI/Pause Button Hover.png" id="5_8xf0i"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI/General Text Button.png" id="6_2ni0n"]
+[ext_resource type="Texture2D" uid="uid://dpyc54hg3yuq5" path="res://Art/UI [Updated]/General UI (New)/General Text Button Normal.png" id="6_imukg"]
+[ext_resource type="Texture2D" uid="uid://d38ikh2sci6ho" path="res://Art/UI [Updated]/General UI (New)/General Text Button Pressed.png" id="7_ei6dk"]
 [ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="7_g4qmq"]
+[ext_resource type="Texture2D" uid="uid://b26yc3hva8mip" path="res://Art/UI [Updated]/General UI (New)/General Text Button Hovered.png" id="8_imgjm"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="8_oae47"]
-[ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI/General Text ButtonBlack.png" id="9_6qydt"]
-[ext_resource type="Texture2D" uid="uid://dw5xdig3nlwfo" path="res://Art/UI/Battle/Battle Text Button Dis.png" id="10_0ev21"]
+[ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="9_6ymbk"]
 [ext_resource type="PackedScene" uid="uid://ctf4kk8t8s5sk" path="res://Reuseable Templates/nine_patch_rect_battletray.tscn" id="10_o1p8c"]
 [ext_resource type="LabelSettings" uid="uid://b5depcdow2mva" path="res://Fonts/pause_menu.tres" id="11_cdvcq"]
 [ext_resource type="Texture2D" uid="uid://dx31sx8w1672b" path="res://Art/BlakeTest/lvl_bar_back.png" id="12_todem"]
@@ -133,8 +134,10 @@ offset_left = 712.0
 offset_top = 888.0
 offset_right = 1216.0
 offset_bottom = 972.0
-texture_normal = ExtResource("6_2ni0n")
-texture_hover = ExtResource("7_g4qmq")
+texture_normal = ExtResource("6_imukg")
+texture_pressed = ExtResource("7_ei6dk")
+texture_hover = ExtResource("8_imgjm")
+texture_disabled = ExtResource("9_6ymbk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -145,9 +148,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -75.5
+offset_left = -117.5
 offset_top = -22.0
-offset_right = 75.5
+offset_right = 117.5
 offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -161,8 +164,10 @@ offset_left = 1320.0
 offset_top = 840.0
 offset_right = 1824.0
 offset_bottom = 924.0
-texture_normal = ExtResource("6_2ni0n")
-texture_hover = ExtResource("7_g4qmq")
+texture_normal = ExtResource("6_imukg")
+texture_pressed = ExtResource("7_ei6dk")
+texture_hover = ExtResource("8_imgjm")
+texture_disabled = ExtResource("9_6ymbk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -173,9 +178,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -102.5
+offset_left = -110.5
 offset_top = -22.0
-offset_right = 102.5
+offset_right = 110.5
 offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -189,8 +194,10 @@ offset_left = 1320.0
 offset_top = 952.0
 offset_right = 1824.0
 offset_bottom = 1036.0
-texture_normal = ExtResource("6_2ni0n")
-texture_hover = ExtResource("7_g4qmq")
+texture_normal = ExtResource("6_imukg")
+texture_pressed = ExtResource("7_ei6dk")
+texture_hover = ExtResource("8_imgjm")
+texture_disabled = ExtResource("9_6ymbk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -223,9 +230,10 @@ offset_top = 840.0
 offset_right = 611.0
 offset_bottom = 924.0
 disabled = true
-texture_normal = ExtResource("6_2ni0n")
-texture_hover = ExtResource("7_g4qmq")
-texture_disabled = ExtResource("9_6qydt")
+texture_normal = ExtResource("6_imukg")
+texture_pressed = ExtResource("7_ei6dk")
+texture_hover = ExtResource("8_imgjm")
+texture_disabled = ExtResource("9_6ymbk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -252,9 +260,10 @@ offset_top = 942.0
 offset_right = 608.0
 offset_bottom = 1026.0
 disabled = true
-texture_normal = ExtResource("6_2ni0n")
-texture_hover = ExtResource("7_g4qmq")
-texture_disabled = ExtResource("9_6qydt")
+texture_normal = ExtResource("6_imukg")
+texture_pressed = ExtResource("7_ei6dk")
+texture_hover = ExtResource("8_imgjm")
+texture_disabled = ExtResource("9_6ymbk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -280,9 +289,10 @@ offset_left = 1624.0
 offset_top = 72.0
 offset_right = 1791.0
 offset_bottom = 156.0
-texture_normal = ExtResource("6_2ni0n")
+texture_normal = ExtResource("24_6xx8d")
+texture_pressed = ExtResource("25_6u3mc")
 texture_hover = ExtResource("7_g4qmq")
-texture_disabled = ExtResource("10_0ev21")
+texture_disabled = ExtResource("27_14xwn")
 ignore_texture_size = true
 stretch_mode = 0
 
