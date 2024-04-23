@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://6m1saae2adgt"]
+[gd_scene load_steps=32 format=3 uid="uid://6m1saae2adgt"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
 [ext_resource type="Material" uid="uid://ba1ofdf7mq55l" path="res://Materials/blur.tres" id="2_u3111"]
@@ -16,9 +16,18 @@
 [ext_resource type="Texture2D" uid="uid://cslu1iytjjeic" path="res://Art/BlakeTest/lvl_bar_top.png" id="13_ko3cl"]
 [ext_resource type="Texture2D" uid="uid://ch26beo5cs0fw" path="res://Art/BlakeTest/lvl_bar_pro.png" id="14_xr1dm"]
 [ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="15_jt8vl"]
-[ext_resource type="Texture2D" uid="uid://ctkjp020t618j" path="res://Art/UI [Updated]/Battle (Old)/HP Bar Background.png" id="16_5nvi5"]
+[ext_resource type="Texture2D" uid="uid://bfl0kcl0gfax1" path="res://Art/UI [Updated]/Battle (New)/HP Frame.png" id="16_psygd"]
 [ext_resource type="Texture2D" uid="uid://bfgu4ulxuakv7" path="res://Art/UI [Updated]/Battle (Old)/HP Fill Fixed.png" id="17_1pxng"]
 [ext_resource type="Texture2D" uid="uid://cqkmfbso08yyq" path="res://Art/UI [Updated]/General UI (New)/Dialogue Frame.png" id="19_3p3fr"]
+[ext_resource type="Texture2D" uid="uid://cpmfaon24a43w" path="res://Art/UI [Updated]/General UI (New)/General Arrow Light.png" id="20_lne0p"]
+[ext_resource type="Texture2D" uid="uid://jhmu4ctxffin" path="res://Art/UI [Updated]/General UI (New)/General Progress Bar.png" id="20_x4l1l"]
+[ext_resource type="Texture2D" uid="uid://dn56cadfpfbru" path="res://Art/UI [Updated]/General UI (New)/Progress Fill White.png" id="21_0lt34"]
+[ext_resource type="LabelSettings" uid="uid://co4ip75rjbre2" path="res://Fonts/DialogueFont.tres" id="21_hsvi7"]
+[ext_resource type="Texture2D" uid="uid://2ddcarycodno" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Normal.png" id="24_6xx8d"]
+[ext_resource type="Texture2D" uid="uid://bc6kjnu22dlh2" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Pressed.png" id="25_6u3mc"]
+[ext_resource type="Texture2D" uid="uid://dpm7s432tcaj2" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Hovered.png" id="26_8y3hx"]
+[ext_resource type="Texture2D" uid="uid://c1d1nqelp4a6e" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Disabled.png" id="27_14xwn"]
+[ext_resource type="Texture2D" uid="uid://ps1r0swx1oxn" path="res://Art/BlakeTest/Placeholder_Coin.png" id="28_sbkwt"]
 
 [sub_resource type="Animation" id="Animation_xsbti"]
 length = 0.001
@@ -78,9 +87,9 @@ offset_bottom = 992.52
 
 [node name="Label" type="Label" parent="." groups=["pause_menu"]]
 offset_left = 713.0
-offset_top = 16.0
+offset_top = 25.0
 offset_right = 1181.0
-offset_bottom = 182.0
+offset_bottom = 191.0
 theme_override_font_sizes/font_size = 121
 text = "PAUSED"
 
@@ -378,6 +387,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="HealthBar" type="TextureProgressBar" parent="PlayerStats"]
+process_mode = 3
+layout_mode = 0
+offset_left = 112.0
+offset_top = 72.0
+offset_right = 568.0
+offset_bottom = 109.0
+value = 27.0
+nine_patch_stretch = true
+texture_under = ExtResource("16_psygd")
+texture_progress = ExtResource("17_1pxng")
+tint_progress = Color(0, 1, 0, 1)
+
 [node name="WeaponSlot1" type="Sprite2D" parent="PlayerStats"]
 modulate = Color(1, 1, 1, 0.721569)
 position = Vector2(528, 186)
@@ -435,18 +457,62 @@ scale = Vector2(0.0666667, 0.0666667)
 position = Vector2(483, 388)
 scale = Vector2(0.0858025, 0.0858025)
 
-[node name="HealthBar" type="TextureProgressBar" parent="PlayerStats"]
-process_mode = 3
+[node name="AttackLabel" type="Label" parent="PlayerStats"]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 72.0
-offset_right = 586.0
-offset_bottom = 109.0
-value = 27.0
+offset_left = 648.0
+offset_top = 128.0
+offset_right = 725.0
+offset_bottom = 159.0
+text = "Attack"
+label_settings = ExtResource("11_cdvcq")
+
+[node name="AttackValue" type="Label" parent="PlayerStats/AttackLabel"]
+layout_mode = 0
+offset_left = 330.0
+offset_right = 407.0
+offset_bottom = 31.0
+text = "50"
+label_settings = ExtResource("11_cdvcq")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PlayerStats/AttackLabel"]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 317.0
+offset_bottom = 32.0
+value = 50.0
 nine_patch_stretch = true
-texture_under = ExtResource("16_5nvi5")
-texture_progress = ExtResource("17_1pxng")
-tint_progress = Color(0, 1, 0, 1)
+texture_under = ExtResource("20_x4l1l")
+texture_progress = ExtResource("21_0lt34")
+tint_progress = Color(1, 0.266667, 0.419608, 0.752941)
+
+[node name="DefenceLabel" type="Label" parent="PlayerStats"]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 192.0
+offset_right = 748.0
+offset_bottom = 223.0
+text = "Defence"
+label_settings = ExtResource("11_cdvcq")
+
+[node name="DefenceValue" type="Label" parent="PlayerStats/DefenceLabel"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = -2.0
+offset_right = 407.0
+offset_bottom = 29.0
+text = "10"
+label_settings = ExtResource("11_cdvcq")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="PlayerStats/DefenceLabel"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = -2.0
+offset_right = 317.0
+offset_bottom = 30.0
+nine_patch_stretch = true
+texture_under = ExtResource("20_x4l1l")
+texture_progress = ExtResource("21_0lt34")
+tint_progress = Color(1, 0.266667, 0.419608, 0.705882)
 
 [node name="Inventory" parent="PlayerStats" instance=ExtResource("3_cxgdb")]
 layout_mode = 1
@@ -457,75 +523,151 @@ offset_bottom = 551.4
 
 [node name="Slot1" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(119.736, 197)
+position = Vector2(118.736, 184)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot2" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(243.736, 197)
+position = Vector2(242.736, 184)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot3" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(367.736, 197)
+position = Vector2(366.736, 184)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot4" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(490.736, 197)
+position = Vector2(489.736, 184)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot5" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(119.736, 317)
+position = Vector2(118.736, 304)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot6" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(243.736, 317)
+position = Vector2(242.736, 304)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot7" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(367.736, 317)
+position = Vector2(366.736, 304)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot8" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(490.736, 317)
+position = Vector2(489.736, 304)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot9" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(119.736, 437)
+position = Vector2(118.736, 424)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot10" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(243.736, 437)
+position = Vector2(242.736, 424)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot11" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(367.736, 437)
+position = Vector2(366.736, 424)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
 
 [node name="Slot12" type="Sprite2D" parent="PlayerStats/Inventory"]
 modulate = Color(1, 1, 1, 0.513726)
-position = Vector2(490.736, 437)
+position = Vector2(489.736, 424)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_3p3fr")
+
+[node name="ArrowBack" type="Sprite2D" parent="PlayerStats/Inventory"]
+position = Vector2(250.685, 535.195)
+rotation = 1.5708
+scale = Vector2(0.0152835, 0.0152835)
+texture = ExtResource("20_lne0p")
+
+[node name="ArrowNext" type="Sprite2D" parent="PlayerStats/Inventory"]
+position = Vector2(354.332, 534.438)
+rotation = -1.5708
+scale = Vector2(0.0146797, 0.0146797)
+texture = ExtResource("20_lne0p")
+
+[node name="PageNumber" type="Label" parent="PlayerStats/Inventory"]
+layout_mode = 0
+offset_left = 274.736
+offset_top = 517.0
+offset_right = 329.736
+offset_bottom = 557.0
+text = "1/1"
+label_settings = ExtResource("21_hsvi7")
+
+[node name="Item Name" type="Label" parent="PlayerStats/Inventory"]
+layout_mode = 0
+offset_left = 70.7361
+offset_top = 72.0
+offset_right = 206.736
+offset_bottom = 103.0
+text = "Item Name"
+label_settings = ExtResource("11_cdvcq")
+
+[node name="ItemQuantity" type="Label" parent="PlayerStats/Inventory"]
+layout_mode = 0
+offset_left = 131.736
+offset_top = 183.0
+offset_right = 155.736
+offset_bottom = 223.0
+text = "1"
+label_settings = ExtResource("8_oae47")
+
+[node name="TextureButton" type="TextureButton" parent="PlayerStats/Inventory"]
+layout_mode = 0
+offset_left = 366.736
+offset_top = 48.0
+offset_right = 537.736
+offset_bottom = 112.0
+texture_normal = ExtResource("24_6xx8d")
+texture_pressed = ExtResource("25_6u3mc")
+texture_hover = ExtResource("26_8y3hx")
+texture_disabled = ExtResource("27_14xwn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PlayerStats/Inventory/TextureButton"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 14.0
+offset_right = 127.0
+offset_bottom = 54.0
+text = "Drink"
+label_settings = ExtResource("8_oae47")
+
+[node name="CurrencyValue" type="Label" parent="PlayerStats"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -88.0
+offset_right = 215.0
+offset_bottom = -48.0
+text = "100"
+label_settings = ExtResource("8_oae47")
+
+[node name="PlaceholderCoin" type="Sprite2D" parent="PlayerStats/CurrencyValue"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(-68, 17)
+scale = Vector2(0.0702876, 0.0702876)
+texture = ExtResource("28_sbkwt")
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="UnpauseButton" to="." method="_on_unpause_button_pressed"]
