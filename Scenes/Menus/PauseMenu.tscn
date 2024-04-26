@@ -1,13 +1,15 @@
-[gd_scene load_steps=33 format=3 uid="uid://6m1saae2adgt"]
+[gd_scene load_steps=35 format=3 uid="uid://6m1saae2adgt"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
 [ext_resource type="Material" uid="uid://ba1ofdf7mq55l" path="res://Materials/blur.tres" id="2_u3111"]
 [ext_resource type="PackedScene" uid="uid://c0dcgeye1xs5d" path="res://Reuseable Templates/nine_patch_rect_dialogue.tscn" id="3_cxgdb"]
-[ext_resource type="Texture2D" uid="uid://cr7i1skpw2msn" path="res://Art/UI [Old]/Pause Button.png" id="4_qov66"]
-[ext_resource type="Texture2D" uid="uid://b6xf3wco30m5g" path="res://Art/UI [Old]/Pause Button Hover.png" id="5_8xf0i"]
+[ext_resource type="Texture2D" uid="uid://bdeasbar1aj23" path="res://Art/UI [Updated]/General UI (New)/Pause Button Normal.png" id="4_owj5r"]
+[ext_resource type="Texture2D" uid="uid://b8ktpas2vyerk" path="res://Art/UI [Updated]/General UI (New)/Pause Button Pressed.png" id="5_vq0tt"]
 [ext_resource type="Texture2D" uid="uid://dpyc54hg3yuq5" path="res://Art/UI [Updated]/General UI (New)/General Text Button Normal.png" id="6_imukg"]
+[ext_resource type="Texture2D" uid="uid://damd610yqwp5y" path="res://Art/UI [Updated]/General UI (New)/Pause Button Hovered.png" id="6_o7uwj"]
 [ext_resource type="Texture2D" uid="uid://d38ikh2sci6ho" path="res://Art/UI [Updated]/General UI (New)/General Text Button Pressed.png" id="7_ei6dk"]
 [ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="7_g4qmq"]
+[ext_resource type="Texture2D" uid="uid://l5rmwmvkawmm" path="res://Art/UI [Updated]/General UI (New)/Pause Button Disabled.png" id="7_rlp81"]
 [ext_resource type="Texture2D" uid="uid://b26yc3hva8mip" path="res://Art/UI [Updated]/General UI (New)/General Text Button Hovered.png" id="8_imgjm"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="8_oae47"]
 [ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="9_6ymbk"]
@@ -104,8 +106,10 @@ offset_top = 928.0
 offset_right = -1756.0
 offset_bottom = 1051.0
 grow_horizontal = 0
-texture_normal = ExtResource("4_qov66")
-texture_hover = ExtResource("5_8xf0i")
+texture_normal = ExtResource("4_owj5r")
+texture_pressed = ExtResource("5_vq0tt")
+texture_hover = ExtResource("6_o7uwj")
+texture_disabled = ExtResource("7_rlp81")
 ignore_texture_size = true
 stretch_mode = 0
 
