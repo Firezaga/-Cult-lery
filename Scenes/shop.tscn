@@ -118,6 +118,7 @@ scale = Vector2(0.0146797, 0.0146797)
 texture = ExtResource("4_76hvf")
 
 [node name="PageNumber" type="Label" parent="shop_ui"]
+layout_mode = 0
 offset_left = 481.0
 offset_top = 945.001
 offset_right = 536.0

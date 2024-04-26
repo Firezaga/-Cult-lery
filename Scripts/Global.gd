@@ -48,7 +48,6 @@ var PlayerWeapon4Defense = null
 
 var PlayerMoney = 15
 var PlayerPotion = 0
-
 var PlayerLoc = null
 #endregion
 
@@ -221,9 +220,9 @@ func quit_game():
 
 
 func pause():
-	current_scene.get_tree().paused = true
+	PlayerMove = false
 
 
 func unpause():
-	current_scene.get_tree().paused = false
+	PlayerMove = true
 
