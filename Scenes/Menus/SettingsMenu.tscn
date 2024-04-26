@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpbwi4ari7nqb"]
+[gd_scene load_steps=12 format=3 uid="uid://cpbwi4ari7nqb"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/SettingsMenu.gd" id="1_smv1p"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/[Old] Village Assets/Cupcake Sky Background.png" id="2_k4uc2"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI [Old]/General Text Button.png" id="3_cmu38"]
-[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="4_ckwnn"]
+[ext_resource type="Texture2D" uid="uid://dpyc54hg3yuq5" path="res://Art/UI [Updated]/General UI (New)/General Text Button Normal.png" id="3_0kyun"]
+[ext_resource type="Texture2D" uid="uid://d38ikh2sci6ho" path="res://Art/UI [Updated]/General UI (New)/General Text Button Pressed.png" id="4_vikpc"]
+[ext_resource type="Texture2D" uid="uid://b26yc3hva8mip" path="res://Art/UI [Updated]/General UI (New)/General Text Button Hovered.png" id="5_hpqem"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="5_nkbai"]
-[ext_resource type="Texture2D" uid="uid://dgoh6aplg1jk3" path="res://Art/UI [Old]/Dialogue/Dialogue Frame.svg" id="6_3xhyg"]
+[ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="6_pm281"]
+[ext_resource type="Texture2D" uid="uid://cqkmfbso08yyq" path="res://Art/UI [Updated]/General UI (New)/Dialogue Frame.png" id="8_p375x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tly3c"]
-font_size = 60
+font_size = 120
 
 [sub_resource type="LabelSettings" id="LabelSettings_ylxcr"]
 font_size = 35
@@ -27,10 +29,10 @@ texture = ExtResource("2_k4uc2")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
-offset_left = 823.0
-offset_top = 114.0
-offset_right = 1099.0
-offset_bottom = 197.0
+offset_left = 679.0
+offset_top = 52.0
+offset_right = 1369.0
+offset_bottom = 257.0
 text = "SETTINGS"
 label_settings = SubResource("LabelSettings_tly3c")
 
@@ -40,8 +42,10 @@ offset_top = 910.0
 offset_right = 771.0
 offset_bottom = 994.0
 tooltip_text = "Quit"
-texture_normal = ExtResource("3_cmu38")
-texture_hover = ExtResource("4_ckwnn")
+texture_normal = ExtResource("3_0kyun")
+texture_pressed = ExtResource("4_vikpc")
+texture_hover = ExtResource("5_hpqem")
+texture_disabled = ExtResource("6_pm281")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -67,8 +71,10 @@ offset_top = 910.0
 offset_right = 1676.0
 offset_bottom = 994.0
 tooltip_text = "Quit"
-texture_normal = ExtResource("3_cmu38")
-texture_hover = ExtResource("4_ckwnn")
+texture_normal = ExtResource("3_0kyun")
+texture_pressed = ExtResource("4_vikpc")
+texture_hover = ExtResource("5_hpqem")
+texture_disabled = ExtResource("6_pm281")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -93,7 +99,7 @@ offset_left = 267.0
 offset_top = 237.0
 offset_right = 1680.0
 offset_bottom = 870.0
-texture = ExtResource("6_3xhyg")
+texture = ExtResource("8_p375x")
 region_rect = Rect2(0, 0, 129, 129)
 patch_margin_left = 27
 patch_margin_top = 53
@@ -102,121 +108,121 @@ patch_margin_bottom = 52
 
 [node name="LabelMusic" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 85.0
-offset_right = 285.0
-offset_bottom = 140.0
+offset_left = 130.0
+offset_top = 84.0
+offset_right = 242.0
+offset_bottom = 139.0
 text = "Music"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="HSlider" type="HSlider" parent="NinePatchDialogueBox/LabelMusic"]
 layout_mode = 0
-offset_left = 680.0
-offset_right = 1068.0
+offset_left = 775.0
+offset_right = 1163.0
 offset_bottom = 84.0
 
 [node name="LabelSoundEffect" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 169.0
-offset_right = 433.0
-offset_bottom = 224.0
+offset_left = 130.0
+offset_top = 168.0
+offset_right = 390.0
+offset_bottom = 223.0
 text = "Sound Effects"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="HSlider2" type="HSlider" parent="NinePatchDialogueBox/LabelSoundEffect"]
 layout_mode = 0
-offset_left = 680.0
+offset_left = 775.0
 offset_top = -16.0
-offset_right = 1068.0
+offset_right = 1163.0
 offset_bottom = 68.0
 
 [node name="LabelScreenSize" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 260.0
-offset_right = 433.0
-offset_bottom = 315.0
+offset_left = 130.0
+offset_top = 259.0
+offset_right = 390.0
+offset_bottom = 314.0
 text = "Screen Size"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="OptionButton" type="OptionButton" parent="NinePatchDialogueBox/LabelScreenSize"]
 layout_mode = 0
-offset_left = 705.0
-offset_right = 987.0
+offset_left = 800.0
+offset_right = 1082.0
 offset_bottom = 55.0
 
 [node name="LabelExampleText" type="Label" parent="NinePatchDialogueBox/LabelScreenSize"]
 layout_mode = 0
-offset_left = 749.0
+offset_left = 844.0
 offset_top = 5.0
-offset_right = 926.0
+offset_right = 1021.0
 offset_bottom = 47.0
 text = "1920 x 1080 "
 label_settings = SubResource("LabelSettings_ok1wg")
 
 [node name="LabelAspectRatio" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 344.0
-offset_right = 433.0
-offset_bottom = 399.0
+offset_left = 130.0
+offset_top = 343.0
+offset_right = 390.0
+offset_bottom = 398.0
 text = "Aspect Ratio"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="OptionButton2" type="OptionButton" parent="NinePatchDialogueBox/LabelAspectRatio"]
 layout_mode = 0
-offset_left = 705.0
-offset_right = 987.0
+offset_left = 800.0
+offset_right = 1082.0
 offset_bottom = 55.0
 
 [node name="LabelExampleText2" type="Label" parent="NinePatchDialogueBox/LabelAspectRatio"]
 layout_mode = 0
-offset_left = 753.0
+offset_left = 848.0
 offset_top = 5.0
-offset_right = 930.0
+offset_right = 1025.0
 offset_bottom = 47.0
 text = "16:9"
 label_settings = SubResource("LabelSettings_ok1wg")
 
 [node name="LabelDisplay Mode" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 421.0
-offset_right = 433.0
-offset_bottom = 476.0
+offset_left = 130.0
+offset_top = 420.0
+offset_right = 390.0
+offset_bottom = 475.0
 text = "Display Mode"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="OptionButton2" type="OptionButton" parent="NinePatchDialogueBox/LabelDisplay Mode"]
 layout_mode = 0
-offset_left = 705.0
-offset_right = 987.0
+offset_left = 800.0
+offset_right = 1082.0
 offset_bottom = 55.0
 
 [node name="LabelExampleText2" type="Label" parent="NinePatchDialogueBox/LabelDisplay Mode"]
 layout_mode = 0
-offset_left = 753.0
+offset_left = 848.0
 offset_top = 5.0
-offset_right = 930.0
+offset_right = 1025.0
 offset_bottom = 47.0
 text = "Fullscreen"
 label_settings = SubResource("LabelSettings_ok1wg")
 
 [node name="LabelBrightness" type="Label" parent="NinePatchDialogueBox"]
 layout_mode = 0
-offset_left = 173.0
-offset_top = 498.0
-offset_right = 433.0
-offset_bottom = 553.0
+offset_left = 130.0
+offset_top = 497.0
+offset_right = 390.0
+offset_bottom = 552.0
 text = "Brightness"
 label_settings = SubResource("LabelSettings_ylxcr")
 
 [node name="HSlider3" type="HSlider" parent="NinePatchDialogueBox/LabelBrightness"]
 layout_mode = 0
-offset_left = 680.0
+offset_left = 775.0
 offset_top = -17.0
-offset_right = 1068.0
+offset_right = 1163.0
 offset_bottom = 67.0
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
