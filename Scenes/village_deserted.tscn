@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c02pvtcdq6s1i" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Sprinkles Front.png" id="9_kiiax"]
 [ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/Player/player_village.tscn" id="10_0duxd"]
 [ext_resource type="Texture2D" uid="uid://c2paketaax648" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Cupcake House Cherry Front.png" id="10_clfsi"]
-[ext_resource type="Texture2D" uid="uid://sqxenvxrlfox" path="res://Art/UI/Speech Bubble Icon.png" id="13_0q47p"]
+[ext_resource type="Texture2D" uid="uid://sqxenvxrlfox" path="res://Art/UI [Old]/Speech Bubble Icon.png" id="13_0q47p"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="13_gcoyi"]
 [ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="13_mo8rh"]
 [ext_resource type="Texture2D" uid="uid://cyjgoccl7hk7i" path="res://Art/Village/Deserted Village/Side Scroller [Updated]/Tiny Rocks.png" id="14_rfako"]

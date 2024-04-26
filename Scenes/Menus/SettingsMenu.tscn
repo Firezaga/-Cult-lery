@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/Menus/SettingsMenu.gd" id="1_smv1p"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/[Old] Village Assets/Cupcake Sky Background.png" id="2_k4uc2"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI/General Text Button.png" id="3_cmu38"]
-[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="4_ckwnn"]
+[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI [Old]/General Text Button.png" id="3_cmu38"]
+[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="4_ckwnn"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="5_nkbai"]
-[ext_resource type="Texture2D" uid="uid://dgoh6aplg1jk3" path="res://Art/UI/Dialogue/Dialogue Frame.svg" id="6_3xhyg"]
+[ext_resource type="Texture2D" uid="uid://dgoh6aplg1jk3" path="res://Art/UI [Old]/Dialogue/Dialogue Frame.svg" id="6_3xhyg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tly3c"]
 font_size = 60

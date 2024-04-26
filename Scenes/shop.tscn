@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ps1r0swx1oxn" path="res://Art/BlakeTest/Placeholder_Coin.png" id="3_ounph"]
 [ext_resource type="Texture2D" uid="uid://dw6ndbyxue81a" path="res://Art/BlakeTest/Placeholder_Potion_Icon.png" id="4_8tdqd"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="4_b7ady"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI/General Text Button.png" id="5_8hc87"]
-[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="6_ikjhs"]
+[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI [Old]/General Text Button.png" id="5_8hc87"]
+[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="6_ikjhs"]
 
 [sub_resource type="Animation" id="Animation_bu4ni"]
 resource_name = "background_in"

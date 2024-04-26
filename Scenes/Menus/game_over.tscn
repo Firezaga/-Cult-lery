@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr8e1cyk62td0"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/game_over.gd" id="1_6dfr0"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI/General Text Button.png" id="2_qy3nc"]
-[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI/General Text ButtonPressed.png" id="3_n33tk"]
-[ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI/General Text ButtonBlack.png" id="4_pfgy7"]
+[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI [Old]/General Text Button.png" id="2_qy3nc"]
+[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="3_n33tk"]
+[ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI [Old]/General Text ButtonBlack.png" id="4_pfgy7"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="5_tuwit"]
 
 [node name="game_over" type="CanvasLayer"]
