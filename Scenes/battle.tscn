@@ -1,34 +1,42 @@
-[gd_scene load_steps=33 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=41 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
 [ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted Village/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
+[ext_resource type="Texture2D" uid="uid://xbs15nubouy6" path="res://Art/UI [Updated]/Battle (New)/Battle Tray.png" id="5_dx085"]
 [ext_resource type="Texture2D" uid="uid://c2y2ma44ndkl8" path="res://Art/Weapons/Blood Moon Blade Sprite.png" id="5_p3qef"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="6_o6c28"]
-[ext_resource type="Texture2D" uid="uid://bswwgvooenevu" path="res://Art/UI [Old]/Battle/Attack Button Hover.png" id="8_nj4sy"]
-[ext_resource type="Texture2D" uid="uid://eg7cc4j1eo4x" path="res://Art/UI [Old]/Battle/Battle Tray.svg" id="9_3d1m4"]
-[ext_resource type="Texture2D" uid="uid://b3nkibcnfytwh" path="res://Art/UI [Old]/Battle/Attack Button Dis.png" id="9_04usm"]
-[ext_resource type="Texture2D" uid="uid://b1phf6uy0l04f" path="res://Art/UI [Old]/Battle/Wait Button.png" id="9_bck3x"]
-[ext_resource type="Texture2D" uid="uid://n0nn8cwxpx4t" path="res://Art/UI [Old]/Battle/Attack Button.png" id="10_h3wp1"]
-[ext_resource type="Texture2D" uid="uid://v5ebrqwjjg4i" path="res://Art/UI [Old]/Battle/Defend Button Hover.png" id="11_h4ylx"]
-[ext_resource type="Texture2D" uid="uid://ce5cblcf2witn" path="res://Art/UI [Old]/Battle/Defend Button.png" id="11_yajv7"]
-[ext_resource type="Texture2D" uid="uid://dvyrwadj28mpd" path="res://Art/UI [Old]/Battle/Defend Button Dis.png" id="12_0i67s"]
-[ext_resource type="Texture2D" uid="uid://2j3bis0h71b0" path="res://Art/UI [Old]/Battle/Flee Button.png" id="13_t3jkd"]
-[ext_resource type="Texture2D" uid="uid://ctkjp020t618j" path="res://Art/UI [Updated]/Battle (Old)/HP Bar Background.png" id="14_gg4hw"]
-[ext_resource type="Texture2D" uid="uid://tm0ypai0ay8y" path="res://Art/UI [Old]/Battle/Wait Button Hover.png" id="14_hdfah"]
+[ext_resource type="Texture2D" uid="uid://drpjbv2muvqcv" path="res://Art/UI [Updated]/Battle (New)/Attack Button Normal.png" id="8_p0nm4"]
+[ext_resource type="Texture2D" uid="uid://b44vd0b7f7ryj" path="res://Art/UI [Updated]/Battle (New)/Attack Button Pressed.png" id="9_8totb"]
+[ext_resource type="Texture2D" uid="uid://cv4x04yibhjl8" path="res://Art/UI [Updated]/Battle (New)/Attack Button Hovered.png" id="10_1ymgu"]
+[ext_resource type="Texture2D" uid="uid://d077qna4mon3j" path="res://Art/UI [Updated]/Battle (New)/Attack Button Disabled.png" id="11_4jbvl"]
+[ext_resource type="Texture2D" uid="uid://cjemqk0vgqn8l" path="res://Art/UI [Updated]/Battle (New)/Defend Button Normal.png" id="12_8wx0l"]
+[ext_resource type="Texture2D" uid="uid://es48ps8l4by4" path="res://Art/UI [Updated]/Battle (New)/Defend Button Pressed.png" id="13_w05ky"]
+[ext_resource type="Texture2D" uid="uid://dld0fc4r27fu1" path="res://Art/UI [Updated]/Battle (New)/Defend Button Hovered.png" id="14_04npe"]
 [ext_resource type="Texture2D" uid="uid://0fmd3qg63grv" path="res://Art/UI [Old]/Battle/Battle Text Button.png" id="14_pboex"]
 [ext_resource type="Texture2D" uid="uid://bfgu4ulxuakv7" path="res://Art/UI [Updated]/Battle (Old)/HP Fill Fixed.png" id="15_a2qia"]
-[ext_resource type="Texture2D" uid="uid://ci7nigkv6abss" path="res://Art/UI [Old]/Battle/Wait Button Dis.png" id="15_o7wcd"]
+[ext_resource type="Texture2D" uid="uid://x8rlmqanfxoa" path="res://Art/UI [Updated]/Battle (New)/Defend Button Disabled.png" id="15_o867c"]
 [ext_resource type="Texture2D" uid="uid://8duk3joobql" path="res://Art/UI [Updated]/Battle (Old)/HP Back Enemy.png" id="16_2pc08"]
-[ext_resource type="Texture2D" uid="uid://oqbvfketxfq7" path="res://Art/UI [Old]/Battle/AP Empty Icon.png" id="16_kim5s"]
+[ext_resource type="Texture2D" uid="uid://ccrsd3ly2r4s2" path="res://Art/UI [Updated]/Battle (New)/Wait Button Normal.png" id="16_i60og"]
+[ext_resource type="Texture2D" uid="uid://cggmmpych8mke" path="res://Art/UI [Updated]/Battle (New)/Wait Button Pressed.png" id="17_6onvk"]
 [ext_resource type="Texture2D" uid="uid://bruojjpgok5vl" path="res://Art/UI [Old]/Battle/AP Filled Icon.png" id="17_8ueu7"]
 [ext_resource type="Texture2D" uid="uid://bxmao6i3gamfa" path="res://Art/UI [Updated]/Battle (Old)/HP Fill Enemy.png" id="17_v2knm"]
-[ext_resource type="Texture2D" uid="uid://corlvcft3fgj5" path="res://Art/UI [Old]/Battle/Flee ButtonHover.png" id="17_x1h1o"]
-[ext_resource type="Texture2D" uid="uid://c7kh15feal4sf" path="res://Art/UI [Old]/Battle/Flee Button Dis.png" id="18_k4tis"]
+[ext_resource type="Texture2D" uid="uid://mag5kft6b4y2" path="res://Art/UI [Updated]/Battle (New)/Wait Button Hovered.png" id="18_6mqmo"]
+[ext_resource type="Texture2D" uid="uid://canvnbg2vun3y" path="res://Art/UI [Updated]/Battle (New)/Wait Button Disabled.png" id="19_6m48j"]
+[ext_resource type="Texture2D" uid="uid://wopjg7js4tew" path="res://Art/UI [Updated]/Battle (New)/Flee Button Normal.png" id="20_25r11"]
 [ext_resource type="Texture2D" uid="uid://cr3nlppssdpo8" path="res://Art/UI [Old]/Battle/Battle Text Button Hover.png" id="20_c153p"]
+[ext_resource type="Texture2D" uid="uid://ccf3rj2b51m1v" path="res://Art/UI [Updated]/Battle (New)/Flee Button Pressed.png" id="21_30n5m"]
 [ext_resource type="Texture2D" uid="uid://dw5xdig3nlwfo" path="res://Art/UI [Old]/Battle/Battle Text Button Dis.png" id="21_ur7p4"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="22_ljdfw"]
+[ext_resource type="Texture2D" uid="uid://dw1nirr3r7l8l" path="res://Art/UI [Updated]/Battle (New)/Flee Button Hovered.png" id="22_yvaat"]
+[ext_resource type="Texture2D" uid="uid://bbl8bukra5u7" path="res://Art/UI [Updated]/Battle (New)/Flee Button Disabled.png" id="23_quo2h"]
+[ext_resource type="Texture2D" uid="uid://dcdjwqa0e1u0b" path="res://Art/UI [Updated]/Battle (New)/AP Empty Icon.png" id="24_4hrf2"]
+[ext_resource type="Texture2D" uid="uid://bfl0kcl0gfax1" path="res://Art/UI [Updated]/Battle (New)/HP Frame.png" id="24_dp8h3"]
+[ext_resource type="Texture2D" uid="uid://2ddcarycodno" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Normal.png" id="24_qbh64"]
+[ext_resource type="Texture2D" uid="uid://bc6kjnu22dlh2" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Pressed.png" id="25_li2bu"]
+[ext_resource type="Texture2D" uid="uid://dpm7s432tcaj2" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Hovered.png" id="26_71kdv"]
+[ext_resource type="Texture2D" uid="uid://c1d1nqelp4a6e" path="res://Art/UI [Updated]/Battle (New)/Battle Text Button Disabled.png" id="27_yfiun"]
 
 [sub_resource type="Animation" id="Animation_rs55o"]
 length = 2.5
@@ -151,7 +159,7 @@ offset_right = 1874.0
 offset_bottom = 1041.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("9_3d1m4")
+texture = ExtResource("5_dx085")
 region_rect = Rect2(0, 0, 129, 129)
 patch_margin_left = 27
 patch_margin_top = 53
@@ -179,9 +187,10 @@ offset_left = 912.0
 offset_top = 704.0
 offset_right = 1051.0
 offset_bottom = 843.0
-texture_normal = ExtResource("10_h3wp1")
-texture_hover = ExtResource("8_nj4sy")
-texture_disabled = ExtResource("9_04usm")
+texture_normal = ExtResource("8_p0nm4")
+texture_pressed = ExtResource("9_8totb")
+texture_hover = ExtResource("10_1ymgu")
+texture_disabled = ExtResource("11_4jbvl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -190,9 +199,10 @@ offset_left = 1131.0
 offset_top = 705.0
 offset_right = 1270.0
 offset_bottom = 844.0
-texture_normal = ExtResource("11_yajv7")
-texture_hover = ExtResource("11_h4ylx")
-texture_disabled = ExtResource("12_0i67s")
+texture_normal = ExtResource("12_8wx0l")
+texture_pressed = ExtResource("13_w05ky")
+texture_hover = ExtResource("14_04npe")
+texture_disabled = ExtResource("15_o867c")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -202,9 +212,10 @@ offset_top = 704.0
 offset_right = 1531.0
 offset_bottom = 843.0
 disabled = true
-texture_normal = ExtResource("9_bck3x")
-texture_hover = ExtResource("14_hdfah")
-texture_disabled = ExtResource("15_o7wcd")
+texture_normal = ExtResource("16_i60og")
+texture_pressed = ExtResource("17_6onvk")
+texture_hover = ExtResource("18_6mqmo")
+texture_disabled = ExtResource("19_6m48j")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -214,9 +225,10 @@ offset_top = 704.0
 offset_right = 1779.0
 offset_bottom = 843.0
 disabled = true
-texture_normal = ExtResource("13_t3jkd")
-texture_hover = ExtResource("17_x1h1o")
-texture_disabled = ExtResource("18_k4tis")
+texture_normal = ExtResource("20_25r11")
+texture_pressed = ExtResource("21_30n5m")
+texture_hover = ExtResource("22_yvaat")
+texture_disabled = ExtResource("23_quo2h")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -226,9 +238,10 @@ offset_top = 896.0
 offset_right = 1261.0
 offset_bottom = 978.0
 disabled = true
-texture_normal = ExtResource("14_pboex")
-texture_hover = ExtResource("20_c153p")
-texture_disabled = ExtResource("21_ur7p4")
+texture_normal = ExtResource("24_qbh64")
+texture_pressed = ExtResource("25_li2bu")
+texture_hover = ExtResource("26_71kdv")
+texture_disabled = ExtResource("27_yfiun")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -248,9 +261,10 @@ offset_top = 896.0
 offset_right = 1757.0
 offset_bottom = 978.0
 disabled = true
-texture_normal = ExtResource("14_pboex")
-texture_hover = ExtResource("20_c153p")
-texture_disabled = ExtResource("21_ur7p4")
+texture_normal = ExtResource("24_qbh64")
+texture_pressed = ExtResource("25_li2bu")
+texture_hover = ExtResource("26_71kdv")
+texture_disabled = ExtResource("27_yfiun")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -373,112 +387,122 @@ text = "ENEMY 4"
 [node name="Player" type="Node" parent="UI"]
 
 [node name="AP" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 51.0
-offset_top = 116.0
-offset_right = 174.0
-offset_bottom = 274.0
+offset_left = 66.0
+offset_top = 151.0
+offset_right = 189.0
+offset_bottom = 309.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP2" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 191.0
-offset_top = 110.0
-offset_right = 314.0
-offset_bottom = 268.0
+offset_left = 164.0
+offset_top = 151.0
+offset_right = 287.0
+offset_bottom = 309.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP3" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 329.0
-offset_top = 111.0
-offset_right = 452.0
-offset_bottom = 269.0
+offset_left = 262.0
+offset_top = 152.0
+offset_right = 385.0
+offset_bottom = 310.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP4" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 480.0
-offset_top = 106.0
-offset_right = 603.0
-offset_bottom = 264.0
+offset_left = 359.0
+offset_top = 152.0
+offset_right = 482.0
+offset_bottom = 310.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP5" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 631.0
-offset_top = 107.0
-offset_right = 754.0
-offset_bottom = 265.0
+offset_left = 460.0
+offset_top = 152.0
+offset_right = 583.0
+offset_bottom = 310.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP6" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 83.0
-offset_top = 278.0
-offset_right = 206.0
-offset_bottom = 436.0
+offset_left = 66.0
+offset_top = 290.0
+offset_right = 189.0
+offset_bottom = 448.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP7" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 224.0
-offset_top = 272.0
-offset_right = 347.0
-offset_bottom = 430.0
+offset_left = 164.0
+offset_top = 290.0
+offset_right = 287.0
+offset_bottom = 448.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP8" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 377.0
-offset_top = 271.0
-offset_right = 500.0
-offset_bottom = 429.0
+offset_left = 262.0
+offset_top = 290.0
+offset_right = 385.0
+offset_bottom = 448.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP9" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 513.0
-offset_top = 271.0
-offset_right = 636.0
-offset_bottom = 429.0
+offset_left = 359.0
+offset_top = 290.0
+offset_right = 482.0
+offset_bottom = 448.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP10" type="TextureProgressBar" parent="UI/Player"]
-offset_left = 664.0
-offset_top = 260.0
-offset_right = 787.0
-offset_bottom = 418.0
+offset_left = 460.0
+offset_top = 290.0
+offset_right = 583.0
+offset_bottom = 448.0
+scale = Vector2(0.65, 0.65)
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("16_kim5s")
+texture_under = ExtResource("24_4hrf2")
 texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
@@ -490,7 +514,7 @@ offset_bottom = 131.0
 step = 0.0
 value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("14_gg4hw")
+texture_under = ExtResource("24_dp8h3")
 texture_progress = ExtResource("15_a2qia")
 tint_progress = Color(0, 1, 0, 1)
 
