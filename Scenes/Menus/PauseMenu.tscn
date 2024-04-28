@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://6m1saae2adgt"]
+[gd_scene load_steps=32 format=3 uid="uid://6m1saae2adgt"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/PauseMenu.gd" id="1_a2yh5"]
 [ext_resource type="Material" uid="uid://ba1ofdf7mq55l" path="res://Materials/blur.tres" id="2_u3111"]
@@ -15,9 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="9_6ymbk"]
 [ext_resource type="PackedScene" uid="uid://ctf4kk8t8s5sk" path="res://Reuseable Templates/nine_patch_rect_battletray.tscn" id="10_o1p8c"]
 [ext_resource type="LabelSettings" uid="uid://b5depcdow2mva" path="res://Fonts/pause_menu.tres" id="11_cdvcq"]
-[ext_resource type="Texture2D" uid="uid://dx31sx8w1672b" path="res://Art/BlakeTest/lvl_bar_back.png" id="12_todem"]
-[ext_resource type="Texture2D" uid="uid://cslu1iytjjeic" path="res://Art/BlakeTest/lvl_bar_top.png" id="13_ko3cl"]
-[ext_resource type="Texture2D" uid="uid://ch26beo5cs0fw" path="res://Art/BlakeTest/lvl_bar_pro.png" id="14_xr1dm"]
 [ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="15_jt8vl"]
 [ext_resource type="Texture2D" uid="uid://bfl0kcl0gfax1" path="res://Art/UI [Updated]/Battle (New)/HP Frame.png" id="16_psygd"]
 [ext_resource type="Texture2D" uid="uid://bfgu4ulxuakv7" path="res://Art/UI [Updated]/Battle (Old)/HP Fill Fixed.png" id="17_1pxng"]
@@ -367,28 +364,28 @@ offset_bottom = 535.0
 text = "LVL"
 label_settings = ExtResource("11_cdvcq")
 
-[node name="LevelProgressBar2" type="TextureProgressBar" parent="PlayerStats"]
+[node name="LevelProgressBar" type="TextureProgressBar" parent="PlayerStats"]
 layout_mode = 0
 offset_left = 120.0
-offset_top = 150.0
-offset_right = 415.0
-offset_bottom = 190.0
+offset_top = 186.0
+offset_right = 379.0
+offset_bottom = 221.0
 rotation = 1.5708
-value = 50.0
+value = 5.0
 nine_patch_stretch = true
 texture_under = ExtResource("20_x4l1l")
 texture_progress = ExtResource("21_0lt34")
 tint_progress = Color(0, 1, 1, 0.780392)
 
-[node name="BattleTextButtonNormal" type="Sprite2D" parent="PlayerStats/LevelProgressBar2"]
-position = Vector2(315, 21)
-rotation = 1.5708
+[node name="BattleTextButtonNormal" type="Sprite2D" parent="PlayerStats"]
+position = Vector2(98.9989, 465)
+rotation = -3.14159
 scale = Vector2(0.0233724, 0.11999)
 texture = ExtResource("24_6xx8d")
 
-[node name="BattleTextButtonNormal2" type="Sprite2D" parent="PlayerStats/LevelProgressBar2"]
-position = Vector2(14, 16.7793)
-rotation = 1.5708
+[node name="BattleTextButtonNormal2" type="Sprite2D" parent="PlayerStats"]
+position = Vector2(103.221, 164)
+rotation = -3.14159
 scale = Vector2(0.0233724, 0.11999)
 texture = ExtResource("24_6xx8d")
 
@@ -403,22 +400,6 @@ text = "1"
 label_settings = ExtResource("11_cdvcq")
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="LevelProgressBar" type="TextureProgressBar" parent="PlayerStats"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0739935
-anchor_top = 0.326214
-anchor_right = 0.104461
-anchor_bottom = 0.827184
-value = 50.0
-fill_mode = 3
-nine_patch_stretch = true
-texture_under = ExtResource("12_todem")
-texture_over = ExtResource("13_ko3cl")
-texture_progress = ExtResource("14_xr1dm")
 metadata/_edit_use_anchors_ = true
 
 [node name="Lvl2" type="Label" parent="PlayerStats"]
@@ -545,7 +526,7 @@ offset_bottom = 31.0
 text = "50"
 label_settings = ExtResource("11_cdvcq")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="PlayerStats/AttackLabel"]
+[node name="AttackValueBar" type="TextureProgressBar" parent="PlayerStats/AttackLabel"]
 layout_mode = 0
 offset_left = 144.0
 offset_right = 317.0
@@ -574,7 +555,7 @@ offset_bottom = 29.0
 text = "10"
 label_settings = ExtResource("11_cdvcq")
 
-[node name="TextureProgressBar2" type="TextureProgressBar" parent="PlayerStats/DefenceLabel"]
+[node name="DefenceValueBar" type="TextureProgressBar" parent="PlayerStats/DefenceLabel"]
 layout_mode = 0
 offset_left = 144.0
 offset_top = -2.0

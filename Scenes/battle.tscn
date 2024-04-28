@@ -1,11 +1,10 @@
-[gd_scene load_steps=41 format=3 uid="uid://dk5kvc27hsf71"]
+[gd_scene load_steps=40 format=3 uid="uid://dk5kvc27hsf71"]
 
 [ext_resource type="Script" path="res://Scripts/battle.gd" id="1_rqkbr"]
 [ext_resource type="PackedScene" uid="uid://cqi1d8gihq0xv" path="res://color_rect.tscn" id="2_d4jdv"]
 [ext_resource type="Texture2D" uid="uid://c54o6sks6k71s" path="res://Art/Village/Deserted Village/Battle/Deserted Cupcake Village Battle Normal.png" id="3_0m688"]
 [ext_resource type="Texture2D" uid="uid://boe6vhcnfo0xr" path="res://Art/Character/MC Idle Sprite(Battle).png" id="3_woqp6"]
 [ext_resource type="Texture2D" uid="uid://xbs15nubouy6" path="res://Art/UI [Updated]/Battle (New)/Battle Tray.png" id="5_dx085"]
-[ext_resource type="Texture2D" uid="uid://c2y2ma44ndkl8" path="res://Art/Weapons/Blood Moon Blade Sprite.png" id="5_p3qef"]
 [ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="6_o6c28"]
 [ext_resource type="Texture2D" uid="uid://drpjbv2muvqcv" path="res://Art/UI [Updated]/Battle (New)/Attack Button Normal.png" id="8_p0nm4"]
 [ext_resource type="Texture2D" uid="uid://b44vd0b7f7ryj" path="res://Art/UI [Updated]/Battle (New)/Attack Button Pressed.png" id="9_8totb"]
@@ -109,41 +108,41 @@ texture = ExtResource("3_woqp6")
 [node name="Weapon1" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(385, 541)
 scale = Vector2(0.116667, 0.116667)
-texture = ExtResource("5_p3qef")
 
 [node name="Weapon2" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(505, 657)
 scale = Vector2(0.111806, 0.111806)
-texture = ExtResource("5_p3qef")
 
 [node name="Weapon3" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(622, 804)
 scale = Vector2(0.101215, 0.101215)
-texture = ExtResource("5_p3qef")
 
 [node name="Weapon4" type="Sprite2D" parent="Player" groups=["Battle"]]
 position = Vector2(734, 949)
 scale = Vector2(0.115432, 0.115432)
-texture = ExtResource("5_p3qef")
 
 [node name="Enemy" type="Node" parent="."]
 
 [node name="Enemy3" type="Sprite2D" parent="Enemy"]
+visible = false
 position = Vector2(1218, 309)
 scale = Vector2(0.34477, 0.34477)
 texture = ExtResource("6_o6c28")
 
 [node name="Enemy4" type="Sprite2D" parent="Enemy"]
+visible = false
 position = Vector2(1664, 307)
 scale = Vector2(0.335048, 0.335048)
 texture = ExtResource("6_o6c28")
 
 [node name="Enemy1" type="Sprite2D" parent="Enemy"]
+visible = false
 position = Vector2(985, 473)
 scale = Vector2(0.412826, 0.412826)
 texture = ExtResource("6_o6c28")
 
 [node name="Enemy2" type="Sprite2D" parent="Enemy"]
+visible = false
 position = Vector2(1499, 524)
 scale = Vector2(0.412826, 0.412826)
 texture = ExtResource("6_o6c28")
@@ -153,6 +152,7 @@ texture = ExtResource("6_o6c28")
 [node name="Buttons" type="Node" parent="UI"]
 
 [node name="ButtonBackground" type="NinePatchRect" parent="UI/Buttons" groups=["Battle", "ButtonsWBack"]]
+visible = false
 offset_left = 810.0
 offset_top = 652.0
 offset_right = 1874.0
@@ -183,6 +183,7 @@ autowrap_mode = 2
 [node name="TurnButtons" type="Node2D" parent="UI/Buttons"]
 
 [node name="AttackButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 912.0
 offset_top = 704.0
 offset_right = 1051.0
@@ -195,6 +196,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="DefendButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1131.0
 offset_top = 705.0
 offset_right = 1270.0
@@ -207,6 +209,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="WaitButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1392.0
 offset_top = 704.0
 offset_right = 1531.0
@@ -220,6 +223,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="FleeButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1640.0
 offset_top = 704.0
 offset_right = 1779.0
@@ -233,6 +237,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="OrderButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 920.0
 offset_top = 896.0
 offset_right = 1261.0
@@ -256,6 +261,7 @@ text = "ORDER"
 label_settings = ExtResource("22_ljdfw")
 
 [node name="SpecialsButton" type="TextureButton" parent="UI/Buttons/TurnButtons" groups=["Buttons", "ButtonsWBack"]]
+visible = false
 offset_left = 1416.0
 offset_top = 896.0
 offset_right = 1757.0
@@ -387,6 +393,7 @@ text = "ENEMY 4"
 [node name="Player" type="Node" parent="UI"]
 
 [node name="AP" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 66.0
 offset_top = 151.0
 offset_right = 189.0
@@ -399,6 +406,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP2" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 164.0
 offset_top = 151.0
 offset_right = 287.0
@@ -411,6 +419,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP3" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 262.0
 offset_top = 152.0
 offset_right = 385.0
@@ -423,6 +432,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP4" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 359.0
 offset_top = 152.0
 offset_right = 482.0
@@ -435,6 +445,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP5" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 460.0
 offset_top = 152.0
 offset_right = 583.0
@@ -447,6 +458,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP6" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 66.0
 offset_top = 290.0
 offset_right = 189.0
@@ -459,6 +471,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP7" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 164.0
 offset_top = 290.0
 offset_right = 287.0
@@ -471,6 +484,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP8" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 262.0
 offset_top = 290.0
 offset_right = 385.0
@@ -483,6 +497,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP9" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 359.0
 offset_top = 290.0
 offset_right = 482.0
@@ -495,6 +510,7 @@ texture_progress = ExtResource("17_8ueu7")
 radial_initial_angle = 143.5
 
 [node name="AP10" type="TextureProgressBar" parent="UI/Player"]
+visible = false
 offset_left = 460.0
 offset_top = 290.0
 offset_right = 583.0
@@ -521,6 +537,7 @@ tint_progress = Color(0, 1, 0, 1)
 [node name="Enemy" type="Node" parent="UI"]
 
 [node name="Enemy1Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
 offset_left = 695.0
 offset_top = 206.0
 offset_right = 1069.0
@@ -535,6 +552,7 @@ texture_progress = ExtResource("17_v2knm")
 tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy2Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
 offset_left = 1247.0
 offset_top = 216.0
 offset_right = 1621.0
@@ -549,6 +567,7 @@ texture_progress = ExtResource("17_v2knm")
 tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy3Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
 offset_left = 988.0
 offset_top = 51.0
 offset_right = 1362.0
@@ -563,6 +582,7 @@ texture_progress = ExtResource("17_v2knm")
 tint_progress = Color(0, 1, 0, 1)
 
 [node name="Enemy4Health" type="TextureProgressBar" parent="UI/Enemy"]
+visible = false
 offset_left = 1443.0
 offset_top = 63.0
 offset_right = 1817.0

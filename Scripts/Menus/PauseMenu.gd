@@ -27,8 +27,16 @@ func _on_pause_button_pressed():
 	$PlayerStats/Lvl2.text = str(Global.PlayerLvl + 1)
 	$PlayerStats/LevelProgressBar.max_value = Global.PlayerMaxExperience
 	$PlayerStats/LevelProgressBar.value = Global.PlayerCurExperience
+	$PlayerStats/HealthBar/HPValue.text = str(Global.PlayerCurHealth) + "/" + str(Global.PlayerMaxHealth)
 	$PlayerStats/HealthBar.max_value = Global.PlayerMaxHealth
 	$PlayerStats/HealthBar.value = Global.PlayerCurHealth
+	$PlayerStats/AttackLabel/AttackValue.text = str(Global.PlayerAttack)
+	$PlayerStats/AttackLabel/AttackValueBar.max_value = 50
+	$PlayerStats/AttackLabel/AttackValueBar.value = Global.PlayerAttack
+	$PlayerStats/DefenceLabel/DefenceValue.text = str(Global.PlayerDefense)
+	$PlayerStats/DefenceLabel/DefenceValueBar.max_value = 50
+	$PlayerStats/DefenceLabel/DefenceValueBar.value = Global.PlayerDefense
+	
 	if Global.PlayerWeapon1 != "":
 		$PlayerStats/Weapon1.texture = ResourceLoader.load(Global.PlayerWeapon1)
 	if Global.PlayerWeapon2 != "":

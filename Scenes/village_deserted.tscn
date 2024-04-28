@@ -325,12 +325,12 @@ position = Vector2(280, 294)
 [node name="_Chad_ish" type="Area2D" parent="Foreground"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/_Chad_ish"]
-position = Vector2(3994, 528)
+position = Vector2(5555, 528)
 scale = Vector2(0.562326, 0.562326)
 shape = SubResource("CapsuleShape2D_hv0lh")
 
 [node name="RadishBossIdleSprite" type="Sprite2D" parent="Foreground/_Chad_ish"]
-position = Vector2(4233.88, 922.875)
+position = Vector2(5794.88, 922.875)
 scale = Vector2(0.562326, 0.562326)
 texture = ExtResource("13_gcoyi")
 
@@ -402,6 +402,7 @@ text = "Test"
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_mo8rh")]
+visible = false
 
 [connection signal="area_shape_entered" from="Foreground/FortuneTeller" to="." method="_on_fortune_teller_area_shape_entered"]
 [connection signal="area_shape_exited" from="Foreground/FortuneTeller" to="." method="_on_fortune_teller_area_shape_exited"]

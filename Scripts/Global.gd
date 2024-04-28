@@ -187,14 +187,14 @@ func game_over():
 
 func new_game():
 	PlayerMaxHealth = 50
-	PlayerCurHealth = 10
+	PlayerCurHealth = 40
 	PlayerAttack = 15
 	PlayerAP = 1
 	PlayerStartingAP = 25
 	PlayerDefense = 5
 	PlayerLvl = 1
 	PlayerMaxExperience = 10
-	PlayerCurExperience = 0
+	PlayerCurExperience = 4
 	goto_scene(NewGame)
 
 
