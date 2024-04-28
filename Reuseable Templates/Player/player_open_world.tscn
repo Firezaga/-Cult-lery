@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3xcje80yffmr"]
+[gd_scene load_steps=4 format=3 uid="uid://c3xcje80yffmr"]
 
 [ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="1_xk220"]
+[ext_resource type="Script" path="res://Scripts/player_open_world.gd" id="1_xkijp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72ws0"]
 radius = 40.0
-height = 192.0
+height = 128.0
 
 [node name="PlayerOpenWorld" type="Area2D"]
+script = ExtResource("1_xkijp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-5.68434e-14, 0)
-scale = Vector2(0.158025, 0.133333)
+position = Vector2(-5.68434e-14, -3.8147e-06)
+scale = Vector2(0.158025, 0.0888889)
 texture = ExtResource("1_xk220")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

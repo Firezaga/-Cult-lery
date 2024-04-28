@@ -17,11 +17,13 @@ texture = ExtResource("2_j2tf1")
 stretch_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = -3858.0
-offset_top = -3960.0
-offset_right = -1298.0
-offset_bottom = -2520.0
+offset_left = -2216.0
+offset_top = -2227.0
+offset_right = -746.0
+offset_bottom = -1400.0
 scale = Vector2(3, 3)
 texture = ExtResource("3_eqswc")
+expand_mode = 1
 
 [node name="PlayerOpenWorld" parent="." instance=ExtResource("4_al01i")]
+speed = 600
