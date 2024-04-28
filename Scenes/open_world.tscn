@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvqp2f2dtkpel"]
+
+[ext_resource type="Script" path="res://Scripts/open_world.gd" id="1_gnxlt"]
+[ext_resource type="Texture2D" uid="uid://0nt5qo1j1mp7" path="res://Art/Village/Main Village/Open World Map/Sea Background.png" id="2_j2tf1"]
+[ext_resource type="Texture2D" uid="uid://c70spac66cbkm" path="res://Art/Village/Main Village/Open World Map/Main Village Island.png" id="3_eqswc"]
+[ext_resource type="PackedScene" uid="uid://c3xcje80yffmr" path="res://Reuseable Templates/Player/player_open_world.tscn" id="4_al01i"]
+
+[node name="OpenWorld" type="Node2D"]
+script = ExtResource("1_gnxlt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5537.0
+offset_top = -5520.0
+offset_right = 5676.0
+offset_bottom = 2818.0
+texture = ExtResource("2_j2tf1")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -3858.0
+offset_top = -3960.0
+offset_right = -1298.0
+offset_bottom = -2520.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_eqswc")
+
+[node name="PlayerOpenWorld" parent="." instance=ExtResource("4_al01i")]
