@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://by54j1uyv6y81"]
+[gd_scene load_steps=22 format=3 uid="uid://by54j1uyv6y81"]
 
+[ext_resource type="Script" path="res://Scripts/main_village.gd" id="1_n4bui"]
 [ext_resource type="Texture2D" uid="uid://bq51hq2e743tt" path="res://Art/Village/Main Village/Side Scroller/Ground Top.png" id="1_slwfm"]
 [ext_resource type="Texture2D" uid="uid://cjg3su8bgef4q" path="res://Art/Village/Main Village/Side Scroller/Sky Background.png" id="1_um8n4"]
 [ext_resource type="Texture2D" uid="uid://bpngtirwxdvnw" path="res://Art/Village/Main Village/Side Scroller/Ground Village.png" id="2_k2ck3"]
@@ -17,8 +18,17 @@
 [ext_resource type="Texture2D" uid="uid://blicgn25aawas" path="res://Art/Village/Main Village/Side Scroller/Flower Single.png" id="12_6biak"]
 [ext_resource type="Texture2D" uid="uid://b1hwi6eqdgojp" path="res://Art/Village/Main Village/Side Scroller/Extra Shadow.png" id="12_q61wn"]
 [ext_resource type="Texture2D" uid="uid://diah4wg0opjjj" path="res://Art/Village/Main Village/Side Scroller/Tree with Shadow.png" id="13_qcsea"]
+[ext_resource type="PackedScene" uid="uid://bu06d4mkwmk61" path="res://Reuseable Templates/Player/player_village.tscn" id="15_d4rhh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ratqs"]
+height = 650.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4r8s"]
+radius = 25.0
+height = 1096.0
 
 [node name="MainVillage" type="Node2D"]
+script = ExtResource("1_n4bui")
 
 [node name="Background Art" type="Node" parent="."]
 
@@ -314,6 +324,21 @@ scale = Vector2(0.5425, 0.5425)
 texture = ExtResource("8_1axuq")
 flip_h = true
 
+[node name="PlayerVillage" parent="Foreground Art" instance=ExtResource("15_d4rhh")]
+position = Vector2(1066, 244)
+
+[node name="OpenWorld" type="Area2D" parent="Foreground Art"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground Art/OpenWorld"]
+position = Vector2(-690, 434)
+shape = SubResource("CapsuleShape2D_ratqs")
+debug_color = Color(1, 0, 0.145098, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Foreground Art/OpenWorld"]
+position = Vector2(8238, 433)
+shape = SubResource("CapsuleShape2D_t4r8s")
+debug_color = Color(0.992157, 0, 0.231373, 0.419608)
+
 [node name="Foreground Houses" type="Node" parent="Foreground Art"]
 
 [node name="CupcakeHouseSprinklesBackView" type="Sprite2D" parent="Foreground Art/Foreground Houses"]
@@ -377,3 +402,5 @@ modulate = Color(0.964706, 0.913725, 0.898039, 1)
 position = Vector2(7712, 1432)
 scale = Vector2(0.725521, 0.704167)
 texture = ExtResource("6_r5vxc")
+
+[connection signal="area_entered" from="Foreground Art/OpenWorld" to="." method="_on_open_world_area_entered"]

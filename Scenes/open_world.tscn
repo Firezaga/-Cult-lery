@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvqp2f2dtkpel"]
+[gd_scene load_steps=10 format=3 uid="uid://bvqp2f2dtkpel"]
 
 [ext_resource type="Script" path="res://Scripts/open_world.gd" id="1_gnxlt"]
 [ext_resource type="Texture2D" uid="uid://0nt5qo1j1mp7" path="res://Art/Village/Main Village/Open World Map/Sea Background.png" id="2_j2tf1"]
 [ext_resource type="Texture2D" uid="uid://c70spac66cbkm" path="res://Art/Village/Main Village/Open World Map/Main Village Island.png" id="3_eqswc"]
+[ext_resource type="PackedScene" uid="uid://6m1saae2adgt" path="res://Scenes/Menus/PauseMenu.tscn" id="5_kf4s2"]
 [ext_resource type="PackedScene" uid="uid://b8u5ecm86l3mv" path="res://Reuseable Templates/Player/player_open_world_t.tscn" id="5_quinl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1wnfn"]
@@ -16,6 +17,9 @@ height = 108.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mrou"]
 radius = 7.0
 height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nnodl"]
+height = 650.0
 
 [node name="OpenWorld" type="Node2D"]
 script = ExtResource("1_gnxlt")
@@ -38,7 +42,7 @@ texture = ExtResource("3_eqswc")
 expand_mode = 1
 
 [node name="PlayerOpenWorldT" parent="." instance=ExtResource("5_quinl")]
-position = Vector2(425, -610)
+position = Vector2(671, -841)
 speed = 600
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -344,4 +348,17 @@ polygon = PackedVector2Array(-1251, -1270, -1276, -1276, -1301, -1285, -1321, -1
 polygon = PackedVector2Array(477, -636, 465, -637, 454, -647, 456, -662, 477, -683, 503, -695, 502, -716, 532, -740, 546, -758, 579, -763, 619, -766, 638, -753, 666, -739, 696, -728, 736, -715, 750, -703, 758, -664, 739, -658, 704, -655, 690, -653, 665, -656, 622, -670, 558, -669, 565, -655, 546, -636)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-188, 199, -512, 110, -669, 55, -898, 26, -1142, 19, -1483, -212, -1482, -552, -1438, -739, -1444, -849, -1556, -1041, -1602, -1111, -1625, -1217, -1568, -1387, -1480, -1488, -1331, -1582, -1267, -1635, -1194, -1760, -1112, -1899, -1026, -1956, -876, -1996, -746, -2029, -638, -2086, -488, -2172, -360, -2207, -175, -2194, -41, -2138, 93, -2063, 208, -1989, 341, -1961, 456, -1964, 613, -2008, 801, -2067, 931, -2109, 1029, -2093, 1110, -2074, 1191, -2010, 1279, -1893, 1331, -1778, 1368, -1707, 1422, -1667, 1498, -1631, 1573, -1577, 1628, -1520, 1680, -1418, 1712, -1312, 1752, -1189, 1780, -1105, 1794, -930, 1773, -674, 1724, -479, 1639, -314, 1478, -158, 1282, -64, 1114, -38, 982, -2, 895, 40, 774, 98, 647, 154, 516, 196, 332, 226, 236, 232, 128, 232, 67, 227, -11, 224, -93, 212, -147, 208, -187, 199, -190, 1012, 2316, 243, 2327, -2670, -1932, -2732, -2068, 922, -217, 1004)
+polygon = PackedVector2Array(-188, 199, -512, 110, -669, 55, -898, 26, -1142, 19, -1483, -212, -1482, -552, -1438, -739, -1444, -849, -1556, -1041, -1602, -1111, -1625, -1217, -1568, -1387, -1480, -1488, -1331, -1582, -1267, -1635, -1194, -1760, -1112, -1899, -1026, -1956, -876, -1996, -746, -2029, -638, -2086, -488, -2172, -360, -2207, -175, -2194, -41, -2138, 93, -2063, 208, -1989, 341, -1961, 456, -1964, 613, -2008, 801, -2067, 931, -2109, 1029, -2093, 1110, -2074, 1191, -2010, 1279, -1893, 1331, -1778, 1368, -1707, 1422, -1667, 1498, -1631, 1573, -1577, 1628, -1520, 1680, -1418, 1712, -1312, 1752, -1189, 1780, -1105, 1794, -930, 1773, -674, 1724, -479, 1639, -314, 1478, -158, 1282, -64, 1114, -38, 982, -2, 895, 40, 774, 98, 647, 154, 516, 196, 332, 226, 236, 232, 128, 232, 67, 227, -11, 224, -93, 212, -147, 208, -187, 199, 20, 454, 1223, 225, 2008, -350, 1883, -1110, 1585, -1893, 1026, -2161, 348.822, -2298.7, -572, -2335, -1444, -1772, -1757, -1214, -1572, 30, -271, 376)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_kf4s2")]
+
+[node name="Village" type="Area2D" parent="."]
+position = Vector2(1061, -824)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Village"]
+position = Vector2(-25, -6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nnodl")
+debug_color = Color(0.996078, 0, 0.184314, 0.419608)
+
+[connection signal="area_entered" from="Village" to="." method="_on_village_area_entered"]

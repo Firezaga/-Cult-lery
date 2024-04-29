@@ -9,23 +9,25 @@ var Shop = "res://Scenes/shop.tscn"
 var Dialogue = "res://Scenes/dialogue.tscn"
 var GameOver = "res://Scenes/Menus/game_over.tscn"
 var VillageDeserted = "res://Scenes/village_deserted.tscn"
+var MainVillage = "res://Scenes/main_village.tscn"
+var OpenWorld = "res://Scenes/open_world.tscn"
 var current_scene = null
 
 #region Character variables - for saving/loading and going between scenes
 #region Basic Stats - (Name, Health, Attack, Defense)
 var PlayerName = "Test"
 var PlayerMaxHealth = 200
-var PlayerCurHealth = 100
+var PlayerCurHealth = 200
 var PlayerAttack = 50
 var PlayerAP = 1
 var PlayerStartingAP = 1
 var PlayerDefense = 0
-var PlayerMove = null
+var PlayerMove = false
 #endregion
 
 #region Leveling
-var PlayerLvl = null
-var PlayerMaxExperience = null
+var PlayerLvl = 2
+var PlayerMaxExperience = 200
 var PlayerCurExperience = 0
 #endregion
 
@@ -47,8 +49,9 @@ var PlayerWeapon4Attack = null
 var PlayerWeapon4Defense = null
 
 var PlayerMoney = 15
-var PlayerPotion = 0
-var PlayerLoc = null
+var PlayerPotion = 5
+var PlayerLocX = -31
+var PlayerLocY = 77
 #endregion
 
 #region Enemy variables
@@ -126,6 +129,12 @@ func _deferred_goto_scene(path):
 
 func goto_village_deserted():
 	goto_scene(VillageDeserted)
+
+func goto_main_village():
+	goto_scene(MainVillage)
+
+func goto_open_world():
+	goto_scene(OpenWorld)
 
 func shop():
 	var scene = load(Shop)
