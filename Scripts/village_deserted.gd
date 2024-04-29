@@ -16,11 +16,10 @@ func _process(_delta):
 		Global.PlayerMove = false
 		can_talk = false
 		$Foreground/FortuneTeller/SpeechBubbleIcon.visible = false
-		$Foreground/FortuneTeller/ShopIcon.visible = false
 		Global.DiaBackground = "res://Art/Village/Deserted Village/Battle/Deserted Cupcake Village Chromatic Abberation.png"
 		Global.DiaSpriteLeft = "res://Art/Character/MC Idle Sprite(Open World).png"
 		Global.DiaSpriteRight = "res://Art/NPCs/Fortune Teller/Fortune Teller Idle Sprite.png"
-		Global.DiaText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque justo nec odio ultrices, vitae tincidunt nibh mollis. Nulla facilisi. Suspendisse potenti. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. ~Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. Sed auctor nisl nec nunc mattis, eu sodales nibh molestie. Vivamus auctor nisl vel nunc mattis, eu sodales nibh molestie. Praesent nec nisl nec nunc volutpat mollis. Sed quis nunc nec nunc mattis molestie. ~Sed auctor nisl nec nunc mattis, eu sodales nibh molestie.~"
+		Global.DiaText = "RADDISHES!!!!!!! ~This person seems to not see you.~"
 		Global.dialogue()
 	if Input.is_action_pressed("shop") && can_talk:
 		Global.PlayerMove = false
@@ -46,7 +45,6 @@ func _on_animation_player_animation_finished(anim_name):
 
 func _on_fortune_teller_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	$Foreground/FortuneTeller/SpeechBubbleIcon.visible = true
-	$Foreground/FortuneTeller/ShopIcon.visible = true
 	can_talk = true
 
 
@@ -54,5 +52,4 @@ func _on_fortune_teller_area_shape_entered(area_rid, area, area_shape_index, loc
 
 func _on_fortune_teller_area_shape_exited(area_rid, area, area_shape_index, local_shape_index):
 	$Foreground/FortuneTeller/SpeechBubbleIcon.visible = false
-	$Foreground/FortuneTeller/ShopIcon.visible = false
 	can_talk = false

@@ -22,6 +22,7 @@ var PlayerAttack = 50
 var PlayerAP = 1
 var PlayerStartingAP = 1
 var PlayerDefense = 0
+var PlayerStoryState = 0
 var PlayerMove = false
 #endregion
 
@@ -196,14 +197,17 @@ func game_over():
 
 func new_game():
 	PlayerMaxHealth = 50
-	PlayerCurHealth = 40
+	PlayerCurHealth = 50
 	PlayerAttack = 15
 	PlayerAP = 1
 	PlayerStartingAP = 25
 	PlayerDefense = 5
 	PlayerLvl = 1
 	PlayerMaxExperience = 10
-	PlayerCurExperience = 4
+	PlayerCurExperience = 0
+	PlayerMoney = 0
+	PlayerPotion = 0
+	PlayerStoryState = 0
 	goto_scene(NewGame)
 
 

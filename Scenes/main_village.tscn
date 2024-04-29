@@ -325,7 +325,7 @@ texture = ExtResource("8_1axuq")
 flip_h = true
 
 [node name="PlayerVillage" parent="Foreground Art" instance=ExtResource("15_d4rhh")]
-position = Vector2(1066, 244)
+position = Vector2(5189, 244)
 
 [node name="OpenWorld" type="Area2D" parent="Foreground Art"]
 

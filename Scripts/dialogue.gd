@@ -6,8 +6,10 @@ var can_skip = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$ColorRect/AnimationPlayer.play("background_in")
-	$SpriteRight.texture = ResourceLoader.load(Global.DiaSpriteRight)
-	$SpriteLeft.texture = ResourceLoader.load(Global.DiaSpriteLeft)
+	if Global.DiaSpriteRight != "":
+		$SpriteRight.texture = ResourceLoader.load(Global.DiaSpriteRight)
+	if Global.DiaSpriteLeft != "":
+		$SpriteLeft.texture = ResourceLoader.load(Global.DiaSpriteLeft)
 	$SceneBackground.texture = ResourceLoader.load(Global.DiaBackground)
 	raw_text = Global.DiaText
 
@@ -41,7 +43,7 @@ func ProText():
 		if raw_text[i] == '~':
 			await DisplayText(text_to_send)
 			await get_tree().create_timer(2.0).timeout
-			text_to_send = " "
+			text_to_send = ""
 			continue
 		text_to_send += raw_text[i]
 
