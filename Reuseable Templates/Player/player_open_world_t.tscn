@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8u5ecm86l3mv"]
+
+[ext_resource type="Script" path="res://Reuseable Templates/Player/player_open_world_t.gd" id="1_03qlh"]
+[ext_resource type="Texture2D" uid="uid://b333mkaace2j6" path="res://Art/Character/MC Idle Sprite(Open World).png" id="1_jnogw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_322le"]
+radius = 8.0
+height = 32.0
+
+[node name="PlayerOpenWorldT" type="CharacterBody2D"]
+script = ExtResource("1_03qlh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0790125, 0.0444444)
+texture = ExtResource("1_jnogw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_322le")
+
+[node name="Camera2D" type="Camera2D" parent="."]

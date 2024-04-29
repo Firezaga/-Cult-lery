@@ -4,15 +4,14 @@
 [ext_resource type="Script" path="res://Scripts/player_open_world.gd" id="1_xkijp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72ws0"]
-radius = 40.0
-height = 128.0
+radius = 16.0
+height = 64.0
 
 [node name="PlayerOpenWorld" type="Area2D"]
 script = ExtResource("1_xkijp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-5.68434e-14, -3.8147e-06)
-scale = Vector2(0.158025, 0.0888889)
+scale = Vector2(0.0790125, 0.0444444)
 texture = ExtResource("1_xk220")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
