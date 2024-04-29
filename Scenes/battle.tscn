@@ -288,6 +288,7 @@ label_settings = ExtResource("22_ljdfw")
 visible = false
 
 [node name="AttackEnemy1Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
 offset_left = 913.0
 offset_top = 835.0
 offset_right = 1233.0
@@ -308,6 +309,7 @@ theme_override_font_sizes/font_size = 30
 text = "ENEMY 1"
 
 [node name="AttackEnemy2Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
 offset_left = 1424.0
 offset_top = 835.0
 offset_right = 1744.0
@@ -328,6 +330,7 @@ theme_override_font_sizes/font_size = 30
 text = "ENEMY 2"
 
 [node name="AttackEnemy3Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
 offset_left = 911.0
 offset_top = 697.0
 offset_right = 1231.0
@@ -348,6 +351,7 @@ theme_override_font_sizes/font_size = 30
 text = "ENEMY 3"
 
 [node name="AttackBackButton" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
 offset_left = 854.0
 offset_top = 958.0
 offset_right = 990.0
@@ -371,6 +375,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AttackEnemy4Button" type="TextureButton" parent="UI/Buttons/TargetButtons"]
+visible = false
 offset_left = 1421.0
 offset_top = 697.0
 offset_right = 1741.0

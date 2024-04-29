@@ -184,7 +184,7 @@ func battle_end():
 	Enemy4Name = ""
 	Enemy4Health = 0
 	Enemy4Attack = 0
-	Enemy4.Defense = 0
+	Enemy4Defense = 0
 	
 	await get_tree().create_timer(0.5).timeout
 	PlayerMove = true
