@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://y3xdejfxd7kp"]
+
+[ext_resource type="Texture2D" uid="uid://cdapbn2iavdm" path="res://Art/Character/MC Facing Right Pieces.png" id="2_3vcgv"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Polygons" type="Node2D" parent="."]
+position = Vector2(0, 58)
+
+[node name="Scarf" type="Polygon2D" parent="Polygons"]
+position = Vector2(360, -726)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(632, 1216, 632, 1240, 560, 1248, 512, 1368, 456, 1376, 352, 1336, 344, 1280, 400, 1280, 544, 1184, 456, 1312, 552, 1216)
+uv = PackedVector2Array(632, 1216, 632, 1240, 560, 1248, 512, 1368, 456, 1376, 352, 1336, 344, 1280, 400, 1280, 544, 1184, 456, 1312, 552, 1216)
+polygons = [PackedInt32Array(8, 10, 0), PackedInt32Array(10, 2, 1, 0), PackedInt32Array(8, 7, 9, 10), PackedInt32Array(10, 9, 3, 2), PackedInt32Array(7, 6, 5, 9), PackedInt32Array(9, 5, 4, 3)]
+internal_vertex_count = 2
+
+[node name="Tail" type="Polygon2D" parent="Polygons"]
+position = Vector2(551, -505)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(328, 1176, 288, 1128, 200, 1136, 152, 1192, 104, 1280, 112, 1296, 232, 1304, 320, 1256, 256, 1200, 208, 1240)
+uv = PackedVector2Array(328, 1176, 288, 1128, 200, 1136, 152, 1192, 104, 1280, 112, 1296, 232, 1304, 320, 1256, 256, 1200, 208, 1240)
+polygons = [PackedInt32Array(1, 2, 8), PackedInt32Array(1, 8, 7, 0), PackedInt32Array(2, 3, 9, 8), PackedInt32Array(3, 4, 5, 9), PackedInt32Array(9, 5, 6), PackedInt32Array(9, 6, 7, 8)]
+internal_vertex_count = 2
+
+[node name="HandBack" type="Polygon2D" parent="Polygons"]
+position = Vector2(-201, 267)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(1160, 392, 1136, 408, 1152, 480, 1136, 488, 1152, 520, 1168, 576, 1240, 576, 1280, 528, 1240, 488, 1232, 456, 1216, 448, 1200, 408, 1184, 464, 1200, 504)
+uv = PackedVector2Array(1160, 392, 1136, 408, 1152, 480, 1136, 488, 1152, 520, 1168, 576, 1240, 576, 1280, 528, 1240, 488, 1232, 456, 1216, 448, 1200, 408, 1184, 464, 1200, 504)
+polygons = [PackedInt32Array(12, 2, 1, 0), PackedInt32Array(0, 12, 10, 11), PackedInt32Array(13, 3, 2, 12), PackedInt32Array(12, 10, 9, 13), PackedInt32Array(3, 4, 13), PackedInt32Array(9, 13, 8), PackedInt32Array(13, 4, 5, 6), PackedInt32Array(13, 6, 7, 8)]
+internal_vertex_count = 2
+
+[node name="ArmBack" type="Polygon2D" parent="Polygons"]
+position = Vector2(-127, 372)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(1064, 112, 1016, 144, 1008, 224, 1016, 256, 1040, 392, 1104, 400, 1184, 376, 1128, 248, 1120, 216, 1112, 144, 1064, 216, 1072, 256, 1064, 144)
+uv = PackedVector2Array(1064, 112, 1016, 144, 1008, 224, 1016, 256, 1040, 392, 1104, 400, 1184, 376, 1128, 248, 1120, 216, 1112, 144, 1064, 216, 1064, 248, 1064, 144)
+polygons = [PackedInt32Array(0, 1, 12, 9), PackedInt32Array(1, 2, 10, 12), PackedInt32Array(12, 10, 8, 9), PackedInt32Array(2, 3, 11, 10), PackedInt32Array(10, 11, 7, 8), PackedInt32Array(3, 4, 5, 11), PackedInt32Array(11, 5, 6, 7)]
+internal_vertex_count = 3
+
+[node name="ShoeBack" type="Polygon2D" parent="Polygons"]
+position = Vector2(-226, -289)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(1176, 1216, 1136, 1224, 1128, 1280, 1104, 1296, 1112, 1344, 1104, 1400, 1192, 1416, 1272, 1400, 1264, 1336, 1224, 1328, 1216, 1288, 1216, 1232, 1168, 1288, 1168, 1336)
+uv = PackedVector2Array(1176, 1216, 1136, 1224, 1128, 1280, 1104, 1296, 1112, 1344, 1104, 1400, 1192, 1416, 1272, 1400, 1264, 1336, 1224, 1328, 1216, 1288, 1216, 1232, 1168, 1288, 1168, 1336)
+polygons = [PackedInt32Array(1, 2, 12, 0), PackedInt32Array(0, 12, 10, 11), PackedInt32Array(2, 3, 13, 12), PackedInt32Array(12, 13, 9, 10), PackedInt32Array(3, 4, 13), PackedInt32Array(4, 5, 6, 13), PackedInt32Array(13, 9, 8), PackedInt32Array(8, 13, 6, 7)]
+internal_vertex_count = 2
+
+[node name="LegBack" type="Polygon2D" parent="Polygons"]
+position = Vector2(-189, -186)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(1112, 880, 1080, 896, 1088, 1016, 1088, 1040, 1056, 1200, 1104, 1224, 1136, 1224, 1200, 1200, 1192, 1032, 1184, 1000, 1160, 896, 1136, 1008, 1136, 1032, 1120, 912, 1136, 1152)
+uv = PackedVector2Array(1112, 880, 1080, 896, 1088, 1016, 1088, 1040, 1056, 1200, 1104, 1224, 1136, 1224, 1200, 1200, 1192, 1032, 1184, 1000, 1160, 896, 1136, 1008, 1136, 1032, 1120, 912, 1136, 1152)
+polygons = [PackedInt32Array(0, 1, 13, 10), PackedInt32Array(1, 13, 11, 2), PackedInt32Array(13, 11, 9, 10), PackedInt32Array(11, 2, 3, 12), PackedInt32Array(11, 12, 8, 9), PackedInt32Array(12, 3, 4, 14), PackedInt32Array(12, 14, 7, 8), PackedInt32Array(14, 4, 5, 6), PackedInt32Array(14, 6, 7)]
+internal_vertex_count = 4
+
+[node name="ShoeFront" type="Polygon2D" parent="Polygons"]
+position = Vector2(-19, -256)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(976, 1176, 944, 1184, 928, 1248, 912, 1256, 912, 1288, 920, 1304, 904, 1360, 944, 1384, 1040, 1384, 1080, 1352, 1064, 1304, 1024, 1296, 1024, 1272, 1016, 1256, 1016, 1200, 976, 1208, 968, 1264, 968, 1304)
+polygons = [PackedInt32Array(1, 15, 14, 0), PackedInt32Array(1, 2, 16, 15), PackedInt32Array(15, 16, 13, 14), PackedInt32Array(2, 3, 4, 16), PackedInt32Array(16, 11, 12, 13), PackedInt32Array(16, 4, 5, 17), PackedInt32Array(16, 17, 11), PackedInt32Array(5, 6, 7, 17), PackedInt32Array(17, 7, 8, 9), PackedInt32Array(11, 17, 9, 10)]
+internal_vertex_count = 3
+
+[node name="Leg Front" type="Polygon2D" parent="Polygons"]
+position = Vector2(43, -126)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(880, 808, 848, 840, 864, 960, 864, 984, 824, 1144, 880, 1176, 976, 1152, 968, 984, 968, 952, 936, 824, 912, 960, 912, 984, 888, 840)
+uv = PackedVector2Array(880, 808, 848, 840, 864, 960, 864, 984, 824, 1144, 880, 1176, 976, 1152, 968, 984, 968, 952, 936, 824, 912, 960, 912, 984, 888, 840)
+polygons = [PackedInt32Array(0, 1, 12, 9), PackedInt32Array(12, 1, 2, 10), PackedInt32Array(12, 10, 8, 9), PackedInt32Array(10, 2, 3, 11), PackedInt32Array(10, 11, 7, 8), PackedInt32Array(11, 3, 4, 5), PackedInt32Array(11, 5, 6, 7)]
+internal_vertex_count = 3
+
+[node name="Torso" type="Polygon2D" parent="Polygons"]
+position = Vector2(-145, -87)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(1088, 504, 1048, 496, 1032, 560, 984, 656, 984, 768, 960, 896, 1080, 888, 1208, 832, 1192, 744, 1176, 648, 1128, 560, 1128, 496, 1080, 560, 1088, 656, 1088, 760)
+uv = PackedVector2Array(1088, 504, 1048, 496, 1032, 560, 984, 656, 984, 768, 960, 896, 1080, 888, 1208, 832, 1192, 744, 1176, 648, 1128, 560, 1128, 496, 1080, 560, 1088, 656, 1088, 760)
+polygons = [PackedInt32Array(1, 2, 12, 0), PackedInt32Array(0, 12, 10, 11), PackedInt32Array(2, 3, 13, 12), PackedInt32Array(12, 13, 9, 10), PackedInt32Array(3, 13, 14, 4), PackedInt32Array(13, 14, 8, 9), PackedInt32Array(4, 5, 6, 14), PackedInt32Array(14, 6, 7, 8)]
+internal_vertex_count = 3
+
+[node name="Head" type="Polygon2D" parent="Polygons"]
+position = Vector2(401, -699)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(552, 720, 416, 736, 328, 832, 296, 952, 344, 1080, 440, 1144, 568, 1152, 696, 1152, 792, 1120, 832, 1008, 800, 984, 808, 840, 728, 744, 728, 680, 688, 664, 624, 720, 552, 944)
+uv = PackedVector2Array(552, 720, 416, 736, 328, 832, 296, 952, 344, 1080, 440, 1144, 568, 1152, 696, 1152, 792, 1120, 832, 1008, 800, 984, 808, 840, 728, 744, 728, 680, 688, 664, 624, 720, 552, 944)
+polygons = [PackedInt32Array(1, 16, 3, 2), PackedInt32Array(16, 3, 4, 5), PackedInt32Array(16, 5, 6, 7), PackedInt32Array(16, 7, 8), PackedInt32Array(16, 8, 9, 10), PackedInt32Array(12, 16, 10, 11), PackedInt32Array(15, 16, 1, 0), PackedInt32Array(14, 15, 16), PackedInt32Array(14, 13, 12, 16)]
+internal_vertex_count = 1
+
+[node name="Hat" type="Polygon2D" parent="Polygons"]
+position = Vector2(436, -304)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(480, 0, 160, 248, 200, 360, 256, 408, 280, 696, 584, 688, 816, 600, 760, 368, 768, 256, 816, 96, 504, 392, 496, 312)
+uv = PackedVector2Array(480, 0, 160, 248, 200, 360, 256, 408, 280, 696, 584, 688, 816, 600, 760, 368, 768, 256, 816, 96, 504, 392, 496, 312)
+polygons = [PackedInt32Array(0, 1, 2, 11), PackedInt32Array(0, 11, 8, 9), PackedInt32Array(2, 3, 10, 11), PackedInt32Array(11, 10, 7, 8), PackedInt32Array(3, 4, 5, 10), PackedInt32Array(10, 5, 6, 7)]
+internal_vertex_count = 2
+
+[node name="HandFront" type="Polygon2D" parent="Polygons"]
+position = Vector2(104, 205)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(856, 472, 832, 488, 848, 568, 840, 592, 856, 616, 864, 680, 944, 672, 976, 608, 936, 576, 928, 552, 912, 536, 896, 488, 888, 560, 864, 496, 904, 600)
+uv = PackedVector2Array(856, 472, 832, 488, 848, 568, 840, 592, 856, 616, 864, 680, 944, 672, 976, 608, 936, 576, 928, 552, 912, 536, 896, 488, 888, 560, 864, 496, 904, 600)
+polygons = [PackedInt32Array(1, 0, 11, 13), PackedInt32Array(1, 2, 12, 13), PackedInt32Array(13, 12, 10, 11), PackedInt32Array(12, 2, 3, 14), PackedInt32Array(3, 4, 14), PackedInt32Array(12, 10, 9, 14), PackedInt32Array(9, 8, 14), PackedInt32Array(5, 6, 14, 4), PackedInt32Array(14, 6, 7, 8)]
+internal_vertex_count = 3
+
+[node name="ArmFront" type="Polygon2D" parent="Polygons"]
+position = Vector2(36, 330)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(896, 152, 856, 184, 848, 288, 848, 312, 872, 456, 936, 464, 1024, 448, 960, 304, 952, 272, 936, 168, 896, 272, 904, 312, 896, 184)
+uv = PackedVector2Array(896, 152, 856, 184, 848, 288, 848, 312, 872, 456, 936, 464, 1024, 448, 960, 304, 952, 272, 936, 168, 896, 272, 904, 312, 896, 184)
+polygons = [PackedInt32Array(0, 1, 12, 9), PackedInt32Array(1, 2, 10, 12), PackedInt32Array(12, 10, 8, 9), PackedInt32Array(10, 2, 3, 11), PackedInt32Array(10, 11, 7, 8), PackedInt32Array(11, 3, 4, 5), PackedInt32Array(11, 5, 6, 7)]
+internal_vertex_count = 3
+
+[node name="ScarfBow" type="Polygon2D" parent="Polygons"]
+position = Vector2(207, -744)
+texture = ExtResource("2_3vcgv")
+polygon = PackedVector2Array(776, 1224, 776, 1256, 744, 1264, 696, 1296, 664, 1280, 680, 1256, 664, 1240, 672, 1216, 648, 1168, 744, 1176, 720, 1216, 728, 1240)
+uv = PackedVector2Array(776, 1224, 776, 1256, 744, 1264, 696, 1296, 664, 1280, 680, 1256, 664, 1240, 672, 1216, 648, 1168, 744, 1176, 720, 1216, 728, 1240)
+polygons = [PackedInt32Array(8, 7, 10, 9), PackedInt32Array(9, 10, 0), PackedInt32Array(7, 6, 10), PackedInt32Array(10, 6, 5, 11), PackedInt32Array(10, 11, 1, 0), PackedInt32Array(11, 5, 4, 3), PackedInt32Array(11, 3, 2, 1)]
+internal_vertex_count = 2
