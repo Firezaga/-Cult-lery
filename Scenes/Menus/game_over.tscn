@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr8e1cyk62td0"]
+[gd_scene load_steps=8 format=3 uid="uid://dr8e1cyk62td0"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/game_over.gd" id="1_6dfr0"]
-[ext_resource type="Texture2D" uid="uid://dsp0cggtj1jk6" path="res://Art/UI [Old]/General Text Button.png" id="2_qy3nc"]
-[ext_resource type="Texture2D" uid="uid://voxrln1urfrd" path="res://Art/UI [Old]/General Text ButtonPressed.png" id="3_n33tk"]
-[ext_resource type="Texture2D" uid="uid://dhb1n6bileppk" path="res://Art/UI [Old]/General Text ButtonBlack.png" id="4_pfgy7"]
+[ext_resource type="Texture2D" uid="uid://dp6i3nvf1cheq" path="res://Art/Bosses/Raddish Boss/Radish Boss Idle Sprite.png" id="2_23ysg"]
+[ext_resource type="Texture2D" uid="uid://dpyc54hg3yuq5" path="res://Art/UI [Updated]/General UI (New)/General Text Button Normal.png" id="3_gl40u"]
+[ext_resource type="Texture2D" uid="uid://d38ikh2sci6ho" path="res://Art/UI [Updated]/General UI (New)/General Text Button Pressed.png" id="4_njho2"]
+[ext_resource type="Texture2D" uid="uid://b26yc3hva8mip" path="res://Art/UI [Updated]/General UI (New)/General Text Button Hovered.png" id="5_rlpe4"]
 [ext_resource type="LabelSettings" uid="uid://bd184ntgknbm1" path="res://Fonts/MainMenuButtonFont.tres" id="5_tuwit"]
+[ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="6_xk3nv"]
 
 [node name="game_over" type="CanvasLayer"]
 layer = 4
@@ -18,22 +20,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="RadishBossIdleSprite" type="Sprite2D" parent="."]
+position = Vector2(939, 535)
+scale = Vector2(0.389062, 0.389062)
+texture = ExtResource("2_23ysg")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 660.0
-offset_top = 240.0
-offset_right = 1262.0
-offset_bottom = 384.0
+offset_left = 623.0
+offset_top = 101.0
+offset_right = 1225.0
+offset_bottom = 245.0
 theme_override_font_sizes/font_size = 105
 text = "GAME OVER"
 
 [node name="QuitToMenuButton" type="TextureButton" parent="."]
-offset_left = 188.0
-offset_top = 865.0
-offset_right = 692.0
-offset_bottom = 949.0
-texture_normal = ExtResource("2_qy3nc")
-texture_hover = ExtResource("3_n33tk")
-texture_disabled = ExtResource("4_pfgy7")
+offset_left = 145.0
+offset_top = 861.0
+offset_right = 649.0
+offset_bottom = 945.0
+texture_normal = ExtResource("3_gl40u")
+texture_pressed = ExtResource("4_njho2")
+texture_hover = ExtResource("5_rlpe4")
+texture_disabled = ExtResource("6_xk3nv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -57,14 +65,15 @@ label_settings = ExtResource("5_tuwit")
 horizontal_alignment = 1
 
 [node name="LoadGameButton" type="TextureButton" parent="."]
-offset_left = 749.0
-offset_top = 863.0
-offset_right = 1253.0
-offset_bottom = 947.0
+offset_left = 706.0
+offset_top = 859.0
+offset_right = 1210.0
+offset_bottom = 943.0
 disabled = true
-texture_normal = ExtResource("2_qy3nc")
-texture_hover = ExtResource("3_n33tk")
-texture_disabled = ExtResource("4_pfgy7")
+texture_normal = ExtResource("3_gl40u")
+texture_pressed = ExtResource("4_njho2")
+texture_hover = ExtResource("5_rlpe4")
+texture_disabled = ExtResource("6_xk3nv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -88,13 +97,14 @@ label_settings = ExtResource("5_tuwit")
 horizontal_alignment = 1
 
 [node name="QuitGameButton" type="TextureButton" parent="."]
-offset_left = 1306.0
-offset_top = 867.0
-offset_right = 1810.0
-offset_bottom = 951.0
-texture_normal = ExtResource("2_qy3nc")
-texture_hover = ExtResource("3_n33tk")
-texture_disabled = ExtResource("4_pfgy7")
+offset_left = 1263.0
+offset_top = 863.0
+offset_right = 1767.0
+offset_bottom = 947.0
+texture_normal = ExtResource("3_gl40u")
+texture_pressed = ExtResource("4_njho2")
+texture_hover = ExtResource("5_rlpe4")
+texture_disabled = ExtResource("6_xk3nv")
 ignore_texture_size = true
 stretch_mode = 0
 
