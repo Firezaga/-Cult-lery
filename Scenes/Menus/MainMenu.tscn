@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bj3kkdcx4ybau"]
+[gd_scene load_steps=11 format=3 uid="uid://bj3kkdcx4ybau"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_l3i7p"]
 [ext_resource type="Texture2D" uid="uid://dpyc54hg3yuq5" path="res://Art/UI [Updated]/General UI (New)/General Text Button Normal.png" id="3_av4ol"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b26yc3hva8mip" path="res://Art/UI [Updated]/General UI (New)/General Text Button Hovered.png" id="5_bvgmw"]
 [ext_resource type="Texture2D" uid="uid://d146asjwypy3p" path="res://Art/UI [Updated]/General UI (New)/General Text Button Disabled.png" id="6_0df7f"]
 [ext_resource type="Texture2D" uid="uid://dh812rerribfc" path="res://Art/Village/[Old] Village Assets/Cupcake Sky Background.png" id="6_d6imb"]
+[ext_resource type="AudioStream" uid="uid://bsfyqreky03vd" path="res://Audio/Loops/testsound.wav" id="8_fudwb"]
 
 [sub_resource type="SystemFont" id="SystemFont_13bf4"]
 font_names = PackedStringArray("Felix Titling")
@@ -180,8 +181,14 @@ offset_bottom = 489.0
 text = "CULT'LERY"
 label_settings = SubResource("LabelSettings_rd6pl")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_fudwb")
+volume_db = -80.0
+autoplay = true
+
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="LoadGameButton" to="." method="_on_load_game_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
